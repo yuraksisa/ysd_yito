@@ -1,0 +1,316 @@
+/* ---------------------------------------------------------------------- */
+/*                       MAIN STYLES DEFINITION                           */
+/* ---------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------- */
+/*                                                                        */
+/*  --------------------------------------------------------------------  */
+/*  |                                                        container |  */
+/*  |  --------------------------------------------------------------  |  */
+/*  |  |                                           container_header |  |  */
+/*  |  |                                                            |  |  */
+/*  |  |-------------------------------------------------------------  |  */
+/*  |                                                                  |  */
+/*  |  --------------------------------------------------------------  |  */
+/*  |  |                                          container_content |  |  */
+/*  |  |                                                            |  |  */
+/*  |  -------------------------------------------------------------|  |  */
+/*  |                                                                  |  */                        
+/*  |  -------------------------------------------------------------|  |  */
+/*  |  |                                           container_footer |  |  */
+/*  |  | ---------------------------------------------------------- |  |  */
+/*  |  | |                                            footer_image| |  |  */
+/*  |  | ---------------------------------------------------------- |  |  */
+/*  |  | |                                          footer_message| |  |  */
+/*  |  | ---------------------------------------------------------- |  |  */
+/*  |  --------------------------------------------------------------  |  */
+/*  |                                                                  |  */
+/*  --------------------------------------------------------------------  */
+/*                                                                        */
+/* ---------------------------------------------------------------------- */
+
+/* -------------------------- TAGS STYLE --------------------------- */
+
+* {
+ font-family:'ABeeZee','American Typewriter', serif;	
+}
+
+
+body 
+{	
+  line-height: 1.5;	
+  margin: 0px;
+  padding: 0px;  
+  color: #000000;	
+}
+
+a:link, a:visited {
+  color: black;
+}
+
+a:hover {
+ color: darkgrey;	
+}
+
+a img {
+  border: none;	
+}
+
+h1 {
+  font-size: 2em;	
+  margin-top: 0px;
+  margin-bottom: 0px;  
+  margin-left: 10px; /* Por el GRID 960 del contenido */
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-top: 0px;
+  margin-bottom: 0px;  
+}
+
+pre {
+  white-space: normal;
+  font-family: 'Cutive Mono', 'American Typewriter', monospace;
+}
+
+button {
+}
+
+/* ================================================================= */
+/* ------------            MAIN LAYOUT         --------------------- */
+/* ================================================================= */
+
+#top {
+  background: #CD2039;
+}
+
+#header {
+  background: black;
+  margin-bottom: 5px;
+}
+
+/* ----------- THE CONTAINER (HOLDS ALL THE ELEMENTS) -------------- */
+
+#container { 
+  width: 960px; 
+  /*background: white;*/
+  margin: 0 auto;
+}
+
+/* ----------- CONTAINER HEADER ------------------------------------------ */
+
+#container_header {
+  /*background-color:  white; */
+  background-position: 0px 0px;
+  margin: 0px;
+  padding: 0px;     
+  border-bottom: 1px solid #DDD;
+}
+
+.site_title {
+  display: inline-block; 
+}
+
+#container_headline {
+  border-bottom: 1px solid #EEE;
+}
+
+/* ----------- CONTAINER CONTENT ---------------------------------------- */
+
+#container_content {
+  /*background-color: white;*/
+  padding-bottom: 20px; 
+  overflow: hidden; 
+  margin-top: 15px;
+}
+
+#container_content_left {
+ overflow: hidden;	
+}
+
+#container_content_center {
+ overflow: hidden;	
+}
+
+#container_content_right {
+ overflow: hidden;		
+}
+
+#container_footer_content {
+ background: #DDD;
+ color : gray;
+}
+
+/* ==================================================== */
+/* --------------- CLASSES ---------------------------- */
+/* ==================================================== */
+
+.date_control {
+  background: url('/img/icons/calendar.png');
+  background-repeat: no-repeat; 
+  background-position: 99%;
+}
+
+.link {
+  cursor: hand;
+  cursor: pointer;  
+}
+
+.icon {
+  width: 16px;
+}
+
+.highlighted_text {
+  font-weight: bold;
+  font-size: large; 
+}
+
+.lowlighted_text {
+  font-weight: normal;
+  font-size: small; 
+}
+
+/* -------- Errors --------- */
+
+.error {
+  color: #E23131; 
+  display: block;
+}
+
+.warn {
+  color: darkblue;  
+}
+
+.fatal {
+  color: darkred; 
+}
+
+/* --------------- BLOCKS -------------------- */
+
+/* ------- Highlight Block ------------- */
+
+.highlight_block_title {
+  padding: 2px 5px 2px 5px;
+}
+
+.highlight_block {
+  background: #EEE; 
+  border: 1px solid #CCC; 
+  padding: 5px; 
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */ 
+}
+
+.highlight_block_level_2 {
+  overflow: hidden;
+  background: #DDDDDD;  
+}
+
+/* ------- Information blocks (FLOAT BLOCKS WITH DIFFERENT CATEGORIES) ------------- */
+
+.information-block-container { /* Holds a set of information-block */
+  overflow: hidden;   
+}
+
+.information-block {
+  float: left;
+  margin-left: 10px;    
+  padding: 10px;
+  text-align: left;
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */  
+}
+
+.information-block-category-1 {
+  background: #EEEEEE;  
+}
+
+.information-block-category-2 {
+  background: #DDDDDD;  
+}
+
+.information-block-category-3 {
+  background: #CCCCCC;  
+}
+
+.information-block-category-4 {
+  background: #AAAAAA;  
+}
+
+.information-block-title {
+  
+}
+
+.information-block-description {
+  
+}
+
+.information-block-detail {
+  font-size: 0.8em;
+}
+
+
+/* ================================================================= */
+/* ---------------------- INTEGRATION ------------------------------ */
+/* ================================================================= */
+
+.ui-widget { /* jQuery UI */
+ font-size: 1em;
+}
+
+/* ----------- Overlay  ---------------------- */
+
+.contentWrap {
+  padding-left : 15px;
+  padding-right: 15px;
+}
+
+#overlay { /* use a semi-transparent image for the overlay */
+  border: 1px solid gray;
+  height:450px;
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */
+}
+
+div.contentWrap { /* container for external content. uses vertical scrollbar, if needed */
+  height:441px;
+  overflow-y:auto;
+}
+	
+.apple_overlay { /* the overlayed element */
+	
+  /* initially overlay is hidden */
+  display:none;
+	
+  /* growing background image */
+  /*background-image:url(../img/overlay/white.png);*/
+  background: white;
+  color: black;
+	
+  /* 
+	width after the growing animation finishes
+	height is automatically calculated
+  */
+  width:640px;		
+	
+  /* some padding to layout nested elements nicely  */
+  padding:15px;
+  margin: 5px;
+
+}
+  
+.apple_overlay .close { /* default close button positioned on upper right corner */
+	background-image:url('/img/overlay/close.png');
+	position:absolute; right:-25px; top:-25px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}

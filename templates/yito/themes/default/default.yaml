@@ -1,0 +1,8 @@
+name: Default
+description: Default theme. It uses 960.css
+styles: [
+    '/css/style.css',
+    'http://fonts.googleapis.com/css?family=ABeeZee',
+    'http://fonts.googleapis.com/css?family=Cutive+Mono']
+scripts: []
+images: []

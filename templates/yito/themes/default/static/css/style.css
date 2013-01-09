@@ -1,0 +1,2724 @@
+
+/* ------- 960.css ---------*/
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/
+
+  Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+
+body {
+  min-width: 960px;
+  background: url('/img/background.jpg');
+}
+
+/* `Container
+----------------------------------------------------------------------------------------------------*/
+
+.container_12,
+.container_16 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11,
+.push_12, .pull_12,
+.push_13, .pull_13,
+.push_14, .pull_14,
+.push_15, .pull_15 {
+  position: relative;
+}
+
+.container_12 .grid_3,
+.container_16 .grid_4 {
+  width: 220px;
+}
+
+.container_12 .grid_6,
+.container_16 .grid_8 {
+  width: 460px;
+}
+
+.container_12 .grid_9,
+.container_16 .grid_12 {
+  width: 700px;
+}
+
+.container_12 .grid_12,
+.container_16 .grid_16 {
+  width: 940px;
+}
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+  margin-left: 0;
+}
+
+.omega {
+  margin-right: 0;
+}
+
+/* `Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .grid_1 {
+  width: 60px;
+}
+
+.container_12 .grid_2 {
+  width: 140px;
+}
+
+.container_12 .grid_4 {
+  width: 300px;
+}
+
+.container_12 .grid_5 {
+  width: 380px;
+}
+
+.container_12 .grid_7 {
+  width: 540px;
+}
+
+.container_12 .grid_8 {
+  width: 620px;
+}
+
+.container_12 .grid_10 {
+  width: 780px;
+}
+
+.container_12 .grid_11 {
+  width: 860px;
+}
+
+/* `Grid >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_16 .grid_1 {
+  width: 40px;
+}
+
+.container_16 .grid_2 {
+  width: 100px;
+}
+
+.container_16 .grid_3 {
+  width: 160px;
+}
+
+.container_16 .grid_5 {
+  width: 280px;
+}
+
+.container_16 .grid_6 {
+  width: 340px;
+}
+
+.container_16 .grid_7 {
+  width: 400px;
+}
+
+.container_16 .grid_9 {
+  width: 520px;
+}
+
+.container_16 .grid_10 {
+  width: 580px;
+}
+
+.container_16 .grid_11 {
+  width: 640px;
+}
+
+.container_16 .grid_13 {
+  width: 760px;
+}
+
+.container_16 .grid_14 {
+  width: 820px;
+}
+
+.container_16 .grid_15 {
+  width: 880px;
+}
+
+/* `Prefix Extra Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .prefix_3,
+.container_16 .prefix_4 {
+  padding-left: 240px;
+}
+
+.container_12 .prefix_6,
+.container_16 .prefix_8 {
+  padding-left: 480px;
+}
+
+.container_12 .prefix_9,
+.container_16 .prefix_12 {
+  padding-left: 720px;
+}
+
+/* `Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .prefix_1 {
+  padding-left: 80px;
+}
+
+.container_12 .prefix_2 {
+  padding-left: 160px;
+}
+
+.container_12 .prefix_4 {
+  padding-left: 320px;
+}
+
+.container_12 .prefix_5 {
+  padding-left: 400px;
+}
+
+.container_12 .prefix_7 {
+  padding-left: 560px;
+}
+
+.container_12 .prefix_8 {
+  padding-left: 640px;
+}
+
+.container_12 .prefix_10 {
+  padding-left: 800px;
+}
+
+.container_12 .prefix_11 {
+  padding-left: 880px;
+}
+
+/* `Prefix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_16 .prefix_1 {
+  padding-left: 60px;
+}
+
+.container_16 .prefix_2 {
+  padding-left: 120px;
+}
+
+.container_16 .prefix_3 {
+  padding-left: 180px;
+}
+
+.container_16 .prefix_5 {
+  padding-left: 300px;
+}
+
+.container_16 .prefix_6 {
+  padding-left: 360px;
+}
+
+.container_16 .prefix_7 {
+  padding-left: 420px;
+}
+
+.container_16 .prefix_9 {
+  padding-left: 540px;
+}
+
+.container_16 .prefix_10 {
+  padding-left: 600px;
+}
+
+.container_16 .prefix_11 {
+  padding-left: 660px;
+}
+
+.container_16 .prefix_13 {
+  padding-left: 780px;
+}
+
+.container_16 .prefix_14 {
+  padding-left: 840px;
+}
+
+.container_16 .prefix_15 {
+  padding-left: 900px;
+}
+
+/* `Suffix Extra Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .suffix_3,
+.container_16 .suffix_4 {
+  padding-right: 240px;
+}
+
+.container_12 .suffix_6,
+.container_16 .suffix_8 {
+  padding-right: 480px;
+}
+
+.container_12 .suffix_9,
+.container_16 .suffix_12 {
+  padding-right: 720px;
+}
+
+/* `Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .suffix_1 {
+  padding-right: 80px;
+}
+
+.container_12 .suffix_2 {
+  padding-right: 160px;
+}
+
+.container_12 .suffix_4 {
+  padding-right: 320px;
+}
+
+.container_12 .suffix_5 {
+  padding-right: 400px;
+}
+
+.container_12 .suffix_7 {
+  padding-right: 560px;
+}
+
+.container_12 .suffix_8 {
+  padding-right: 640px;
+}
+
+.container_12 .suffix_10 {
+  padding-right: 800px;
+}
+
+.container_12 .suffix_11 {
+  padding-right: 880px;
+}
+
+/* `Suffix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_16 .suffix_1 {
+  padding-right: 60px;
+}
+
+.container_16 .suffix_2 {
+  padding-right: 120px;
+}
+
+.container_16 .suffix_3 {
+  padding-right: 180px;
+}
+
+.container_16 .suffix_5 {
+  padding-right: 300px;
+}
+
+.container_16 .suffix_6 {
+  padding-right: 360px;
+}
+
+.container_16 .suffix_7 {
+  padding-right: 420px;
+}
+
+.container_16 .suffix_9 {
+  padding-right: 540px;
+}
+
+.container_16 .suffix_10 {
+  padding-right: 600px;
+}
+
+.container_16 .suffix_11 {
+  padding-right: 660px;
+}
+
+.container_16 .suffix_13 {
+  padding-right: 780px;
+}
+
+.container_16 .suffix_14 {
+  padding-right: 840px;
+}
+
+.container_16 .suffix_15 {
+  padding-right: 900px;
+}
+
+/* `Push Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .push_3,
+.container_16 .push_4 {
+  left: 240px;
+}
+
+.container_12 .push_6,
+.container_16 .push_8 {
+  left: 480px;
+}
+
+.container_12 .push_9,
+.container_16 .push_12 {
+  left: 720px;
+}
+
+/* `Push Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .push_1 {
+  left: 80px;
+}
+
+.container_12 .push_2 {
+  left: 160px;
+}
+
+.container_12 .push_4 {
+  left: 320px;
+}
+
+.container_12 .push_5 {
+  left: 400px;
+}
+
+.container_12 .push_7 {
+  left: 560px;
+}
+
+.container_12 .push_8 {
+  left: 640px;
+}
+
+.container_12 .push_10 {
+  left: 800px;
+}
+
+.container_12 .push_11 {
+  left: 880px;
+}
+
+/* `Push Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_16 .push_1 {
+  left: 60px;
+}
+
+.container_16 .push_2 {
+  left: 120px;
+}
+
+.container_16 .push_3 {
+  left: 180px;
+}
+
+.container_16 .push_5 {
+  left: 300px;
+}
+
+.container_16 .push_6 {
+  left: 360px;
+}
+
+.container_16 .push_7 {
+  left: 420px;
+}
+
+.container_16 .push_9 {
+  left: 540px;
+}
+
+.container_16 .push_10 {
+  left: 600px;
+}
+
+.container_16 .push_11 {
+  left: 660px;
+}
+
+.container_16 .push_13 {
+  left: 780px;
+}
+
+.container_16 .push_14 {
+  left: 840px;
+}
+
+.container_16 .push_15 {
+  left: 900px;
+}
+
+/* `Pull Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .pull_3,
+.container_16 .pull_4 {
+  left: -240px;
+}
+
+.container_12 .pull_6,
+.container_16 .pull_8 {
+  left: -480px;
+}
+
+.container_12 .pull_9,
+.container_16 .pull_12 {
+  left: -720px;
+}
+
+/* `Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .pull_1 {
+  left: -80px;
+}
+
+.container_12 .pull_2 {
+  left: -160px;
+}
+
+.container_12 .pull_4 {
+  left: -320px;
+}
+
+.container_12 .pull_5 {
+  left: -400px;
+}
+
+.container_12 .pull_7 {
+  left: -560px;
+}
+
+.container_12 .pull_8 {
+  left: -640px;
+}
+
+.container_12 .pull_10 {
+  left: -800px;
+}
+
+.container_12 .pull_11 {
+  left: -880px;
+}
+
+/* `Pull Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_16 .pull_1 {
+  left: -60px;
+}
+
+.container_16 .pull_2 {
+  left: -120px;
+}
+
+.container_16 .pull_3 {
+  left: -180px;
+}
+
+.container_16 .pull_5 {
+  left: -300px;
+}
+
+.container_16 .pull_6 {
+  left: -360px;
+}
+
+.container_16 .pull_7 {
+  left: -420px;
+}
+
+.container_16 .pull_9 {
+  left: -540px;
+}
+
+.container_16 .pull_10 {
+  left: -600px;
+}
+
+.container_16 .pull_11 {
+  left: -660px;
+}
+
+.container_16 .pull_13 {
+  left: -780px;
+}
+
+.container_16 .pull_14 {
+  left: -840px;
+}
+
+.container_16 .pull_15 {
+  left: -900px;
+}
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after,
+.container_12:before,
+.container_12:after,
+.container_16:before,
+.container_16:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after,
+.container_12:after,
+.container_16:after {
+  clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix,
+.container_12,
+.container_16 {
+  zoom: 1;
+}
+/* ------- flash-messages.css ---------*/
+/* ---------------------------------------------------------------------- */
+/*                       FLASH STYLES DEFINITION                          */
+/* ---------------------------------------------------------------------- */
+
+.flash { 	
+  border: 1px dashed transparent;
+}
+
+.flash-error {
+  color: red;
+}
+
+.flash-message {
+  color: black;
+}
+
+.flash-notice {
+  color: black;
+}
+
+.flash-warning {
+  color: orange;
+}
+
+.flash > p {	
+  font-size: 30px; 	
+  margin-left: 150px;
+  margin-top: 30px;
+}
+
+/* ------- forms.css ---------*/
+/* ----------------------------------------------------------- */
+/*                  FORMS STYLE                                */
+/* ----------------------------------------------------------- */
+
+/* ----------------------------------------------------------- */
+/*                                                             */
+/*  ---------------------------------------------------------  */
+/*  |                                               form    |  */
+/*  |  ---------------------------------------------------  |  */
+/*  |  |  .formrow                                  div  |  |  */
+/*  |  | ---------------------  ------------------------ |  |  */
+/*  |  | |.fieldtitle   label|  |.fieldcontrol    field| |  |  */
+/*  |  | ---------------------  ------------------------ |  |  */
+/*  |  |                                                 |  |  */
+/*  |  ---------------------------------------------------  |  */
+/*  ---------------------------------------------------------  */
+/*                                                             */   
+/* ----------------------------------------------------------- */ 
+
+form {
+  overflow: hidden; /* Floats cleaning */
+ // margin-right: 20px;
+}
+
+/* -------------- ORGANIZATION ------------------ */
+
+form div.formrow {
+  margin-bottom: 15px;	
+  overflow: hidden;
+  width: 100%;
+}
+
+form div.formrow-botonera input[type="button"], form div.formrow-botonera input[type="submit"], form div.formrow-botonera input[type="reset"]{
+  float: right;
+  margin-right: 10px;	
+}
+
+form div label.fieldtitle {
+  text-align:left;
+  display: block;
+  padding-top: 5px;
+}
+
+form div input.fieldcontrol, form div textarea.fieldcontrol, form div label.error, form div div.fieldcontrol, form div fieldset.fieldcontrol { /* occupies all the space */
+  width: 95%;
+  //width: 98%;
+  padding: 5px;
+}
+
+form div select.fieldcontrol { /* to the left and do not alter the width */
+  //float: left;
+  //clear: left;
+  padding: 5px;
+}
+
+form div select.fieldcontrol-combo { /* more than one select in the same row */
+  //float : left;
+  margin-right: 5px;	
+}
+
+/* ----------------- CONTROLS ------------------ */
+form fieldset {
+  border: 1px solid gray;	
+}
+
+form legend {
+  	
+}
+
+form input[type="text"], form input[type="password"] { /* TEXT and PASSWORD */
+  border: 1px solid black; 
+  font-size: 1em;
+}
+
+form input:focus {
+  border: 1px solid #5164ee;
+}
+
+form textarea { /* TEXTAREA */
+  border: 1px solid black; /* Simple black border */	
+  font-size: 1em;
+}
+
+form textarea:focus {
+  border: 1px solid #5164ee;
+}
+
+form select { /* SELECT */
+  paddding: 5px;	
+}
+
+form input[type="button"], form input[type="submit"], form input[type="reset"]  { /* BUTTONS */
+  text-align: center;
+  
+  margin-left: 5px; /* Separation between buttons */
+  padding: 5px; 
+	  
+  color: black;
+  background-color: #DDD; 
+  
+  -webkit-border-radius: 3px 3px; /* Safari  */ 
+  -moz-border-radius: 3px 3px; /* Firefox */
+  border-radius: 3px 3px; /* iExplorer 9 */	  
+ 
+  border: 1px solid gray;
+    
+  cursor: hand;
+  cursor: pointer;
+  
+  font-size: 1em;
+}
+
+.form-button { /* Represents a button */
+
+  text-align: center;
+
+  padding : 5px 5px 5px 5px; 
+  
+  min-width: 50px;     	
+
+  color: black;
+  background-color: #DDD;
+  
+  -webkit-border-radius: 3px 3px; /* Safari  */ 
+  -moz-border-radius: 3px 3px; /* Firefox */
+  border-radius: 3px 3px; /* iExplorer 9 */	  
+
+  border: 1px gray solid;
+   
+  cursor: hand;
+  cursor: pointer;	
+
+  display: inline-block;
+  
+  font-size: 1em;
+}
+
+.form-button a { /* Represents a link inside a button */
+  text-decoration: none;
+  font-weight: normal;  
+  display: block;
+}
+
+.form-button a:link, .form-button a:visited {
+  color: black;
+}
+
+.form-button a:hover {
+ color: gray;	
+}
+
+.disabled-form-button {
+  color: gray;
+  background-color: #EEE;
+  cursor: default;
+}
+
+/* ------- main.css ---------*/
+/* ---------------------------------------------------------------------- */
+/*                       MAIN STYLES DEFINITION                           */
+/* ---------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------- */
+/*                                                                        */
+/*  --------------------------------------------------------------------  */
+/*  |                                                        container |  */
+/*  |  --------------------------------------------------------------  |  */
+/*  |  |                                           container_header |  |  */
+/*  |  |                                                            |  |  */
+/*  |  |-------------------------------------------------------------  |  */
+/*  |                                                                  |  */
+/*  |  --------------------------------------------------------------  |  */
+/*  |  |                                          container_content |  |  */
+/*  |  |                                                            |  |  */
+/*  |  -------------------------------------------------------------|  |  */
+/*  |                                                                  |  */                        
+/*  |  -------------------------------------------------------------|  |  */
+/*  |  |                                           container_footer |  |  */
+/*  |  | ---------------------------------------------------------- |  |  */
+/*  |  | |                                            footer_image| |  |  */
+/*  |  | ---------------------------------------------------------- |  |  */
+/*  |  | |                                          footer_message| |  |  */
+/*  |  | ---------------------------------------------------------- |  |  */
+/*  |  --------------------------------------------------------------  |  */
+/*  |                                                                  |  */
+/*  --------------------------------------------------------------------  */
+/*                                                                        */
+/* ---------------------------------------------------------------------- */
+
+/* -------------------------- TAGS STYLE --------------------------- */
+
+* {
+ font-family:'ABeeZee','American Typewriter', serif;	
+}
+
+
+body 
+{	
+  line-height: 1.5;	
+  margin: 0px;
+  padding: 0px;  
+  color: #000000;	
+}
+
+a:link, a:visited {
+  color: black;
+}
+
+a:hover {
+ color: darkgrey;	
+}
+
+a img {
+  border: none;	
+}
+
+h1 {
+  font-size: 2em;	
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 10px; /* Por el GRID 960 del contenido */
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-top: 0px;
+  margin-bottom: 0px;  
+}
+
+pre {
+  white-space: normal;
+  font-family: 'Cutive Mono', 'American Typewriter', monospace;
+}
+
+button {
+}
+
+/* ================================================================= */
+/* ------------            MAIN LAYOUT         --------------------- */
+/* ================================================================= */
+
+#top {
+  background: #CD2039;
+}
+
+#header {
+  background: black;
+  margin-bottom: 5px;
+}
+
+/* ----------- THE CONTAINER (HOLDS ALL THE ELEMENTS) -------------- */
+
+#container { 
+  width: 960px; 
+  /*background: white;*/
+  margin: 0 auto;
+}
+
+/* ----------- CONTAINER HEADER ------------------------------------------ */
+
+#container_header {
+  /*background-color:  white;	*/
+  background-position: 0px 0px;
+  margin: 0px;
+  padding: 0px;    	
+  border-bottom: 1px solid #DDD; 
+}
+
+.site_title {
+  display: inline-block; 
+}
+
+#container_headline {
+  border-bottom: 1px solid #EEE;
+}
+
+/* ----------- CONTAINER CONTENT ---------------------------------------- */
+
+#container_content {
+  /*background-color: white;*/
+  padding-bottom: 20px; 
+  overflow: hidden; 
+  margin-top: 15px;
+}
+
+#container_content_left {
+ overflow: hidden;	
+}
+
+#container_content_center {
+ overflow: hidden;	
+}
+
+#container_content_right {
+ overflow: hidden;		
+}
+
+#container_footer_content {
+ background: #DDD;
+ color : gray;
+}
+
+/* ==================================================== */
+/* --------------- CLASSES ---------------------------- */
+/* ==================================================== */
+
+.date_control {
+  background: url('/img/icons/calendar.png');
+  background-repeat: no-repeat;	
+  background-position: 99%;
+}
+
+.link {
+  cursor: hand;
+  cursor: pointer;  
+}
+
+.icon {
+  width: 16px;
+}
+
+.highlighted_text {
+  font-weight: bold;
+  font-size: large; 
+}
+
+.lowlighted_text {
+  font-weight: normal;
+  font-size: small; 
+}
+
+/* -------- Errors --------- */
+
+.error {
+  color: #E23131; 
+  display: block;
+}
+
+.warn {
+  color: darkblue;  
+}
+
+.fatal {
+  color: darkred; 
+}
+
+/* --------------- BLOCKS -------------------- */
+
+/* ------- Highlight Block ------------- */
+
+.highlight_block_title {
+  padding: 2px 5px 2px 5px;
+}
+
+.highlight_block {
+  background: #EEE;	
+  border: 1px solid #CCC;	
+  padding: 5px; 
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */	
+}
+
+.highlight_block_level_2 {
+  overflow: hidden;
+  background: #DDDDDD;	
+}
+
+/* ------- Information blocks (FLOAT BLOCKS WITH DIFFERENT CATEGORIES) ------------- */
+
+.information-block-container { /* Holds a set of information-block */
+  overflow: hidden;		
+}
+
+.information-block {
+  float: left;
+  margin-left: 10px;  	
+  padding: 10px;
+  text-align: left;
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */  
+}
+
+.information-block-category-1 {
+  background: #EEEEEE;	
+}
+
+.information-block-category-2 {
+  background: #DDDDDD;	
+}
+
+.information-block-category-3 {
+  background: #CCCCCC;	
+}
+
+.information-block-category-4 {
+  background: #AAAAAA;	
+}
+
+.information-block-title {
+	
+}
+
+.information-block-description {
+	
+}
+
+.information-block-detail {
+  font-size: 0.8em;
+}
+
+/* ================================================================= */
+/* ---------------------- INTEGRATION ------------------------------ */
+/* ================================================================= */
+
+/* ----------- jQuery UI --------------------- */
+
+.ui-widget { 
+ font-size: 1em;
+}
+
+/* ----------- Overlay  ---------------------- */
+
+.contentWrap {
+  padding-left : 15px;
+  padding-right: 15px;
+}
+
+#overlay { /* use a semi-transparent image for the overlay */
+  border: 1px solid gray;
+  height:450px;
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */
+}
+
+div.contentWrap { /* container for external content. uses vertical scrollbar, if needed */
+  height:441px;
+  overflow-y:auto;
+}
+	
+.apple_overlay { /* the overlayed element */
+	
+  /* initially overlay is hidden */
+  display:none;
+	
+  /* growing background image */
+  /*background-image:url(../img/overlay/white.png);*/
+  background: white;
+  color: black;
+	
+  /* 
+	width after the growing animation finishes
+	height is automatically calculated
+  */
+  width:640px;		
+	
+  /* some padding to layout nested elements nicely  */
+  padding:15px;
+  margin: 5px;
+
+}
+  
+.apple_overlay .close { /* default close button positioned on upper right corner */
+	background-image:url('/img/overlay/close.png');
+	position:absolute; right:-25px; top:-25px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+
+/* ------- menu.css ---------*/
+
+/* ======================================================================
+   The menu CSS
+   ----------------------------------------------------------------------
+   
+   Organize the menu with the simple following rules:
+   
+   menu
+    
+     menuitem
+    
+     submenu submenu-level1
+   
+        menuitem
+        
+        submenu submenu-level2
+        
+          menuitem
+          
+          submenu submenu-level3
+           
+             menuitem
+             
+             menuitem
+             
+        submenu submenu-level2
+        
+          menuitem
+          
+          menuitem
+          
+     menuitem
+     
+   Example:
+   
+   <ul class="menu">
+     <li class="menuitem">
+       <a href="">Menu Item</a>
+       <ul class="submenu submenu-level1">
+       </ul>
+     </li>
+   </ul>
+
+
+   ====================================================================== */
+
+      /* ------------ Main Menu ------------------*/
+      
+      ul.menu {
+      	list-style: none;
+      	padding-left: 0px;   /* No list style, so drop the blank space */
+      	margin: 0px;
+      }
+      
+      ul.menu > li {
+      	/*float: left;*/                /* To show the options (used instead of display:inline) */
+      	display: inline-block;
+      	padding: 5px;         
+      	padding-left: 0px; 
+        margin: 1px;            /* Left margin : separation of elements */
+      	/*border: 1px dotted gray;*/
+      }
+     
+      /* -------------- Submenu (Generic) --------------------*/
+      
+      ul.submenu {
+      	display: none;           /* Do not show  : The submenu is show when the user puts on the menu */	      	
+      
+        list-style: none;
+      	padding:5px;        /* No list style, so drop the blank space */
+        background: white;
+        border: 1px dotted gray; /* Border */ 
+      }
+
+      ul.submenu > li {	
+        padding: 5px;
+        position: relative;
+      }     
+      
+      /* ------------- Menu Items ---------------- */
+      
+      .menuitem {
+        position : relative;	
+      }
+      
+      .menuitem > a {
+        cursor: hand;
+        cursor: pointer;
+      }
+      
+      .menuitem > a:link, .menuitem > a:visited {
+        text-decoration: none;
+        color: black;
+        white-space: nowrap; /* Evict return */
+      }
+      
+      .menuitem > a:hover {
+      	color:gray;
+      }
+      
+      .menuitem > a > span {
+        font-size: 50%;       
+      }
+      
+     
+       /* -------------- Submenu (LEVEL 1) --------------------*/
+      
+      ul.menu > li:hover ul.submenu-level1 { /* When positionated on the menu item, show the submenu associated */
+        
+        display: block;
+
+      	/* Locate down the parent container */
+      	
+      	position: absolute;
+      	/*margin-top:5px;*/
+      }            
+      
+      /* ------------------ Submenu (LEVEL 2, 3, ...) --------------------*/
+      
+      ul.submenu-level1 > li:hover ul.submenu-level2,
+      ul.submenu-level2 > li:hover ul.submenu-level3 { /* When positionated on the menu item, show the submenu associated */
+        
+        display: block; /* Show the element */       
+
+        /* Locate at the left of the parent container */
+        
+        position: absolute;
+        top: -4px;
+        padding-right: 5px;
+        left: 100%;   /* Para mostrarlo a la izquierda del elemento padre */
+
+      }   
+
+/* ------- yito.css ---------*/
+
+/* ================================== */
+/* ------- jquery ui ---------------- */
+/* ================================== */
+
+  .ui-tabs-vertical { width:95%; border:none; padding-left:0px;}
+  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 30%; background: #EEE;}
+  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 95%; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border: 1px solid #DDD; }
+  .ui-tabs-vertical .ui-tabs-nav li a { display:block; border-bottom: none; float: none;}
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {}
+  .ui-tabs-vertical .ui-tabs-panel { float: right; width: 65%; padding: 5px 10px 10px 10px; border: 1px solid #CCC; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;}
+
+/* ================================== */
+/* ------- Yito JS ------------------ */
+/* ================================== */
+
+.current-page-button {
+  background: #E7E271;
+}
+
+/* ================================== */
+/* -------- YITO CORE --------------- */
+/* ================================== */
+
+.form-frame {
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  padding: 5px;
+  background: white;
+}
+
+.page-title {
+  
+}
+
+.page-title a {
+  text-decoration: none;
+  color: navy;
+  font-size: 1.6em;  
+  font-weight: normal;
+}
+
+/* ================================== */
+/* ------- Photo -------------------- */
+/* ================================== */
+
+#element_photo_img {
+  margin: 0 auto;
+  display: block;
+ -webkit-border-radius: 3px; /* Safari  */ 
+ -moz-border-radius: 3px; /* Firefox */
+ border-radius: 3px; /* iExplorer 9 */    
+}
+
+#photo_change_container {
+  margin-top: 5px;  
+} 
+
+#element_photo_img_template {
+  max-width: 100%;
+}
+
+/* ================================== */
+/* -------- Logger ------------------ */
+/* ================================== */
+
+.tht-logger {
+  font-family: monospace; 
+}
+
+
+.tc-logger {
+  font-family: monospace; 
+}
+
+/* ================================== */
+/* -------- Business Events --------- */
+/* ================================== */
+
+.tht-be {
+  font-family: monospace; 
+}
+
+.tc-be {
+  font-family: monospace; 
+}
+
+/* ================================== */
+/* ------- Contact ------------------ */
+/* ================================== */
+
+.contact_information {
+  text-align: center; 
+}
+
+
+/* ================================== */
+/* ------- Attachments -------------- */
+/* ================================== */
+
+.attachments-list {
+ padding-left: 5px; 
+}
+
+.attachment-element {
+ list-style-type: none;
+}
+
+
+/* ================================== */
+/* ------- Photo selector ----------- */
+/* ================================== */
+
+  #uploader_form {
+    width: 95%;
+    padding: 5px;
+  }
+  
+  #photo_container {
+    margin: 0 auto;
+    height: 300px;
+  }
+    
+  #photo_img {
+    margin: 0 auto;
+  }
+  
+  #uploader_form_buttons {
+    position: relative;
+    bottom: 0px;  
+  }
+
+/* ================================== */
+/* --------- Gallery ---------------- */
+/* ================================== */
+
+  #gallery .list-management-item {
+    display: inline-block;
+  }
+
+  .gallery-thumbnail {
+    text-decoration :none;
+  }
+
+  .album-main-photo {
+    background: #BBB;
+  }
+
+  .album-photo {
+    padding: 3px;
+    cursor: hand;
+    cursor: pointer;  
+  }  
+
+/* ================================== */
+/* ------- AUTH --------------------- */
+/* ================================== */
+
+#login_container {
+
+  margin:0 auto; // Center alignment
+  padding: 10px;
+  width: 30em;
+  
+  padding-top: 5em;
+  padding-bottom: 10em;  	
+}
+
+#form_login {
+  
+  margin: 10px;
+  width: 25em;
+
+  border: 1px solid gray;
+  background-color: #EEEEEE;
+  
+  padding: 10px;
+    
+  -webkit-border-radius: 3px 3px; /* Safari  */ 
+  -moz-border-radius: 3px 3px; /* Firefox */
+  border-radius: 3px 3px; /* iExplorer 9 */		
+}
+
+#form_login h2 {
+  padding-left: 6px;
+  font-size: large;	
+}
+
+#form_login .fieldtitle {
+  width  : 6em;	
+  padding: 6px;
+  float: left;
+  clear: none;
+}
+
+#form_login label.error {
+  width: 18.5em;	
+  padding-top:5px;
+}
+
+#form_login .fieldcontrol {
+  width  : 15em;	
+  padding: 5px;
+  margin-right: 10px;
+  -webkit-border-radius: 3px 3px; /* Safari  */ 
+  -moz-border-radius: 3px 3px; /* Firefox */
+  border-radius: 3px 3px; /* iExplorer 9 */	
+  float: right;
+  clear: none;	
+}
+
+#signup {
+  background-color: red;
+  color: white;		
+}
+
+.signup-button {
+  background-color: red;
+  color: white;	
+}
+
+/* ================================== */
+/* ------- MAIL --------------------- */
+/* ================================== */
+
+#message_form { /* New message */
+ background: white; 
+ padding: 10px;
+ border: 1px solid black;
+ width: 100%;
+}
+
+#message_form_container {
+ padding: 5px;
+ width: 400px;
+}
+
+.reply-button { /* Reply */
+  background: black;
+  color: white;	
+}
+
+#reply_message_form {
+  width: 100%;	
+}
+#reply_message_form div textarea{
+ float: left;	
+ width: 99%;
+}
+
+#messages_container { /* Message reader */
+ background: white;
+}
+
+#message_detail {
+
+}
+
+#messages_info {
+ text-align: center;	
+}
+
+.messages-summary{
+  display: inline;
+}
+
+.left-bar {
+ float: left;	
+}
+
+.right-bar {
+ float: right;	
+}
+
+#message_container_button_bar {
+ height: 30px;
+ margin-top: 5px;
+ margin-bottom: 5px;	
+ border-bottom: 1px solid black;
+ padding-top: 5px;
+ padding-bottom: 10px;
+}
+
+#messages_list {
+ width : 100%;
+}
+
+.highlighted-row {
+  background: white;
+  font-weight: bold;
+}
+
+.mail-sender {
+ width: 25%;	
+ min-width: 150px;
+ text-align : left;
+}
+
+.mail-subject {
+}
+
+.mail-message {
+ color: gray;	
+}
+
+.mail-received-date {
+ width: 90px;
+ text-align: rigth;
+}
+
+#message_detail { /* Message detail */
+ background: white;
+}
+
+#message_detail_button_bar {
+ height: 30px;
+ margin-top: 5px;
+ margin-bottom: 5px;	
+ border-bottom: 1px solid black;
+ padding-top: 5px;
+ padding-bottom: 15px;
+}
+
+#message_detail_header {
+ padding: 5px;	
+}
+
+.message_detail_subject {
+ font-size: large;	
+ padding-bottom: 5px;
+}
+
+.message_detail_sender {
+ font-weight: bold;	
+}
+
+.message_detail_date {
+  float: right;
+}
+
+#message_detail_body {
+ padding: 10px;
+ margin-top: 5px;
+ margin-bottom: 5px;
+ border-bottom: 1px black solid;
+}
+
+#message_detail_conversation {
+ padding-bottom: 10px;
+ border-bottom: 1px black solid;
+ margin-bottom: 10px;
+}
+
+#message_detail_conversation_buttons {
+ height: 23px;
+ padding-top: 5px;
+}
+
+#message_response {
+ margin-top: 5px;
+}
+
+.conversation_item { /* conversation */
+
+ padding: 5px;
+ margin-botton: 5px;
+ margin-top:5px;
+ -webkit-border-radius: 5px 5px; /* Safari  */ 
+ -moz-border-radius: 5px 5px; /* Firefox */
+ border-radius: 5px 5px; /* iExplorer 9 */	
+	
+}
+
+.conversation_item_own {
+ background-color : #e6e4c0;	
+}
+
+.conversation_item_other {
+ background-color : #f8dbef;	
+}
+
+.conversation_item_header {
+	
+ border-bottom: 1px dashed gray;
+ 	
+}
+
+.conversation_item_body {
+	
+ padding: 10px;
+ margin-top: 15px;
+ margin-bottom: 15px;	
+	
+}
+
+.conversation_item_footer {
+	
+}
+
+/* ================================== */
+/* ------- COMMENTS ----------------- */
+/* ================================== */
+
+.comment_set_template {
+ margin-top: 20px;
+ border-top: 2px solid black;	
+}
+
+.post-button {
+  background: black;
+  color: white;	
+}
+
+#comment_form {
+  width: 100%;	
+}
+#comment_form div textarea{
+ float: left;	
+ width: 99%;
+}
+
+#comment_form_container {
+ margin-top: 5px;	
+ padding: 5px; 
+}
+
+.comment {
+
+ padding: 5px;
+ margin-botton: 5px;
+ margin-top:5px;
+ -webkit-border-radius: 5px 5px; /* Safari  */ 
+ -moz-border-radius: 5px 5px; /* Firefox */
+ border-radius: 5px 5px; /* iExplorer 9 */	
+ background: #EEE;
+ 	
+}
+
+.comment_own {
+ background-color : #e6e4c0;	
+}
+
+.comment_other {
+ background-color : #f8dbef;	
+}
+
+.comment_header {
+	
+ border-bottom: 1px dashed gray;
+ 	
+}
+
+.comment_body {
+	
+ padding: 10px;
+ margin-top: 15px;
+ margin-bottom: 15px;	
+	
+}
+
+.comment_footer {
+	
+}
+
+.comment_sender {
+
+}
+
+.comment_date {
+  float: right;
+}
+
+/* ================================== */
+/* ------- PROFILE ------------------ */
+/* ================================== */
+
+#profile_dropdown {
+  background: white;
+  border: 1px solid #CCC;
+  width: 400px;
+  top: 0px;
+  position: absolute;
+  margin-left: 250px;  
+  -webkit-border-radius: 3px 3px; /* Safari  */ 
+  -moz-border-radius: 3px 3px; /* Firefox */
+  border-radius: 3px 3px; /* iExplorer 9 */  
+}
+
+.profile-dropdown-button-bar {
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #EEE;
+  padding-left: 5px;
+}
+
+.profile-block-button {
+  background: #B1C2E7;
+}
+
+.profile_register_header {
+  
+}
+
+.profile_dropdown_body {
+  padding: 5px; 
+}
+
+/* ----- Profile render ------- */
+
+#profile_summary {
+ float:left;	
+ width: 160px;
+ border-right: 1px solid #DDD;
+ padding-right: 10px;
+ margin-right: 10px;
+}
+
+#profile_photo {
+  border: 1px solid #DDD;
+  width: 150px;
+  height: 150px;  
+  padding: 5px;
+  margin: 0px 10px 10px 0px;
+}
+
+#profile_photo_img {
+  width: 140px;
+  margin: 0 auto;
+  display: block;
+  padding: 5px;
+}
+
+#profile_basic h2{
+ text-align:left;	
+}
+
+#profile_basic div {
+  padding-bottom: 3px;	
+}
+
+#about_me {
+  margin-top: 10px;	
+}
+
+.profile_literal {
+  color : #615F5F;	
+  display: block;
+}
+
+#profile_actions {
+
+  padding: 10px 5px 10px 0px;
+  
+  -webkit-border-radius: 3px; /* Safari  */ 
+  -moz-border-radius: 3px; /* Firefox */
+  border-radius: 3px; /* iExplorer 9 */	  
+  
+}
+
+/* ----- Profile form --------- */
+
+#profile_form fieldset {
+  border: none;	
+}
+
+#profile_form legend {
+  font-size: larger;
+  color: #333;
+  font-weight: bold;
+}
+
+#profile_photo_img {
+ display: block;
+ margin: 0 auto;
+ border: 1px solid black; 
+}
+
+#change_photo_link {
+ display : block;
+ margin: 0 auto;	
+}
+
+#choose_photo { /* The block used to show the upload form */
+ display: none;
+ width: 600px;
+ border: 1px solid black;
+ background: white;	
+}
+
+#profile_form_buttons {
+ border-top: 1px solid gray;
+ padding-top: 10px;	
+}
+
+#send {
+ margin: 0 auto;
+}	
+
+#sending-request {
+  display: none;	
+}
+
+#sending-request img {
+  display: block;
+  margin: 0 auto;
+  margin-top:15px;
+}
+
+/* ================================== */
+/* ------- Community ---------------- */
+/* ================================== */
+#community_menu {
+
+ padding: 15px 0px 15px 0px;
+ margin-left: 15px;
+	
+}
+
+.no-margin-right {
+ margin-right: 0px;	
+}
+
+.no-margin-left {
+ margin-left: 0px;	
+}
+
+#members_list {
+ margin-top: 10px;
+ overflow: hidden;	
+}
+
+#messages_summary_page {
+ padding-top: 10px;	
+}
+
+.profile_summary {
+ margin-bottom: 5px;
+}
+
+.profile_summary * {
+ font-size: 12px;	
+}
+
+.profile_summary_photo {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width : 134px;
+  height: 134px;
+  display: block;
+  margin: 0 auto;
+}
+
+.profile_summary_photo_block {
+ background-color: white;
+ border: 1px solid #CCC;
+
+ -webkit-border-radius: 7px; /* Safari  */ 
+ -moz-border-radius: 7px; /* Firefox */
+ border-radius: 7px; /* iExplorer 9 */	
+
+ box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
+ -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
+ -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
+//  height : 210px; /* 148 102 + 4 */
+//  width : 210px; /* 148 108 + 4 */	
+  /*margin: 0 auto;*/
+}
+
+.profile_summary_data {
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+} 
+
+.profile_summary_actions {
+  padding: 0px 2px 0px 2px;	
+}
+
+/* ================================== */
+/* ------- Entity management -------- */
+/* ================================== */
+
+.close-bar {
+  overflow: hidden;
+}
+
+.close-bar a {
+  float:right;
+  cursor: hand;
+  cursor: pointer;  
+  margin-right: 5px;
+}
+
+.guiblock {
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  padding: 5px;
+  background: #EEE;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.guiblock-title {
+  background: #CCC;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.new-entity-button {
+  background: #E66464;
+  color: white;  
+}
+
+.create-entity-button {
+  background: #1CA332;
+  color: white;
+}
+
+.update-entity-button {
+  background: #1CA332;
+  color: white;
+}
+
+.reload-entities-button {
+  background-image: url('/assets/img/icons/refresh.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 32px;  
+}
+
+.delete-entity-button {
+  background-image: url('/assets/img/icomoon/remove.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 32px;    
+}
+
+.entity-title {
+  color: navy;
+  font-size: 1.6em;
+  font-weight: normal;
+  display: inline-block;
+  border-bottom: 3px solid navy;
+}
+
+.elements-list {
+  padding-bottom: 0px;
+  margin-bottom: 15px;
+  background: white;
+}
+
+.element-form-detail {
+  background: white;
+}
+
+/* ================================== */
+/* ----- Aspects Render  ------------ */
+/* ================================== */
+
+.content_data_box {
+    background: #EEEEEE;
+    border: 1px solid #DDDDDD;  
+    margin-top: 10px;
+    padding: 0px 20px 2px 5px;
+}
+
+.content_data_block {
+    border-bottom: 1px solid #DDDDDD; 
+    margin-bottom: 5px;
+}
+
+.content_data_block_title {
+    padding: 5px 5px 5px 5px; 
+    margin: 0px;
+}
+
+.content_data_row {
+    padding: 5px 5px 5px 5px; 
+}
+
+.content_data_label {
+   color: gray; 
+}
+
+
+/* ================================== */
+/* ------- CMS ---------------------- */
+/* ================================== */
+
+/* -------- content render ---------- */
+
+.category {
+  background: #C5E036;
+  padding: 3px;
+  -webkit-border-radius: 3px 3px; /* Safari  */ 
+  -moz-border-radius: 3px 3px; /* Firefox */
+  border-radius: 3px 3px; /* iExplorer 9 */ 
+}
+
+.content-photo {
+ margin-top: 10px;  
+ margin-bottom: 10px;
+}
+.content-photo-img {
+ width: 100%;
+ max-width: 100%; 
+}
+
+.content-title {
+
+}
+
+.content-title a {
+  text-decoration: none;
+  color: navy;
+  font-size: 1.6em;
+  font-weight: normal;
+}
+.content-composer {
+  color: #5D88C9;
+}
+
+.content-header {
+  margin-top: 10px;
+}
+
+.content-header a {
+  text-decoration: none;
+}
+
+.content-body {
+ margin-top: 10px;
+}
+
+.content-body p:first-child {
+  margin-top: 0px;
+}
+
+.content-custom {
+ margin-top: 10px;
+ padding-top: 10px;
+ /*border-top: 1px solid black;*/
+}
+
+.content-actions {
+ border-top: 1px solid black;
+ padding-top: 10px;
+ margin-top: 10px;  
+}
+
+.content-action-button {
+ background: greenyellow; 
+}
+
+/* -------- content render (default) ---------- */
+
+.content-wrapper .content-title {
+  /*text-align: center;*/
+}
+
+.content-title a {
+  border-bottom: 3px solid navy;
+}
+
+.content-wrapper .content_data_block {
+  border-bottom: none;
+}
+
+/* -------- content flyer render ---------- */
+
+.content-flyer-wrapper .content-title {
+  text-align: center;
+  width: 90%;
+}
+
+.content-flyer-wrapper .content-body {
+  width: 90%;
+  margin: 0 auto;
+  margin-right: 5%;
+  line-height: 2em;
+  letter-spacing: 0.07em;
+  padding-top: 10px;
+  -webkit-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 2em;  
+  column-gap: 2em;
+}
+
+.content-flyer-wrapper .content_data_block {
+  border-bottom: none;
+}
+
+.content-flyer-wrapper .content-custom {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* -------- content right extras render ---------- */
+
+.content-rightextras-wrapper .content-body {
+  width: 50%;
+  float: left;
+  margin-right: 5%;
+  line-height: 2em;
+  letter-spacing: 0.07em;
+}
+
+.content-rightextras-wrapper .content_data_block {
+  border-bottom: none;
+}
+
+.content-rightextras-wrapper .gallery_template {
+  width: 45%;
+  display: inline-block;
+  position: relative;
+  top: -2em;
+}
+
+.content-rightextras-wrapper .content-custom :nth-child(2) {
+  clear: left;
+}
+
+/* -------- content left extras render ---------- */
+
+.content-leftextras-wrapper .content-title {
+  margin-left: 50%;
+}
+
+.content-leftextras-wrapper .content-body {
+  width: 50%;
+  float: right;
+  margin-left: 5%;
+  line-height: 2em;
+  letter-spacing: 0.07em;
+}
+
+.content-leftextras-wrapper .content_data_block {
+  border-bottom: none;
+}
+
+.content-leftextras-wrapper .gallery_template {
+  width: 45%;
+  display: inline-block;
+  position: relative;
+  top: -4em;
+}
+
+.content-leftextras-wrapper .content-custom :nth-child(2) {
+  clear: right;
+}
+
+/* -------- content blogentry2 render ----- */
+
+
+/* -------- content teaser render -------- */
+
+.content-teaser-title {
+  margin-top: 10px;
+  margin-bottom: 10px;  
+} 
+
+.content-teaser-body p:first-child {
+  margin-top: 0px;
+}
+
+.content-teaser-title a:visited, .content.title a:link {
+    
+}
+
+.content-teaser-title a:hover {
+  text-decoration: underline; 
+}
+
+.content-teaser-title a:hover {
+  text-decoration: underline; 
+}
+
+.content-teaser-date {
+  font-size: 1.1em; 
+}
+  
+
+.content-teaser-category {
+  font-size: 1.1em;
+}
+
+.content-teaser-category a:visited, .content-teaser-category a:link {
+  text-decoration: none;  
+  border-bottom: none;
+}
+
+.content-teaser-category a:hover {
+  text-decoration: underline;
+}
+
+.content-teaser-body p {
+  margin-top: 0px;  
+}
+
+/* -------- content status --------------- */
+
+.content-status {
+  -webkit-border-radius: 3px 3px; /* Safari  */ 
+  -moz-border-radius: 3px 3px; /* Firefox */
+  border-radius: 3px 3px; /* iExplorer 9 */
+  padding: 3px;
+  display: inline-block;
+}
+
+.content-status-draft {
+  background: #DDD;
+}
+
+.content-status-pend-conf {
+  background: #F5F59C;
+}
+
+.content-status-pend-valid {
+  background: #E9BB5A;
+}
+
+.content-status-published {
+  background: #A0DBA0;
+}
+
+.content-status-banned {
+  background: #F17065;
+}
+
+/* ----------- Blocks ------------------------------------ */
+
+.block { /* The block container */
+
+ margin-top: 4px;
+
+}
+
+.block-title {
+  margin-top: 3px;
+  margin-bottom: 5px;
+  padding: 2px;
+  font-weight: 800;
+  color: darkgray;  
+}
+
+#top .block, #header .block, #container_content_left .block, #container_content_right .block {
+  font-size: 0.8em;
+}
+
+/* ------ View Management ------------- */
+
+#view-preview-result {
+  background: white;
+  border-radius: 5px;
+  padding: 5px;  
+  min-height: 5em;
+  border: 1px dashed;
+}
+
+/* ------ Views RENDERING ------------- */
+
+.block .view { /* View rendered as a block */
+  border-bottom: 1px solid lightSteelBlue;
+  margin-bottom: 5px;
+} 
+
+/* View : List render */
+
+.view_list {  
+  padding-left: 5px;  
+}
+
+.view_list_item {
+  list-style-type: none;    
+  border-bottom: 1px solid #DDD;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 5px;
+}
+
+/* View : Teaser render */
+
+.view_teaser_element {
+  margin-top: 30px;
+  border-top: 1px solid gray;
+  padding-top: 30px;
+}
+
+/* View : Div render - 1 Block with image on left size */
+
+.view_div_youtube_container { /* It's the wrapper for the full view */
+
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+
+}
+
+.view_div_youtube_img { /* Class for the image field */
+  width: 150px;
+  float: left;
+  -webkit-border-radius: 5px; /* Safari  */ 
+  -moz-border-radius: 5px; /* Firefox */
+  border-radius: 5px; /* iExplorer 9 */   
+  clear:left; 
+}
+
+.view_div_youtube_title { /* Class for the title field  */
+   font-size: 1.2em; 
+   font-weight: 500; 
+   color: #559;
+   padding-left: 155px; 
+}
+
+.view_div_youtube_title a { /* The anchor of the title */
+   color: #559;
+   text-decoration: none;
+}
+
+.view_div_youtube_subtitle { /* Class for the subtitle field */
+  font-size: 1.1em;
+  padding-left: 155px;
+}
+
+.view_div_youtube_body { /* It's the class for body (text) */
+  padding-left: 155px;
+}
+
+/* View : Div render - 2 FLOAT blocks with image centered an text */
+
+.view_div_imgblocks_container { /* It's the wrapper fo the full view */
+
+  background: #FCFAFA;
+  border: 1px solid #DDD;
+  padding: 5px;
+  
+  /* Round borders */
+  -webkit-border-radius: 5px 5px; /* Safari  */  
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */   
+}
+
+.view_div_imgblocks_container a { 
+  text-decoration: none;
+}
+
+.view_div_imgblocks_element_wrapper { /* It's the wrapper for an element */
+ display: inline-block; 
+ padding: 5px;   
+ font-size: 0.8em;
+}
+
+.view_div_imgblocks_img { /* It's the class for the image field */
+ display: block; 
+ margin: 0 auto;  
+}
+
+/* View : Div render - 3 Thumbnails (WP) */
+
+.view_div_thumb_container {
+  width: 46%;
+  display: inline-block;
+  margin-left: 2%;
+}
+
+.view_div_thumb_element {
+  position:relative;
+  display: block;
+}
+
+.view_div_thumb_element a, .view_div_thumb_element a:visited
+{
+  display: block;
+  border-style: none;
+}
+
+.view_div_thumb_element a:hover span
+{ 
+  color: rgba(48, 48, 47, 1);
+  opacity: 1;
+}
+
+.view_div_thumb_element img {
+  width: 100%;
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+  box-shadow: 0 0 5px #888;  
+}
+
+.view_div_thumb_element span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(240, 241, 238, .85);
+  opacity: 0;
+  text-align: center;
+  
+  -webkit-transition: all 0.16s cubic-bezier(0, 0, 0.25, 1);
+  -moz-transition: all 0.16s cubic-bezier(0, 0, 0.25, 1);
+  -o-transition: all 0.16s cubic-bezier(0, 0, 0.25, 1);
+  -ms-transition: all 0.16s linear;
+  transition: all 0.16s cubic-bezier(0, 0, 0.25, 1);
+}
+
+.view_div_thumb_element_info {
+  padding-top: 24%;
+}
+
+/* View : Term hierarchy */
+
+.view_term_hierarchy_container { /* Thew view wrapper */
+  background: #EEE; 
+  border: 1px #CCC solid; 
+  padding: 5px; 
+  /* Round borders */
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */ 
+}
+
+.view_term_hierarchy_container a { /* Anchor element */
+  text-decoration: none;
+}
+
+/* ================================== */
+/* ======== DEFINED BLOCKS ========== */
+/* ================================== */
+
+/* ------- BREAD CRUMB -------------- */
+
+#block_site_breadcrumb {
+  padding: 3px;
+  margin-left: 10px; /* Por el GRID 960 del contenido */
+  -webkit-border-radius: 3px 3px; /* Safari  */ 
+  -moz-border-radius: 3px 3px; /* Firefox */
+  border-radius: 3px 3px; /* iExplorer 9 */	
+}
+
+.breadcrumb-element {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+/* ======================================= */
+/* =============== MENUS ================= */
+/* ======================================= */
+
+/* ------- ADMIN MENU ------- */
+
+#block_site_adminmenu {
+ background: #CD2039;
+}
+
+#menu_admin_menu {
+  background: #CD2039;
+  color: black;	
+}
+
+#menu_admin_menu .submenu {
+  background: #CD2039;
+  z-index: 100;	
+}
+
+#menu_admin_menu > .menuitem > a:link, #menu_admin_menu > .menuitem > a:visited {
+  color: black;	
+}
+
+#menu_admin_menu > .menuitem > a:hover {
+  color: white;	
+}
+
+#menu_admin_menu .submenu > .menuitem > a:link, #menu_admin_menu .submenu > .menuitem > a:visited {
+  color: black;	
+}
+
+#menu_admin_menu .submenu > .menuitem > a:hover {
+  color: white;	
+}
+
+/* -- LOGIN MENU -- */
+
+#block_menu_login {
+  display: inline-block;	
+}
+
+#menu_login {
+  background: black;
+  color: white;	
+}
+
+#menu_login .submenu {
+  background: black;	
+  z-index: 100;
+}
+
+#menu_login > .menuitem > a:link, #menu_login > .menuitem > a:visited {
+  color: white;	
+}
+
+#menu_login > .menuitem > a:hover {
+  color: gray;	
+}
+
+#menu_login .submenu > .menuitem > a:link, #menu_login .submenu > .menuitem > a:visited {
+  color: white;	
+}
+
+#menu_login .submenu > .menuitem > a:hover {
+  color: gray;	
+}
+
+
+/* -- MEMBERS MENU -- */
+
+#block_menu_members {
+  display: inline-block;	
+  float: left;
+}
+
+#menu_members {
+  background: black;
+  color: white;	
+}
+
+#menu_members .submenu {
+  background: black;	
+  z-index: 100;
+}
+
+#menu_members > .menuitem > a:link, #menu_members > .menuitem > a:visited {
+  color: white;	
+}
+
+#menu_members > .menuitem > a:hover {
+  color: gray;	
+}
+
+#menu_members .submenu > .menuitem > a:link, #menu_members .submenu > .menuitem > a:visited {
+  color: white;	
+}
+
+#menu_members .submenu > .menuitem > a:hover {
+  color: gray;	
+}
+
+/* -- TRANSLATION -- */
+
+#block_translation_menu {
+  display: inline-block;	
+  float: right;
+  font-size: 0.8em;
+}
+
+#menu_translation_menu {
+  margin-right: 20px;	
+}
+
+#menu_translation_menu .submenu {
+  background: #EEE; 	
+  z-index: 100;
+}
+
+#menu_translation_menu > .menuitem > a:link, #menu_translation_menu > .menuitem > a:visited {
+}
+
+#menu_translation_menu > .menuitem > a:hover {
+  color: gray;	
+}
+
+#menu_translation_menu .submenu > .menuitem > a:link, #menu_translation_menu .submenu > .menuitem > a:visited {
+}
+
+#menu_translation_menu .submenu > .menuitem > a:hover {
+  color: gray;	
+}
+
+/* -- PROFILE MENU -- */
+
+#block_profile_menu {
+  display: inline-block;	
+  float: right;
+  font-size: 0.8em;
+}
+
+#menu_profile_menu {
+}
+
+#menu_profile_menu .submenu {
+  background: #EEE; 	
+  z-index: 100;
+}
+
+#menu_profile_menu > .menuitem > a:link, #menu_profile_menu > .menuitem > a:visited {
+}
+
+#menu_profile_menu > .menuitem > a:hover {
+  color: gray;	
+}
+
+#menu_profile_menu .submenu > .menuitem > a:link, #menu_profile_menu .submenu > .menuitem > a:visited {
+}
+
+#menu_profile_menu .submenu > .menuitem > a:hover {
+  color: gray;	
+}
+
+/* ---- PROFILE LOGIN BLOCK ---- */
+
+#block_profile_login_button {
+  float: left;
+  padding-right: 5px;
+}
+
+#block_profile_register_button {
+  float: left;
+  padding-right: 5px;
+}

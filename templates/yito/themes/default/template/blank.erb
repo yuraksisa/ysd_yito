@@ -1,0 +1,71 @@
+<%#-*- coding: utf-8 -*-%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title><%= page.title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <meta name="description" content="<%= page.description %>"/>
+    <meta name="author" content="<%= page.author %>"/>
+    <meta name="keywords" content="<%= page.keywords %>"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+   
+    <!--script type="text/javascript" src="/js/jquery.validate.js" charset="ISO-8859-1"></script-->
+    
+    <!-- Javascript Resources -->
+    <!--script src="/assets/js/require_config.js"></script-->   
+    <!--<script src="/assets/js/require.js" ></script>
+    <script src="/assets/js/built.js"></script> -->   
+
+    <%= page.scripts %> 
+        
+    <!-- CSS Resources -->
+    
+    <%= page.styles %>
+
+  </head>
+  <body>
+
+     <%= page.content %>
+
+    <!-- jQuery tools OVERLAY integration -->
+    
+    <div class="apple_overlay" id="overlay">
+
+	   <!-- the external content is loaded inside this tag -->
+	   <div class="contentWrap"></div>
+
+    </div>	
+
+    <script type="text/javascript">
+
+      require(['jquery','jquery.tools'], function($) {
+      	
+	      $("a[rel='#overlay'].external").overlay({
+	      	
+	        mask: {
+		       color: '#aaaaaa',
+		       loadSpeed: 200,
+		       opacity: 0.5
+   	        },
+	
+	        closeOnClick : false,
+	      	
+		    onBeforeLoad: function() {
+		    	
+		      this.getOverlay().width(640);
+		      this.getOverlay().height(440);	
+			  
+			  // grab wrapper element inside content
+			  var wrap = this.getOverlay().find(".contentWrap");
+
+		  	  // load the page specified in the trigger
+			  wrap.load(this.getTrigger().attr("href"));
+	      	}
+
+	      });
+      });
+    </script>
+
+  </body>
+</html>

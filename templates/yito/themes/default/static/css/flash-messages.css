@@ -1,0 +1,29 @@
+/* ---------------------------------------------------------------------- */
+/*                       FLASH STYLES DEFINITION                          */
+/* ---------------------------------------------------------------------- */
+
+.flash { 	
+  border: 1px dashed transparent;
+}
+
+
+.flash-error {
+  color: red;
+}
+
+.flash-message {
+  color: black;
+}
+
+.flash-notice {
+  color: black;
+}
+
+.flash-warning {
+  color: orange;
+}
+
+.flash > p {	
+  font-size: 30px; 	
+  margin-left: 150px;
+  margin-top: 30px;

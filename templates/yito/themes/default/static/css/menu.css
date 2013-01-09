@@ -1,0 +1,131 @@
+/* ======================================================================
+   The menu CSS
+   ----------------------------------------------------------------------
+   
+   Organize the menu with the simple following rules:
+   
+   menu
+    
+     menuitem
+    
+     submenu submenu-level1
+   
+        menuitem
+        
+        submenu submenu-level2
+        
+          menuitem
+          
+          submenu submenu-level3
+           
+             menuitem
+             
+             menuitem
+             
+        submenu submenu-level2
+        
+          menuitem
+          
+          menuitem
+          
+     menuitem
+     
+   Example:
+   
+   <ul class="menu">
+     <li class="menuitem">
+       <a href="">Menu Item</a>
+       <ul class="submenu submenu-level1">
+       </ul>
+     </li>
+   </ul>
+
+
+   ====================================================================== */
+
+      /* ------------ Main Menu ------------------*/
+      
+      ul.menu {
+      	list-style: none;
+      	padding-left: 0px;   /* No list style, so drop the blank space */
+      	margin: 0px;
+      }
+      
+      ul.menu > li {
+      	/*float: left;*/                /* To show the options (used instead of display:inline) */
+      	display: inline-block;
+      	padding: 5px;         
+      	padding-left: 0px; 
+        margin: 1px;            /* Left margin : separation of elements */
+      	/*border: 1px dotted gray;*/
+      }
+     
+      /* -------------- Submenu (Generic) --------------------*/
+      
+      ul.submenu {
+      	display: none;           /* Do not show  : The submenu is show when the user puts on the menu */	      	
+      
+        list-style: none;
+      	padding:5px;        /* No list style, so drop the blank space */
+        background: white;
+        border: 1px dotted gray; /* Border */ 
+      }
+
+      ul.submenu > li {	
+        padding: 5px;
+        position: relative;
+      }     
+      
+      /* ------------- Menu Items ---------------- */
+      
+      .menuitem {
+        position : relative;	
+      }
+
+      .menuitem > a {
+        cursor: hand;
+        cursor: pointer;
+      }
+      
+      .menuitem > a:link, .menuitem > a:visited {
+        text-decoration: none;
+        color: black;
+        white-space: nowrap; /* Evict return */
+      }
+      
+      .menuitem > a:hover {
+      	color:gray;
+      }
+      
+      .menuitem > a > span {
+        font-size: 50%;       
+      }
+      
+     
+       /* -------------- Submenu (LEVEL 1) --------------------*/
+      
+      ul.menu > li:hover ul.submenu-level1 { /* When positionated on the menu item, show the submenu associated */
+        
+        display: block;
+
+      	/* Locate down the parent container */
+      	
+      	position: absolute;
+      	/*margin-top:5px;*/
+      }            
+      
+      /* ------------------ Submenu (LEVEL 2, 3, ...) --------------------*/
+      
+      ul.submenu-level1 > li:hover ul.submenu-level2,
+      ul.submenu-level2 > li:hover ul.submenu-level3 { /* When positionated on the menu item, show the submenu associated */
+        
+        display: block; /* Show the element */       
+
+        /* Locate at the left of the parent container */
+        
+        position: absolute;
+        top: -4px;
+        padding-right: 5px;
+        left: 100%;   /* Para mostrarlo a la izquierda del elemento padre */
+
+      }   

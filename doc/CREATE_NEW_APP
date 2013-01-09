@@ -1,0 +1,85 @@
+<h1>Crear nueva aplicación</h1>
+
+<h2>1. Crear la aplicación</h2>
+
+<h3>1.1 Prerrequisitos</h3>
+
+<pre>
+  gem install ysd_yito
+</pre>
+
+<h3>1.2 Crear nueva aplicación</h3>
+
+<pre>
+yito create my_app
+</pre>
+
+<h3>1.3 Actualizar librerias</h3>
+
+<p>Ejecutaremos <em>bundle install</em> para cargar todas las librerías</p>
+
+<h3>1.3 Configurar la aplicación</h3>
+
+<p>La configuración local se encuentra en el fichero <em>config/environments/development.rb</em></p>
+
+<pre>
+  DataMapper.setup(:default, {:adapter => 'postgres',:database => 'blank_web',:host => '192.168.1.133',:username => 'development',:password => 'developer'})
+
+  Persistence.setup(:default, { :adapter => 'mongodb', :host => 'staff.mongohq.com', :port => '10092', :database => 'blank_web', :username => 'yurak.sisa', :password => 'joanic2002' })
+
+  PostalService.account(:default, {:via => :smtp, :via_options => {:address => 'smtp.gmail.com', :port => '587', :user_name => 'yurak.sisa.customers' , :password => 'chiriyuyo', :enable_starttls_auto => true, :domain => 'localhost@localdomain', :authentication => :plain }})
+</pre>
+
+<h3>1.4 Crear las bases de datos</h3>
+
+Base de datos MongoDB
+
+mongo host/my_db
+db.addUser("<username>", "<password>")
+
+<pre>
+  rake db:create
+  rake db:auto:migrate
+  rake db:load_plugins_data
+</pre>
+
+<h3>1.5 Probando la aplicación</h3>
+
+<pre>
+foreman start
+</pre>
+
+http://localhost:9292/
+
+
+<h2>2. Despliegue de la aplicación</h2>
+
+2.1 Crear la aplicación en Heroku
+
+<pre>
+heroku apps:create my_app
+</pre>
+
+2.2 Añadir los addons para la base de datos
+
+# Añadir los addons para base de datos
+heroku addons:add heroku-postgresql:dev
+heroku addons:add pgbackups
+heroku addons:add mongolab:starter
+heroku addons:add newrelic
+
+2.3 Desplegar la aplicación
+
+# Desplegar la aplicación en Heroku
+git push heroku master
+
+2.4 Crear la base de datos
+
+# Crea la base de datos
+
+heroku run rake db:auto:migrate --trace
+heroku run rake db:load_plugins_data --trace
+
+# Reiniciar la aplicación
+heroku restart
+

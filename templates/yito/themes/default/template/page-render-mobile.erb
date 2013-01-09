@@ -1,0 +1,153 @@
+<%#-*- coding: utf-8 -*-%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title><%= page.title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <meta name="description" content="<%= page.description %>"/>
+    <meta name="author" content="<%= page.author %>"/>
+    <meta name="keywords" content="<%= page.keywords %>"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+   
+    <!--script type="text/javascript" src="/js/jquery.validate.js" charset="ISO-8859-1"></script-->
+    
+    <!-- Javascript Resources -->
+    <!--script src="/assets/js/require_config.js"></script-->   
+    <script src="/assets/js/require.js" ></script>
+    <script src="/assets/js/built.js"></script>    
+     
+    <% if page.instance_variable_get(:@scripts) %>
+       <%= page.instance_variable_get(:@scripts)  %>
+    <% end %>      
+        
+    <!-- CSS Resources -->
+
+    <% if page.instance_variable_get(:@styles) %>
+       <%= page.instance_variable_get(:@styles)  %>
+    <% end %>  
+
+  </head>
+  <body>
+
+    <% if page.instance_variable_get(:@top) %>    
+      <div id="top">
+         <div class="container_12">
+           <%= page.instance_variable_get(:@top) %>
+         </div>
+      </div>
+    <% end %>
+
+    <% if page.instance_variable_get(:@header) %>    
+      <div id="header">
+         <div class="container_12">
+           <%= page.instance_variable_get(:@header) %>
+         </div>
+      </div>
+    <% end %>
+        
+    <div id="container">
+       
+      <div id="container_header" class="container_header"> 
+        <h1 class="site_title">
+          <a href="/">
+            <% if site_logo.to_s.strip.length > 0 %>
+              <img src="<%=site_logo%>" alt="<%= site_title%>"/>
+            <% end %>
+            <% if site_title.to_s.strip.length > 0 %>
+            <%= site_title %>
+            <% end %>
+          </a>
+        </h1>
+        <% if site_slogan.to_s.strip.length > 0 %>
+        <p class="site_slogan">
+          <%= site_slogan %>
+        </p>
+        <% end %>        
+        <% if page.instance_variable_get(:@container_header) %>
+          <%= page.instance_variable_get(:@container_header)  %>
+        <% end %>  
+      </div>
+      
+      <% if page.instance_variable_get(:@container_headline) %>
+      <div id="container_headline">
+        <%= page.instance_variable_get(:@container_headline) %>
+      </div>
+      <% end %>
+                             
+      <div id="container_content" class="container_12">
+          <div>
+            <div id="container_content_center" class="grid_<%= 9 + (page.instance_variable_get(:@content_right)?0:3) %>">
+              <%= page.instance_variable_get(:@content_top) %>
+              <%= partial :flash_messages %>
+              <%= page.content %>
+              <%= page.instance_variable_get(:@content_bottom)  %>
+            </div>
+          </div>
+          <% if page.instance_variable_get(:@content_right) %>
+            <div class="grid_3">
+              <div id="container_content_right">
+                <%= page.instance_variable_get(:@content_right)  %>
+              </div>
+            </div>
+          <% end %>
+      </div>
+                                   
+      <!-- Page footer -->
+      <div id="container_footer" class="container_12">
+        <div id="container_footer_content">
+          <%= page.instance_variable_get(:@container_bottom)  %>
+        </div>
+      </div>
+      
+    </div>
+
+    <% if page.instance_variable_get(:@bottom) %>    
+      <div id="bottom">
+         <div class="container_12">
+           <%= page.instance_variable_get(:@bottom) %>
+         </div>
+      </div>
+    <% end %>
+
+    <!-- jQuery tools OVERLAY integration -->
+    
+    <div class="apple_overlay" id="overlay">
+
+	   <!-- the external content is loaded inside this tag -->
+	   <div class="contentWrap"></div>
+
+    </div>	
+
+    <script type="text/javascript">
+
+      require(['jquery','jquery.tools'], function($) {
+      	
+	      $("a[rel='#overlay'].external").overlay({
+	      	
+	        mask: {
+		       color: '#aaaaaa',
+		       loadSpeed: 200,
+		       opacity: 0.5
+   	        },
+	
+	        closeOnClick : false,
+	      	
+		    onBeforeLoad: function() {
+		    	
+		      this.getOverlay().width(640);
+		      this.getOverlay().height(440);	
+			  
+			  // grab wrapper element inside content
+			  var wrap = this.getOverlay().find(".contentWrap");
+
+		  	  // load the page specified in the trigger
+			  wrap.load(this.getTrigger().attr("href"));
+	      	}
+
+	      });
+      });
+    </script>
+
+  </body>
+</html>

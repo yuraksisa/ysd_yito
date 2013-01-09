@@ -1,0 +1,53 @@
+FLEXIBLE DESIGN vs RESPONSIVE DESIGN
+
+  Flexible design : Fluid grids
+
+  >  em and % to define sizes
+
+RESPONSIVE DESIGN
+
+http://www.alistapart.com/articles/responsive-web-design/
+http://www.alistapart.com/d/responsive-web-design/ex/ex-site-flexible.html
+
+Elemenetos del diseño responsable
+
+  - Media Queries
+
+  - Fluid Grid
+
+  - Flexible images
+
+Media Queries
+
+  El attributo media de la etiqueta link nos permite definir el dispositivo al que se aplicará la hoja de estilos.
+
+  Además, con CSS3 nos permite inspeccionar las características físicas del dispositivo que presenta nuestro trabajo.
+  
+  Por ejemplo la siguiente hoja de estilos se aplicará en pantallas de ordenadores con tamaño máximo de 480px
+
+  <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="shetland.css" />
+Ra
+  También puede incluirse la regla en las hojas de estilos
+  
+  @media screen and (max-width: 400px) {
+
+    .content {
+
+    }
+
+  }
+  
+  O como parte de la directiva import
+
+  @import url("shetland.css") screen and (max-device-width: 480px);
+
+Fluid Grid (http://www.alistapart.com/articles/fluidgrids/)
+
+ El tamaño de los elementos de la página se ha de especificar en unidades relativas como porcentajes y EMs.
+
+Flexible images (http://unstoppablerobotninja.com/entry/fluid-images)
+
+ Tamaño establecido en unidades relativas para evitar que se muestren fuera de su elemento contenedor.
+
+ Es recomendable usar imagenes de fondo CSS que puedan ser activadas por media queries o por hojas de estilo hand held, evitando la descarga
+ de imágenes que sean mayores del área donde deben mostrarse.

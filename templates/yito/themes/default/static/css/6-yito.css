@@ -1,13 +1,76 @@
 /* ================================== */
+/* ------- JQUERY TOOLS ------------- */
+/* ================================== */
+
+.contentWrap {
+  padding-left : 15px;
+  padding-right: 15px;
+}
+
+#overlay { /* use a semi-transparent image for the overlay */
+  border: 1px solid gray;
+  height:450px;
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */
+}
+
+div.contentWrap { /* container for external content. uses vertical scrollbar, if needed */
+  height:441px;
+  overflow-y:auto;
+}
+  
+.apple_overlay { /* the overlayed element */
+  
+  /* initially overlay is hidden */
+  display:none;
+  
+  /* growing background image */
+  /*background-image:url(../img/overlay/white.png);*/
+  background: white;
+  color: black;
+  
+  /* 
+  width after the growing animation finishes
+  height is automatically calculated
+  */
+  width:640px;    
+  
+  /* some padding to layout nested elements nicely  */
+  padding:15px;
+  margin: 5px;
+
+}
+  
+.apple_overlay .close { /* default close button positioned on upper right corner */
+  background-image:url('/img/overlay/close.png');
+  position:absolute; right:-25px; top:-25px;
+  cursor:pointer;
+  height:35px;
+  width:35px;
+}
+
+/* ================================== */
 /* ------- jquery ui ---------------- */
 /* ================================== */
 
-  .ui-tabs-vertical { width:95%; border:none; padding-left:0px;}
-  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 30%; background: #EEE;}
-  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 95%; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border: 1px solid #DDD; }
+  .ui-widget { /* jQuery UI */
+    font-size: 1em;
+   }
+
+@media(min-width: 980px) {
+
+  .ui-tabs-vertical { width:100%; border:none; padding-left:0px;}
+  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .4em .2em .2em; float: left; width: 30%; background: #EEE;}
+  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border: 1px solid #EEE; }
   .ui-tabs-vertical .ui-tabs-nav li a { display:block; border-bottom: none; float: none;}
   .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {}
-  .ui-tabs-vertical .ui-tabs-panel { float: right; width: 65%; padding: 5px 10px 10px 10px; border: 1px solid #CCC; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;}
+  .ui-tabs-vertical .ui-tabs-panel { float: right; width: 65%; padding: 5px 10px 10px 10px; border: 1px solid #CCC;}
+
+}
+  div.wysiwyg {
+    width: 100%;
+  }
 
 /* ================================== */
 /* ------- Yito JS ------------------ */
@@ -34,9 +97,11 @@
 
 .page-title a {
   text-decoration: none;
+  /*
   color: navy;
   font-size: 1.6em;  
   font-weight: normal;
+  */
 }
 
 /* ================================== */
@@ -130,6 +195,10 @@
 /* ================================== */
 /* --------- Gallery ---------------- */
 /* ================================== */
+
+  #gallery_highlight img:first-child {
+    width: 100%;
+  }  
 
   #gallery .list-management-item {
     display: inline-block;
@@ -413,14 +482,11 @@
 #comment_form {
   width: 100%;  
 }
+
 #comment_form div textarea{
- float: left; 
- width: 99%;
 }
 
 #comment_form_container {
- margin-top: 5px; 
- padding: 5px; 
 }
 
 .comment {
@@ -483,6 +549,7 @@
   -webkit-border-radius: 3px 3px; /* Safari  */ 
   -moz-border-radius: 3px 3px; /* Firefox */
   border-radius: 3px 3px; /* iExplorer 9 */  
+  z-index:9999;
 }
 
 .profile-dropdown-button-bar {
@@ -492,6 +559,23 @@
   padding-bottom: 5px;
   background: #EEE;
   padding-left: 5px;
+}
+
+.profile-login-button {
+  background: none;
+  border: none;
+  text-transform: uppercase;  
+  cursor: hand;
+  cursor: pointer;
+}
+
+.profile-register-button {
+  background: none;
+  border: none;
+  text-transform: uppercase;  
+  cursor: hand;
+  cursor: pointer;
+  margin-right: 1em;
 }
 
 .profile-block-button {
@@ -533,7 +617,7 @@
   width: 140px;
   margin: 0 auto;
   display: block;
-  padding: 5px;
+  padding: 5px;  
 }
 
 #profile_basic h2{
@@ -575,12 +659,6 @@
   font-weight: bold;
 }
 
-#profile_photo_img {
- display: block;
- margin: 0 auto;
- border: 1px solid black;
-}
-
 #change_photo_link {
  display : block;
  margin: 0 auto;	
@@ -617,10 +695,11 @@
 /* ================================== */
 
 #community_menu {
-
+  display: none;
+/*
  padding: 15px 0px 15px 0px;
  margin-left: 15px;
-	
+	*/
 }
 
 .no-margin-right {
@@ -687,6 +766,443 @@
 /* ------- Entity management -------- */
 /* ================================== */
 
+.element-form-bottom {
+  overflow: hidden;
+}
+
+.back-bar {
+  float: right;
+}
+
+.element_action_submenu {
+  right: 0;
+  left: auto;
+}
+
+.element_actions {
+  float: right;
+  line-height: 1.618em;
+}
+
+.entity-management {
+ /*margin-top: 5px;
+ padding: 5px;  */
+}
+
+.element-block {
+  
+}
+
+/* ------ Elements container ----- */
+
+.elements-container {
+  
+}
+
+.elements-header {
+  margin-bottom: 5px;
+}
+
+.elements-search {
+  
+}
+
+.elements-description {
+  
+}
+
+.elements-list {
+  padding-bottom: 10px; 
+  margin-bottom: 5px;
+}
+
+.no-data-message {
+  text-align: center; 
+  margin: 20px 10px 10px 10px;
+  font-weight: bold;
+}
+
+/* ------ ELEMENT view  --------- */
+
+.element-container {
+  border: 1px solid #EEE;
+  border-radius: 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;  
+}
+
+.element-row-selector {
+ cursor: pointer;
+ cursor: hand;    
+}
+
+.element-navigation-detail {
+ cursor: pointer;
+ cursor: hand;    
+}
+
+.element-detail {
+ padding: 5px;  
+ margin-top: 5px;
+ margin-bottom: 5px;
+}
+
+.element_template_actions {
+ overflow: hidden;
+}
+
+
+.element_template_actions_buttons {
+ margin-top: 5px;
+ float: right;  
+}
+
+.entity-id {
+
+ padding: 5px;
+ background: yellow;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;   
+  
+}
+
+.entity-field {
+ padding: 5px;  
+ border-bottom: 1px dotted gray;
+ overflow: hidden;
+}
+
+.entity-fieldlabel {
+ font-weight: bold; 
+ display: inline-block;
+ vertical-align: top;
+ width: 25%;
+ padding-top: 5px;
+ padding-bottom: 5px;
+}
+
+.entity-fieldvalue {
+ display: inline-block;
+ width:70%;
+ margin-right: 10px;
+ padding-top: 5px;
+ padding-bottom: 5px;
+}
+
+.entity-block-title {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.indentation {
+  width : 20px;
+  display: inline-block;  
+}
+
+.entity-block { /* It defines a block to structure extra entity information or process */
+  
+  border: 1px black solid;  
+  
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+  padding: 5px; 
+  
+  overflow: hidden;
+  
+}
+
+/* ------ ELEMENT form --------- */
+
+.element-form-container {
+ /*padding: 5px;*/
+}
+
+.element-form-detail {
+  background: white;
+  border: 1px solid #EEE;
+  border-radius: 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px; 
+  padding-left: 0.787em;
+  padding-right: 0.787em;
+}
+
+.form-fields  { 
+/* padding: 5px;
+ margin-top: 5px;
+ margin-bottom: 5px;
+ //border: 1px solid gray;
+ //-webkit-border-radius: 5px;
+ //-moz-border-radius: 5px;
+ //border-radius: 5px;  
+*/
+}
+
+.form-title {
+  margin-top: 2px;
+  margin-bottom: 0px; 
+}
+
+.fieldtitle {
+  font-weight: bold;
+}
+
+/*
+.fieldcontrol {
+ padding: 5px;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;    
+}
+*/
+
+/* ----- Navigation bars ----- */
+
+.navigation-bar {
+ overflow: hidden;  
+}
+
+.navigation-bar-title {
+  float: left;  
+}
+
+.navigation-bar-search {
+  float: right; 
+  display: none; 
+}
+
+.navigation-bar-crud-buttons {
+  float: left;  
+  margin-left: 10px;
+}
+
+.navigation-bar-nav-buttons {
+ float: right;  
+ margin-right: 10px;
+}
+
+.bottom-navigation-bar .navigation-bar-crud-buttons {
+  float: right;
+}
+
+.crud-buttons {
+ float: right;  
+}
+
+.entity-actions {
+  margin-top: 5px;
+  border-top: 1px dashed black;
+}
+
+.top-navigation-bar {
+ 
+ padding: 5px;
+ border-top : 1px solid #DDD;
+ border-bottom : 1px solid #DDD;
+ background: #EEE;
+ z-index: 9999;
+
+}
+
+.elements-summary {
+ margin-right: 10px;  
+}
+
+.bottom-navigation-bar {
+
+ border-top : 1px solid #DDD;;
+ clear: both;
+ 
+}
+
+/* ----- Buttons ------ */
+
+.entity-management-button {
+  min-width: 60px;  
+  border: 1px solid gray;
+  background: #DDD; 
+}
+
+.previous-page-button {
+  
+}
+
+.next-page-button {
+  
+}
+
+.previous-element-button {
+  
+}
+
+.next-element-button {
+  
+}
+
+.navigation-button {
+
+}
+
+.page-navigation { /*Button to change from entity navigation to page navigation*/
+  border: none;
+  background: none;
+  text-decoration: underline;
+  float: left;
+}
+
+/* ------ Crud Buttons ------ */
+
+.action-button {
+
+}
+
+.post-button {
+  background-color: rgb(223, 223, 241);
+}
+
+.new-entity-button {
+  background: maroon;
+  color: white;
+}
+
+.edit-entity-button {
+  
+}
+
+.create-entity-button {
+  background-color: rgb(205, 221, 233);
+}
+
+.update-entity-button {
+  background-color: rgb(205, 233, 205);
+}
+
+.cancel-entity-button {
+  
+}
+
+.delete-entity-button {
+  
+}
+
+/* -------- Entity table ----------- */
+
+.table-container {
+  border: 1px solid #EEE;
+  padding: 5px;
+  margin: 0px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px; 
+}
+.table {
+  margin: 1px;
+  border-collapse: collapse;  
+  background: white;
+  width: 100%;
+}
+
+.table-tbody {
+  border-top: 1px solid gray; 
+}
+
+.table-row {
+ background: white; 
+}
+
+.table-header-title {
+  padding: 10px 4px 10px 4px;
+  text-align: left;
+  border-bottom: 1px solid #CCC;
+  background: white;
+  color: dimgray;
+}
+
+.table-cell {
+  padding: 10px 4px 10px 4px;
+  border-bottom: 1px solid #EEE;  
+}
+
+#elements_tbody .table-row:last-child td {
+  border-bottom: none;
+}
+
+.highlighted-row {
+  background: white;
+  font-weight: bold;
+}
+
+/* -------- Form messages --------- */
+
+.entity-message {
+
+ border: 1px dotted gray;
+ padding: 5px;
+ margin: 5px 0px 20px 0px;
+ text-align: center;
+ display: block;
+  
+}
+
+.entity-message-ok {
+
+ color: darkBlue;   
+  
+}
+
+.entity-message-error {
+
+ color: Maroon;
+  
+}
+
+.entity-status-bar {
+  
+}
+
+/* -------- Blocks ---------- */
+
+.entity-blocks-container { // The page entities are represented here
+  margin: 2px;
+  padding: 2px;
+}
+
+
+.entity-block-container { // Each entity is represented 
+  margin: 2px;
+  /*padding: 2px;*/
+  float: left;    
+}
+
+.entity-block-container-inside {
+  margin: 2px;
+  padding: 2px;
+  border: 1px dashed gray;
+}
+
+/* ---------- Entity forms ---------- */
+
+.element-form-detail form div label.fieldtitle {
+  /*padding-top: 5px;*/
+}
+
+.element-form-detail form div input.fieldcontrol, form div textarea.fieldcontrol, form div select.fieldcontrol {
+}
+
+.element-form-detail form div input.fieldcontrol[readonly="readonly"] {
+ background: #EEE;
+ color: gray; 
+}
+
+.element-form-detail form .fielddescription {
+ color: darkgray;
+ clear: left; 
+}
+
+/* -------------------------- */
+
 .close-bar {
   overflow: hidden;
 }
@@ -708,10 +1224,10 @@
 }
 
 .guiblock-title {
-  background: #CCC;
-  padding: 5px;
-  border-radius: 5px;
-  margin-bottom: 10px;
+
+  font-weight: 600;
+  border-bottom: 1px solid #DDD; 
+
 }
 
 .new-entity-button {
@@ -719,19 +1235,11 @@
   color: white;  
 }
 
-.create-entity-button {
-  background: #1CA332;
-  color: white;
-}
-
-.update-entity-button {
-  background: #1CA332;
-  color: white;
-}
 
 .reload-entities-button {
   background-image: url('/assets/img/icons/refresh.png');
   background-repeat: no-repeat;
+  background-position: center;
   padding-left: 32px;  
 }
 
@@ -743,22 +1251,26 @@
 }
 
 .entity-title {
-  color: navy;
-  font-size: 1.6em;
-  font-weight: normal;
-  display: inline-block;
-  border-bottom: 3px solid navy;
 }
 
 .elements-list {
   padding-bottom: 0px;
   margin-bottom: 15px;
   background: white;
+  border: 1px solid #EEE;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;  
 }
 
-.element-form-detail {
-  background: white;
+/* ================================== */
+/* -------- Aspects ----------------- */
+/* ================================== */
+ 
+#aspects_form h3 {
+  border-bottom: 1px solid #DDD;
 }
+
 
 /* ================================== */
 /* ----- Aspects Render  ------------ */
@@ -773,16 +1285,16 @@
 
 .content_data_block {
     border-bottom: 1px solid #DDDDDD; 
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
 }
 
 .content_data_block_title {
-    padding: 5px 5px 5px 5px; 
-    margin: 0px;
+/*    padding: 5px 5px 5px 5px; 
+    margin: 0px;*/
 }
 
 .content_data_row {
-    padding: 5px 5px 5px 5px; 
+/*    padding: 5px 5px 5px 5px; */
 }
 
 .content_data_label {
@@ -817,11 +1329,13 @@
 }
 
 .content-title a {
-  text-decoration: none;
+  text-decoration: none;/*
   color: navy;
+  border-bottom: 3px solid navy;
   font-size: 1.6em;
-  font-weight: normal;
+  font-weight: normal;*/
 }
+
 .content-composer {
   color: #5D88C9;
 }
@@ -835,23 +1349,17 @@
 }
 
 .content-body {
- margin-top: 10px;
-}
-
-.content-body p:first-child {
-  margin-top: 0px;
+/* margin-top: 10px;*/
 }
 
 .content-custom {
- margin-top: 10px;
- padding-top: 10px;
+ /*margin-top: 10px;
+ padding-top: 10px;*/
  /*border-top: 1px solid black;*/
 }
 
 .content-actions {
- border-top: 1px solid black;
- padding-top: 10px;
- margin-top: 10px;  
+
 }
 
 .content-action-button {
@@ -859,10 +1367,6 @@
 }
 
 /* -------- content render (default) ---------- */
-
-.content-title a {
-  border-bottom: 3px solid navy;
-}
 
 .content-wrapper .content_data_block {
   border-bottom: none;
@@ -879,13 +1383,12 @@
   width: 90%;
   margin: 0 auto;
   margin-right: 5%;
-  line-height: 2em;
-  letter-spacing: 0.07em;
-  padding-top: 10px;
+/*
   -webkit-column-count: 2;
   column-count: 2;
   -webkit-column-gap: 2em;  
   column-gap: 2em;
+*/
 }
 
 .content-flyer-wrapper .content_data_block {
@@ -915,7 +1418,6 @@
   width: 45%;
   display: inline-block;
   position: relative;
-  top: -2em;
 }
 
 .content-rightextras-wrapper .content-custom :nth-child(2) {
@@ -924,31 +1426,40 @@
 
 /* -------- content left extras render ---------- */
 
+.content-leftextras-wrapper .gallery_template {
+  width: 47%;
+  float: left;
+  display: inline-block;
+  position: relative;
+}
+
 .content-leftextras-wrapper .content-title {
   margin-left: 50%;
 }
 
 .content-leftextras-wrapper .content-body {
   width: 50%;
-  float: right;
-  margin-left: 5%;
-  line-height: 2em;
-  letter-spacing: 0.07em;
+  margin-left: 3%;
+  display: inline-block;
 }
+
+.content-leftextras-wrapper .content-body + .content-custom {
+  width: 50%;
+  margin-left: 3%;
+  display: inline-block;  
+}
+
 
 .content-leftextras-wrapper .content_data_block {
   border-bottom: none;
 }
 
-.content-leftextras-wrapper .gallery_template {
-  width: 45%;
-  display: inline-block;
-  position: relative;
-  top: -4em;
-}
-
 .content-leftextras-wrapper .content-custom :nth-child(2) {
   clear: right;
+}
+
+.content-leftextras-wrapper .content-actions {
+  clear: left;
 }
 
 /* -------- content blogentry2 render ----- */
@@ -1033,14 +1544,16 @@
 
 .block { /* The block container */
 
- margin-top: 4px;
+ /*margin-top: 4px;*/
 
 }
 
 .block-title {
+  /*  
   margin-top: 3px;
   margin-bottom: 5px;
   padding: 2px;
+  */
   font-weight: 800;
   color: darkgray;	
 }
@@ -1062,8 +1575,8 @@
 /* ------ Views RENDERING ------------- */
 
 .block .view { /* View rendered as a block */
-  border-bottom: 1px solid lightSteelBlue;
-  margin-bottom: 5px;
+/*  border-bottom: 1px solid lightSteelBlue;
+  margin-bottom: 5px;*/
 } 
 
 /* View : List render */
@@ -1088,19 +1601,33 @@
   padding-top: 30px;
 }
 
+/* ------- */
+
+.inline_view_div_element {
+  display: inline-block;
+}
+
+.inline_view_div_element_attribute {
+  display: inline-block;
+}
+
 /* View : Div render - 1 Block with image on left size */
 
 .view_div_youtube_container { /* It's the wrapper for the full view */
 
-  border-bottom: 1px solid #DDD;
+  /*border-bottom: 1px solid #DDD;*/
   padding-bottom: 5px;
   margin-bottom: 5px;
   overflow: hidden;
 
 }
 
+.view_div_youtube_element {
+  border-bottom: 1px dotted #CCC;
+}
+
 .view_div_youtube_img { /* Class for the image field */
-  width: 150px;
+  width: 195px;
   float: left;
   -webkit-border-radius: 5px; /* Safari  */ 
   -moz-border-radius: 5px; /* Firefox */
@@ -1112,7 +1639,7 @@
    font-size: 1.2em; 
    font-weight: 500; 
    color: #559;
-   padding-left: 155px; 
+   padding-left: 200px; 
 }
 
 .view_div_youtube_title a { /* The anchor of the title */
@@ -1122,11 +1649,16 @@
 
 .view_div_youtube_subtitle { /* Class for the subtitle field */
   font-size: 1.1em;
-  padding-left: 155px;
+  padding-left: 200px;
 }
 
 .view_div_youtube_body { /* It's the class for body (text) */
-  padding-left: 155px;
+  padding-left: 200px;
+}
+
+.view_div_youtube_inline { 
+  display: inline-block;
+  padding-left: 5px;
 }
 
 /* View : Div render - 2 FLOAT blocks with image centered an text */
@@ -1230,6 +1762,15 @@
 }
 
 /* ================================== */
+/*          LOCATION                  */
+/* ================================== */
+
+.location-map {
+  width: 100%;
+  min-height: 300px;
+}
+
+/* ================================== */
 /* ======== DEFINED BLOCKS ========== */
 /* ================================== */
 
@@ -1260,6 +1801,13 @@
 
 #block_site_adminmenu {
  background: #CD2039;
+}
+
+@media(min-width: 980px) {
+  #block_site_adminmenu {
+     max-width: 960px;
+     margin: 0 auto;
+  }
 }
 
 #menu_admin_menu {
@@ -1326,11 +1874,13 @@
 #block_menu_members {
   display: inline-block;	
   float: left;
+  font-size: 1.16667em;
+  line-height: 1.618em;  
 }
 
 #menu_members {
-  background: black;
-  color: white;	
+ /* background: black;
+  color: white;	*/
 }
 
 #menu_members .submenu {
@@ -1339,7 +1889,7 @@
 }
 
 #menu_members > .menuitem > a:link, #menu_members > .menuitem > a:visited {
-  color: white;	
+ /* color: white;	*/
 }
 
 #menu_members > .menuitem > a:hover {
@@ -1347,7 +1897,7 @@
 }
 
 #menu_members .submenu > .menuitem > a:link, #menu_members .submenu > .menuitem > a:visited {
-  color: white;	
+  /*color: white;	*/
 }
 
 #menu_members .submenu > .menuitem > a:hover {
@@ -1389,7 +1939,6 @@
 
 #block_profile_menu {
   display: inline-block;  
-  float: right;
   font-size: 0.8em;
 }
 
@@ -1403,10 +1952,12 @@
 }
 
 #menu_profile_menu > .menuitem > a:link, #menu_profile_menu > .menuitem > a:visited {
+  font-weight: 600;
 }
 
 #menu_profile_menu > .menuitem > a:hover {
   color: gray;  
+  font-weight: 600;
 }
 
 #menu_profile_menu .submenu > .menuitem > a:link, #menu_profile_menu .submenu > .menuitem > a:visited {
@@ -1416,14 +1967,73 @@
   color: gray;  
 }
 
+/* ---- MENU PRIMARY LINKS ------ */
+
+#block_menu_primary_links {
+  display: inline-block;  
+  font-size: 1.16667em;
+  line-height: 1.618em;
+}
+
+#menu_primary_links {
+}
+
+#menu_primary_links .submenu {
+  background: #EEE;   
+  z-index: 100;
+}
+
+#menu_primary_links> .menuitem > a:link, #menu_primary_links > .menuitem > a:visited {
+  color: rgb(116, 135, 158);
+}
+
+#menu_primary_links > .menuitem > a:hover {
+  color: gray;  
+}
+
+#menu_primary_links .submenu > .menuitem > a:link, #menu_primary_links .submenu > .menuitem > a:visited {
+  color: rgb(116, 135, 158);
+}
+
+#menu_primary_links .submenu > .menuitem > a:hover {
+  color: gray;  
+}
+
 /* ---- PROFILE LOGIN BLOCK ---- */
 
 #block_profile_login_button {
-  float: left;
+  /*float: left;
   padding-right: 5px;
+  padding-top: 3em;*/
+  display: inline-block;
+  text-transform: capitalize;
+  color: rgb(201, 39, 39);
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+#block_profile_login_button a {
+  text-transform: capitalize;
 }
 
 #block_profile_register_button {
-  float: left;
+  /*float: left;
   padding-right: 5px;
+  padding-top: 3em;*/
+  display: inline-block;
+  text-transform: capitalize;
+  font-weight: 600;
 }
+
+#block_profile_register_button a {
+  text-transform: capitalize;
+}
+
+#login_register {
+  text-align: right;
+}
+
+#connected_user {
+  text-align: right;
+}
+

@@ -32,45 +32,106 @@
 /* -------------------------- TAGS STYLE --------------------------- */
 
 * {
- font-family:'ABeeZee','American Typewriter', serif;	
+ font-family:'Open Sans','American Typewriter', serif;	
 }
 
+body, html {
+  height: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
 
 body 
 {	
-  line-height: 1.5;	
-  margin: 0px;
-  padding: 0px;  
-  color: #000000;	
+  background: url('/img/background.jpg'); 
+  color: black;
+  width: 100%;
+  margin: 0 auto;
 }
 
+
 a:link, a:visited {
-  color: black;
+  color: rgb(67, 67, 155);
+  text-decoration: none;
 }
 
 a:hover {
- color: darkgrey;	
+  color: rgb(117, 117, 190);
+  text-decoration: underline;
 }
 
-a img {
-  border: none;	
+h1, h2, h3 {
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
-  font-size: 2em;	
-  margin-top: 0px;
-  margin-bottom: 0px;  
-  margin-left: 10px; /* Por el GRID 960 del contenido */
+  font-family: 'Risque';
+  color: #5F5D5D;
 }
 
-h1 a {
+h1 a:visited, h1 a:link, h1 a:hover {
+  color: #5F5D5D;
   text-decoration: none;
 }
 
 h2 {
-  font-size: 1.2em;
-  margin-top: 0px;
-  margin-bottom: 0px;  
+  color: black;
+}
+
+h2 a:visited, h2 a:link {
+  color: black;
+} 
+
+h2 a:hover {
+  color: rgb(31, 12, 133);
+}
+
+/* ----- Fonts -------- */
+
+#menu_primary_links a, #menu_members a {
+  font-family: 'Limelight';
+}
+
+/* ----- Links -------- */
+
+p a:link, p a:visited {
+  color: #2D14AF;
+  text-decoration: none;
+}
+
+p a:hover {
+ color: darkgrey; 
+}
+
+h1 a {
+  text-decoration: none;
+  font-family: 'Risque';
+  color: #5F5D5D;  
+}
+
+h2 a {
+  color: navy;
+}
+
+/* ----- Images ------ */
+
+a img {
+  border: none; 
 }
 
 pre {
@@ -78,7 +139,68 @@ pre {
   font-family: 'Cutive Mono', 'American Typewriter', monospace;
 }
 
-button {
+/* -------- Html5 boilerplate -------------- */
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
 /* ================================================================= */
@@ -89,44 +211,35 @@ button {
   background: #CD2039;
 }
 
+#top {
+
+}
+
 #header {
-  background: black;
-  margin-bottom: 5px;
 }
 
 /* ----------- THE CONTAINER (HOLDS ALL THE ELEMENTS) -------------- */
 
 #container { 
-  width: 960px; 
-  /*background: white;*/
+  max-width: 960px; 
   margin: 0 auto;
+  padding: 0px 5px;
 }
 
 /* ----------- CONTAINER HEADER ------------------------------------------ */
 
 #container_header {
-  /*background-color:  white; */
-  background-position: 0px 0px;
-  margin: 0px;
-  padding: 0px;     
   border-bottom: 1px solid #DDD;
 }
 
-.site_title {
-  display: inline-block; 
-}
-
-#container_headline {
+#container_headline { 
   border-bottom: 1px solid #EEE;
 }
 
 /* ----------- CONTAINER CONTENT ---------------------------------------- */
 
 #container_content {
-  /*background-color: white;*/
-  padding-bottom: 20px; 
   overflow: hidden; 
-  margin-top: 15px;
 }
 
 #container_content_left {
@@ -142,8 +255,16 @@ button {
 }
 
 #container_footer_content {
- background: #DDD;
- color : gray;
+}
+
+/* ------------ RESPONSIVE DESIGN --------------------- */
+
+@media(max-width: 980px) {
+
+}
+
+@media(max-width: 601px) {
+
 }
 
 /* ==================================================== */
@@ -154,6 +275,7 @@ button {
   background: url('/img/icons/calendar.png');
   background-repeat: no-repeat; 
   background-position: 99%;
+  background-color: white;
 }
 
 .link {
@@ -166,13 +288,15 @@ button {
 }
 
 .highlighted_text {
-  font-weight: bold;
-  font-size: large; 
+  font-weight: 600; 
+}
+
+.highlighted_text_2 {
+  color: gray;
 }
 
 .lowlighted_text {
-  font-weight: normal;
-  font-size: small; 
+  font-weight: 300; 
 }
 
 /* -------- Errors --------- */
@@ -250,67 +374,4 @@ button {
 
 .information-block-description {
   
-}
-
-.information-block-detail {
-  font-size: 0.8em;
-}
-
-
-/* ================================================================= */
-/* ---------------------- INTEGRATION ------------------------------ */
-/* ================================================================= */
-
-.ui-widget { /* jQuery UI */
- font-size: 1em;
-}
-
-/* ----------- Overlay  ---------------------- */
-
-.contentWrap {
-  padding-left : 15px;
-  padding-right: 15px;
-}
-
-#overlay { /* use a semi-transparent image for the overlay */
-  border: 1px solid gray;
-  height:450px;
-  -webkit-border-radius: 5px 5px; /* Safari  */ 
-  -moz-border-radius: 5px 5px; /* Firefox */
-  border-radius: 5px 5px; /* iExplorer 9 */
-}
-
-div.contentWrap { /* container for external content. uses vertical scrollbar, if needed */
-  height:441px;
-  overflow-y:auto;
-}
-	
-.apple_overlay { /* the overlayed element */
-	
-  /* initially overlay is hidden */
-  display:none;
-	
-  /* growing background image */
-  /*background-image:url(../img/overlay/white.png);*/
-  background: white;
-  color: black;
-	
-  /* 
-	width after the growing animation finishes
-	height is automatically calculated
-  */
-  width:640px;		
-	
-  /* some padding to layout nested elements nicely  */
-  padding:15px;
-  margin: 5px;
-
-}
-  
-.apple_overlay .close { /* default close button positioned on upper right corner */
-	background-image:url('/img/overlay/close.png');
-	position:absolute; right:-25px; top:-25px;
-	cursor:pointer;
-	height:35px;
-	width:35px;
 }

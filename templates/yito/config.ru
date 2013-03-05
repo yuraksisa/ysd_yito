@@ -13,17 +13,18 @@ require 'bundler'
 Bundler.require 
 
 # Rack
-use Rack::Session::Cookie
+use Rack::Session::Cookie, :secret => 'chiriyuyo'
 use Rack::Logger 
 
 # Warden configuration 
 
 Warden::Strategies.add(:profile_strategy, ProfileWarden::ProfileWardenStrategy)
 Warden::Strategies.add(:anonymous_strategy, WardenStrategy::AnonymousWardenStrategy)
+Warden::Strategies.add(:facebook_strategy, WardenStrategy::FacebookWardenStrategy)
 
 use Warden::Manager do |config|
   config.failure_app = Sinatra::Yito
-  config.default_strategies :profile_strategy, :anonymous_strategy
+  config.default_strategies :profile_strategy, :facebook_strategy, :anonymous_strategy
 end
 
 Warden::Manager.serialize_into_session do |user|
@@ -37,7 +38,7 @@ Warden::Manager.serialize_from_session do |id|
               id.to_s
             end
   user = if username and username.strip.length > 0            
-           Users::Profile.get(username) || Users::Profile::ANONYMOUS_USER
+           Users::Profile.get(username) || Users::Profile.ANONYMOUS_USER
          end
 end
   
@@ -45,7 +46,8 @@ end
 
 #MIME::Types.add(MIME::Type.from_array("video/mp4", %(m4v)))
 
-require './config/aspects.rb' 
+require './config/aspects.rb'
+require './config/business_events.rb' 
 require './my_web.rb'
 
 

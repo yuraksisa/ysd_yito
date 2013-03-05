@@ -21,7 +21,6 @@ require 'ysd_service_postal' unless defined?PostalService
     # --- DATA ACCESS CONFIGURATION ----
   
   postgres_uri = ENV['DATABASE_URL']
-  mongodb_uri  = URI.parse(ENV['MONGOLAB_URI'])
 
   # DATABASE configuration
 
@@ -29,11 +28,6 @@ require 'ysd_service_postal' unless defined?PostalService
   DataMapper.setup(:default, postgres_uri)
   DataMapper::Model.raise_on_save_failure = true
   DataMapper.finalize 
-
-  # Persistence service
-
-  Persistence.logger = logger  
-  Persistence.setup(:default, {:adapter => 'mongodb', :host => mongodb_uri.host, :port => mongodb_uri.port, :database => mongodb_uri.path.sub('/',''), :username => mongodb_uri.user, :password => mongodb_uri.password })    
  
   # Postal service
   PostalService.account(:default, {:via => :smtp, :via_options => {:address => 'smtp.gmail.com', :port => '587', :user_name => 'yurak.sisa.customers' , :password => 'chiriyuyo', :enable_starttls_auto => true, :domain => 'localhost@localdomain', :authentication => :plain }})

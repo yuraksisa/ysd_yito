@@ -3,6 +3,7 @@ require 'sinatra/base'
 require 'sinatra/r18n'
 require 'ysd_yito_core'
 require 'ysd_yito_js'
+require 'sinatra/ysd_sinatra_site'
 
 module Sinatra
 
@@ -14,7 +15,8 @@ module Sinatra
     helpers  Sinatra::RequestLanguageHelper  
     register Sinatra::R18n 
     register Sinatra::YSD::Errors 
-    
+    register Sinatra::YSD::Site
+
     enable :logging
 
     # Configuration 

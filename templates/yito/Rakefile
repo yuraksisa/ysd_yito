@@ -121,7 +121,7 @@ namespace :db do
   task :drop, [:repository] => :environment do |t, args|
     repo = args[:repository] || ENV['REPOSITORY'] || :default
     config = DataMapper.repository(repo).adapter.options.symbolize_keys
-    user, password, host = config[:user], config[:password], config[:host]
+    user, password, host = config[:username], config[:password], config[:host]
     database       = config[:database] || config[:path].sub(/\//, "")
     puts "=> Dropping database '#{database}'"
     case config[:adapter]

@@ -45,6 +45,10 @@
 
       /* ------------ Main Menu ------------------*/
       
+      ul { /* To work with normalize.css */ 
+        margin: 0px;
+      }
+
       ul.menu {
       	list-style: none;
       	padding-left: 0px;   /* No list style, so drop the blank space */
@@ -54,9 +58,10 @@
       ul.menu > li {
       	/*float: left;*/                /* To show the options (used instead of display:inline) */
       	display: inline-block;
-      	padding: 5px;         
+      	/*padding: 5px;         
       	padding-left: 0px; 
-        margin: 1px;            /* Left margin : separation of elements */
+        margin: 1px;*/            /* Left margin : separation of elements */
+        margin-left: 1px;
       	/*border: 1px dotted gray;*/
       }
      

@@ -1,0 +1,69 @@
+http://24ways.org/2006/compose-to-a-vertical-rhythm/
+http://typecast.com/blog/4-simple-steps-to-vertical-rhythm
+http://typecast.com/blog/4-simple-steps-to-vertical-rhythm
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+http://www.alistapart.com/articles/more-meaningful-typography/
+
+RITMO VERTICAL
+--------------
+
+Uso regular del espacio
+
+El espacio y la disposición del texto a medida que el lector desciende la página :
+
+  > font-size
+  > line-height
+  > margins and paddings
+
+La unidad básica del espacio vertical es line height.
+
+1. Elegir las fuentes y los tamaños.
+
+   Por defecto, los navegadores utilizan un tamaño de 16px. Defiremos el tamaño de la fuente del cuerpo en porcentaje,
+   respecto al tamaño por defecto del navegador.
+   
+   Si queremos usar 14px, entonces será : 14/16 = 0,875 = 87.50%
+
+   body {
+
+     font-size: 100%;
+
+   }
+ 
+   html > body {
+ 
+     font-size: 100%;
+ 
+   }
+
+   Para elegir los tamaños podemos usar una escala modular (http://modularscale.com/)
+   
+   Elegir escala
+
+     ¿Qué aumentos o incrementos sufrirán el tamaño de los elementos de la página?
+ 
+     Grandes incrementos o pequeños incrementos (Octava 1:2, Segunda Mayor 1:1.125, Golden section ,...)
+
+   Elegir número importante ("El que mueve los hilos")
+
+     Puede ser el tamaño del cuerpo del texto
+        
+
+2. Establece el espacio entre líneas, line-height, lo que nos dará la unidad de ritmo. (ESTABLECER GRID LINES)
+
+   Definiremos el espacio entre líneas del párrafo del contenido, block copy o <p>
+   
+   Mediremos en px y luego obtendremos la proporción en em, usando la escala que calculamos.
+
+   Lo definiremos en em, que es la proporción respecto al tamaño de la fuente
+
+   Hemos de imaginar como si nuestra página estuviera escrito en un papel cuadriculado, donde cada línea del texto ocupa
+   una línea del papel.
+
+3. Establecer el resto de medidas verticales en proporción
+
+   De manera que el line height + margins top and bottom de los elementos sea proporcional al line height del body escogido
+
+
+
+   

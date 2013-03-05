@@ -1,0 +1,22 @@
+RSPEC
+
+Mocks http://stackoverflow.com/questions/3622604/rspec-mock-object-example
+
+Best practices
+
+http://betterspecs.org/
+
+---
+
+Describe
+
+Context
+
+Let
+
+Subject
+-------
+
+subject { Object.new }
+
+Defines the subject of all the 

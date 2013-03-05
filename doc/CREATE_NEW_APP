@@ -83,3 +83,41 @@ heroku run rake db:load_plugins_data --trace
 # Reiniciar la aplicación
 heroku restart
 
+
+======= BACKUP MONGODB DATABASE
+
+Import database
+mongorestore -h ds045297.mongolab.com:45297 -d heroku_app9969031 -u <user> -p <password> <input db directory>
+
+Export database
+mongodump -h ds045297.mongolab.com:45297 -d heroku_app9969031 -u <user> -p <password> -o <output directory>
+
+Execute heroku config to get the MONGOLAB_URI, and then dump the database
+
+mongodump -h ds045297.mongolab.com:45297 -d heroku_app9969031 -u heroku_app9969031 -p qiq2as3n6nqfljrk6q6unpcorf -o .
+
+======== BACKUP PROGRESQL DATABASE
+
+# Crea un backup
+heroku pgbackups:capture
+
+# Descarga el backup
+curl -o latest.dump `heroku pgbackups:url`
+
+--------- RESTAURAR BACKUPS
+
+Execute heroku config to get DATABASE_URL y MONGOLAB_URI
+
+postgres://usjvorfvaswyhw:Cit6JcTt73L7eXPACotF5LVf5N@ec2-54-243-229-203.compute-1.amazonaws.com:5432/d19u2007ugj5en
+mongodb://heroku_app10837433:a18sn3c0aukhbkd31jibidvh9@ds047427.mongolab.com:47427/heroku_app10837433
+
+mongodb://heroku_app10837433:3udpr8s2bau68sr5njjh8oln2m@ds047437.mongolab.com:47437/heroku_app10837433
+
+# Restaura el backup
+pg_restore --verbose --clean --no-acl --no-owner -h ec2-54-243-229-203.compute-1.amazonaws.com -U usjvorfvaswyhw -d d19u2007ugj5en latest.dump
+
+mongorestore --noIndexRestore -h ds047437.mongolab.com:47437 -d heroku_app10837433 -u heroku_app10837433 -p 3udpr8s2bau68sr5njjh8oln2m ../v20/heroku_app9969031
+
+Creating index: { key: { _id: 1 }, ns: "heroku_app10837433.contents", name: "_id_" }
+
+

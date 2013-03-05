@@ -1,0 +1,181 @@
+/* ---- Para mantener proporciones : vertical rythm ----- */
+
+html > body {
+  font-size: 1.125em; /* 1,125 (18px respecto a 16) */
+}
+
+h1 {
+  /* 87 es el alto total (proporcional a 29) ( )*/
+  font-size: 3.333333em; /* 60px / 18px = 3.33333 */
+  line-height: 1.26em;  /* 75px / 60px (font size) = 1.25, lo ajustamos a 1.26 para que el valor sea 75px */
+  margin-top: 0.1em;    /* 6px / 60px (font size) = 0.1 */
+  margin-bottom: 0.1em;   
+  /* 116 es el alto total (90 + 18 + 18) */
+  /*font-size: 4em;*/ /* 72px / 18px = 4 */
+  /*line-height: 1.25em ;*/  /* 90px  / 72 = 1.25*/ 
+  /*margin-top:  0.25em;*/   /* 18 px / 72 =  */
+  /*margin-bottom: 0.25em;*/ /* 18px  / 72 = */
+
+}
+
+h2 {
+  
+  color: black;
+  /* 59 es el alto total (proporcional a 29) ( )*/
+  font-size: 2em; /* 36px / 18 = 2em*/
+  line-height: 1.618em ;  /* 58px / 36px =  1.618  */
+  margin-top: 0.389em;      /* 3.6px / 36px = 0.1*/
+  margin-bottom: 0.222em;   /* 3.6px / 36px = 0.1*/
+  /* 87 es el alto total (proporcional a 29) ( )*/
+  /*font-size: 2em;*/            /* 36px / 18px = 2em*/
+  /*line-height: 1.25em;*/       /* 45px / 36 = */
+  /*margin-top: 0.44em;*/       /* 16px / 36 = */
+  /*margin-bottom: 0.45em;*/   /* 16px / 36 = */
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  line-height: 1.62; /* To achive a line-height of 29x 1,624 from the scale */
+  margin: 0.382em 0;
+}
+
+select {
+  line-height: 1.618em;
+}
+
+/* -------- ------------- */
+
+#top {
+  line-height: 1.618em;
+}
+
+#container_headline { /* El alto debe ser 29 (que es proporcional al line height del contenido) */
+  
+  /* 29 > 1.618 ---> Pero como tenemos border, tomamos 28 */
+  height: 1.562em;
+
+}
+
+/* -------- CLASSES ---------- */
+
+.information-block-detail {
+  font-size: 0.8em;
+}
+
+.content-flyer-wrapper {
+  margin-top: 1.618em;
+}
+
+#gallery_highlight img:first-child {
+  margin-bottom: 1.618em;  
+}  
+
+.content_custom {
+  margin-top: 1.18em;
+}
+
+.back-bar {
+  line-height: 1.618em;
+  margin-top: 0.808em;
+  margin-bottom: 0.8080em;
+}
+
+.top-navigation-bar { /* Para cuadrar con 58 */
+  margin-bottom: 1.389em;
+}
+
+.bottom-navigation-bar { /* Para cuadrar con 58 */
+  margin-top: 12px; 
+  margin-bottom: 13px;
+}
+
+.comments { /* Comments */
+  border-top: 1px solid #EEE;
+  margin-top: 1.618em;
+  padding-top: 0.808em;
+  margin-bottom: 1.618em;
+}
+
+.content_data_block_title, .content_data_row {
+  line-height: 1.618em;
+}
+
+.content-actions {
+  border-top: 1px solid #EEE;
+  line-height: 1.618em;
+  padding-top: 0.808em;
+  margin-bottom: 0.808em;  
+}
+
+.content_data_block_title {
+  margin: 0;
+}
+
+.content-leftextras-wrapper .gallery_template {
+  top: -2.5em; /* We need 59 line - 14px border => 45 px 45/18 = 2.5 */
+}
+
+.location-map {
+  margin-top: 0.808em;
+}
+
+.view {
+   overflow: hidden;
+}
+
+.block .view {
+margin-bottom: 1.618em;
+}
+
+.view_div_youtube_container {
+  padding-bottom: 1.618em;
+  margin-top: 1.18em;
+}
+
+.view_div_youtube_element {
+  margin-bottom: 1.618em;
+  padding-bottom: 1.618em;
+}
+
+.view_div_youtube_body {
+  font-size: 0.73em;
+  line-height: 1.618em;
+  margin-top: 0.279em;
+  margin-bottom: 0.279em;
+}
+
+.block_view_mis_menus {
+  border-top: 1px dashed #DDD;
+  margin-top: 1.618em;
+}
+
+.formrow-botonera {
+  overflow: hidden;
+  margin-top: 0.667em;
+  margin-bottom: 0.722em;
+}
+
+.bottom-navigation-bar {
+  padding-top: 0.667em;
+  padding-bottom: 0.667em;
+}
+
+#bottom {
+ margin-top: 3.236em;
+ background: #EEE;
+ padding-top: 0.808em;
+ padding-bottom: 0.808em;
+}
+
+.elements-description {
+ margin-bottom: 0.808em;
+ margin-top: 0.808em
+}
+
+.guiblock-title {
+line-height: 1.618em;
+margin-bottom: 0.808em;
+}

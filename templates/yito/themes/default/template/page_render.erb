@@ -45,18 +45,18 @@
         
     <div id="container">
        
-      <div id="container_header" class="container_header"> 
-        <h1 class="site_title">
+      <div id="container_header" class="container_header container_12"> 
+        <h1 class="site_title grid_4">
           <a href="/">
-            <% if site_logo.to_s.strip.length > 0 %>
+            <% unless site_logo.empty? %>
               <img src="<%=site_logo%>" alt="<%= site_title%>"/>
             <% end %>
-            <% if site_title.to_s.strip.length > 0 %>
+            <% unless site_title.empty? %>
             <%= site_title %>
             <% end %>
           </a>
         </h1>
-        <% if site_slogan.to_s.strip.length > 0 %>
+        <% unless site_slogan.empty? %>
         <p class="site_slogan">
           <%= site_slogan %>
         </p>
@@ -64,9 +64,19 @@
         <% if page.variables.has_key?(:container_header) %>
           <%= page.variables[:container_header]  %>
         <% end %>  
+        <% if page.variables.has_key?(:login_register) and not page.variables[:login_register].empty? %>
+          <div id="login_register" class="prefix_3 grid_4">
+             <%= page.variables[:login_register]  %>
+          </div>
+        <% end %>
+        <% if page.variables.has_key?(:connected_user) and not page.variables[:connected_user].empty? %>
+          <div id="connected_user" class="prefix_6 grid_1">
+             <%= page.variables[:connected_user]  %>
+          </div>
+        <% end %>        
       </div>
       
-      <% if page.variables.has_key?(:container_headline) %>
+      <% if page.variables.has_key?(:container_headline) and not page.variables[:container_headline].empty? %>
       <div id="container_headline">
         <%= page.variables[:container_headline] %>
       </div>

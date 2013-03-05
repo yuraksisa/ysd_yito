@@ -28,7 +28,7 @@ Plugins::ModelAspect.aspect_applicable(Model::Translatable, ContentManagerSystem
 # Aspects applicable to Users::Profile
 Plugins::ModelAspect.aspect_applicable(FieldSet::EducationEmployment, Users::Profile)
 Plugins::ModelAspect.aspect_applicable(FieldSet::Hobbies, Users::Profile)
-Plugins::ModelAspect.aspect_applicable(FieldSet::Photo, Users::Profile)
+Plugins::ModelAspect.aspect_applicable(FieldSet::Album, Users::Profile)
 
 #
 # Apply the applicable aspects

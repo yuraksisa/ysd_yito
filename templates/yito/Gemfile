@@ -1,24 +1,29 @@
+source 'https://gems.gemfury.com/yUbNQe5tpyPwziSBLoGK/'
 source :gemcutter
-
-gem "foreman"
-gem "unicorn"
-gem "thin" 
-gem "sinatra", :git => "git://github.com/sinatra/sinatra.git"
 
 gem "rake"
 
-# If you use New relic
+# Web 
+gem "foreman"
+gem "unicorn"
+#gem "thin" 
+gem "sinatra", :git => "git://github.com/sinatra/sinatra.git"
+
+# New Relic
 #gem "newrelic_rpm"
 
-# If you want to debug your code
+# Debugger
 #gem "ruby-debug19"
 
-#gem "bcrypt-ruby", "3.0.1"
-#gem "mime-types", "1.19"
+# ORM
+gem "data_mapper", "1.2.0"
 
+# Delayed job
+gem "delayed_job"
+gem "delayed_job_data_mapper"
+
+# Yito 
 gem "ysd_yito",">= 0.1.7" # The yito base
-
-# Models
 gem "ysd_md_rac", ">= 0.2.0" 
 gem "ysd_md_attachment", ">= 0.2.0"
 gem "ysd_md_audit",">= 0.2.0"
@@ -35,8 +40,6 @@ gem "ysd_md_comparison", ">= 0.2.0"
 gem "ysd_md_logger", ">= 0.2.0" 
 gem "ysd_md_translation", ">= 0.2.0"
 gem "ysd_md_location", ">= 0.2.0"
-
-# Plugins
 gem "ysd_plugin_aspects",">= 0.1"
 gem "ysd_plugin_audit",">= 0.1"
 gem "ysd_plugin_auth",">= 0.1"
@@ -61,15 +64,15 @@ gem "ysd_plugin_errors", ">= 0.1"
 gem "ysd_plugin_language", ">= 0.1"
 gem "ysd_plugin_background", ">= 0.1"
 
-# If your application stores data on mongodb, uncomment the following lines
-gem "mongo"
-gem "bson"
-gem "bson_ext"
+# MongoDB
+#gem "mongo"
+#gem "bson"
+#gem "bson_ext"
 
-# If you want to store data on yaml, uncomment the following line
+# YAML
 #gem "dm-yaml-adapter","1.2.0"
 
-# If your application stores data on postgreSQL database, uncomment the following lines
+# PostgreSQL 
 gem "do_postgres","0.10.8"
 gem "dm-postgres-adapter","1.2.0"
 gem "pg","0.13.2"

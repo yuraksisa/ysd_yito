@@ -1,0 +1,69 @@
+/* ----- Navigation bars ----- */
+
+.navigation-bar {
+ overflow: hidden;  
+}
+
+.navigation-bar-title {
+  float: left;  
+}
+
+.navigation-bar-search {
+  float: right; 
+  display: none; 
+}
+
+.navigation-bar-crud-buttons {
+  float: left;  
+ /* margin-left: 10px;*/
+}
+
+.navigation-bar-nav-buttons {
+ float: right;  
+ margin-left: 20px;
+}
+
+.bottom-navigation-bar .navigation-bar-crud-buttons {
+  float: right;
+}
+
+.crud-buttons {
+ float: right;  
+}
+
+.entity-actions {
+  margin-top: 5px;
+  border-top: 1px dashed black;
+}
+
+.top-navigation-bar {
+ 
+ padding: 10px 10px 10px 10px;
+ border: 1px solid #DDD;
+ margin-bottom: 1.389em; /* Vertical rythm */
+ background: rgba(186, 221, 233, 0.2);
+ z-index: 9999;
+ -webkit-border-radius: 5px 5px; /* Safari  */ 
+ -moz-border-radius: 5px 5px; /* Firefox */
+ border-radius: 5px 5px; /* iExplorer 9 */	
+}
+
+.elements-summary {
+ margin-right: 10px;  
+}
+
+.bottom-navigation-bar {
+
+ border-top : 1px solid #DDD;;
+ clear: both;
+
+ margin-top: 12px;        /* Vertical rythm */
+ margin-bottom: 13px;     /* Vertical rythm */
+ padding-top: 0.667em;    /* Vertical rythm */
+ padding-bottom: 0.667em; /* Vertical rythm */
+
+}
+
+.entity-status-bar {
+  
+}

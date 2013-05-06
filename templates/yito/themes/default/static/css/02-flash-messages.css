@@ -1,0 +1,28 @@
+/* ---------------------------------------------------------------------- */
+/*                       FLASH STYLES DEFINITION                          */
+/* ---------------------------------------------------------------------- */
+
+.flash { 	
+  text-align: center;
+  padding: 20px 0px 20px 0px;
+  border: 1px solid #CCC;
+  background: rgba(200,200,200,0.3);
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.flash-error {
+  color: rgb(201, 29, 29)
+}
+
+.flash-message {
+  color: black;
+}
+
+.flash-notice {
+  color: black;
+}
+
+.flash-warning {
+  color: orange;
+}

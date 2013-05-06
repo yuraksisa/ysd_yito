@@ -1,0 +1,61 @@
+/* ================================== */
+/* ------- JQUERY TOOLS ------------- */
+/* ================================== */
+
+.contentWrap {
+  padding-left : 15px;
+  padding-right: 15px;
+}
+
+#overlay { /* use a semi-transparent image for the overlay */
+  border: 1px solid gray;
+  height:450px;
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */
+}
+
+div.contentWrap { /* container for external content. uses vertical scrollbar, if needed */
+  height:441px;
+  overflow-y:auto;
+}
+  
+.apple_overlay { /* the overlayed element */
+  display:none;  
+  background: white;
+  color: black;
+  width:640px;    
+  padding:15px;
+  margin: 5px;
+}
+  
+.apple_overlay .close { /* default close button positioned on upper right corner */
+  background-image:url('/img/overlay/close.png');
+  position:absolute; right:-25px; top:-25px;
+  cursor:pointer;
+  height:35px;
+  width:35px;
+}
+
+/* ================================== */
+/* ------- jquery ui ---------------- */
+/* ================================== */
+
+  .ui-widget { /* jQuery UI */
+    font-size: 1em;
+   }
+
+@media(min-width: 980px) {
+
+  .ui-tabs-vertical { width:100%; border:none; padding-left:0px;}
+  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .4em .2em .2em; float: left; width: 30%; background: #EEE; margin-top: 1.618em;}
+  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border: 1px solid #EEE; }
+  .ui-tabs-vertical .ui-tabs-nav li a { display:block; border-bottom: none; float: none;}
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {}
+  .ui-tabs-vertical .ui-tabs-panel { float: right; width: 65%; padding: 5px 10px 10px 10px; /*border: 1px solid #CCC;*/}
+
+}
+
+div.wysiwyg {
+  width: 100%;
+}

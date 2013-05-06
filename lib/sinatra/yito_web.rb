@@ -56,7 +56,7 @@ module Sinatra
     end
 
     # Before any request (except /login and /logout)
-    before /^(?!(\/.*login|\/.*logout))/ do
+    before /^(?!(\/.*login|\/.*logout|\/.*unauthenticated))/ do
       if not authenticated?
         authenticate # Force the authentication (always the anonymous user)
       end

@@ -2,15 +2,11 @@ name: Default
 description: Default theme. It uses 960.css
 styles: [
     '/css/style.css',
-    'http://fonts.googleapis.com/css?family=Open+Sans',
-    'http://fonts.googleapis.com/css?family=Joti+One',
-    'http://fonts.googleapis.com/css?family=Limelight',
-#    'http://fonts.googleapis.com/css?family=ABeeZee',
-    'http://fonts.googleapis.com/css?family=Risque',
-    'http://fonts.googleapis.com/css?family=Cutive+Mono']
+    'http://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:400italic,400,800,700,600'
+    ]
 scripts: []
 images: []
-regions: ['top', 'header', 'login_register', 'connected_user', 
-          'container_header', 'container_headline', 'content_top', 
-          'content_left', 'content_right', 'content_bottom', 'container_bottom',
-          'bottom']
+regions: ['top', 'header', 'languages_translation', 'login_register', 
+          'connected_user', 'container_header', 'container_headline', 
+          'content_top', 'content_left', 'content_right', 'content_bottom',
+          'container_bottom', 'bottom']

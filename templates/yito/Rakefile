@@ -4,26 +4,27 @@
 # Cf. https://github.com/padrino/padrino-framework/blob/master/padrino-gen/lib/padrino-gen/padrino-tasks/datamapper.rb
 #     https://github.com/datamapper/dm-rails/blob/master/lib/dm-rails/railties/database.rake
 #
-
 require 'rake'
+
+require 'bundler/setup'
+require 'bundler'
+Bundler.require
+# If you use Delayed Job, uncomment the following lines
+#require "active_support/core_ext"
+#require 'delayed/tasks'
+
 
 #
 # replace this with however your app configures DataMapper repositor(ies)
 #
 task :environment do
     
-    puts "Loading dependencies"
-    require 'bundler/setup'
-    require 'bundler'
-    puts "Loaded dependencies"
-    Bundler.require
     require 'ysd_yito_core' # Not included on gemfile
     the_environment = ENV['RACK_ENV'] || :development
     require File.expand_path(File.join('config','aspects.rb'))
     require File.expand_path(File.join('config','environments',"#{the_environment}.rb"))
     
-    #DataMapper::Logger.new($stdout, :debug) #Make sure it's configured the debug mode
-  
+    #DataMapper::Logger.new($stdout, :debug) #Make sure it's configured the debug mode  
 end
 
 namespace :db do

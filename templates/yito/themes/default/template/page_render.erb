@@ -1,6 +1,5 @@
 <%#-*- coding: utf-8 -*-%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
   <head>
     <title><%= page.title %></title>
@@ -9,81 +8,102 @@
     <meta name="author" content="<%= page.author %>"/>
     <meta name="keywords" content="<%= page.keywords %>"/>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-   
-    <!--script type="text/javascript" src="/js/jquery.validate.js" charset="ISO-8859-1"></script-->
-    
-    <!-- Javascript Resources -->
-    <!--script src="/assets/js/require_config.js"></script-->   
-    
-    <!--<script src="/assets/js/require.js" ></script>
-    <script src="/assets/js/built.js"></script> -->   
-     
     <%= page.scripts %> 
-        
-    <!-- CSS Resources -->
-    
     <%= page.styles %>
-
   </head>
   <body>
 
-    <% if page.variables.has_key?(:top) %>    
+    <% if (user and not user.belongs_to?('anonymous')) and (page.variables.has_key?(:top) or (page.variables.has_key?(:connected_user) and not page.variables[:connected_user].empty?)) %>     
       <div id="top">
-         <div class="container_12">
-           <%= page.variables[:top] %>
-         </div>
+        <div class="container-row">
+          <div class="container_12">
+            <div class="grid_2">
+              <h1 class="site_title">
+                <a href="/">
+                  <% unless site_logo.empty? %>
+                    <img src="<%=site_logo%>" alt="<%= site_title%>"/>
+                  <% end %>
+                  <% unless site_title.empty? %>
+                    <%= site_title %>
+                  <% end %>
+                </a>
+              </h1>           
+            </div>
+            <div class="grid_8">
+               <% if page.variables.has_key?(:top) and not page.variables[:top].empty?%> 
+                 <%= page.variables[:top] %>
+               <% else %>
+                 <span>&nbsp;</span>
+               <% end %>
+            </div>
+            <div class="grid_2">
+             <% if page.variables.has_key?(:connected_user) and not page.variables[:connected_user].empty? %>
+               <div id="connected_user">
+                 <%= page.variables[:connected_user]  %>
+               </div>
+             <% end %>
+            </div>
+          </div>
+        </div>
       </div>
     <% end %>
 
     <% if page.variables.has_key?(:header) %>    
       <div id="header">
-         <div class="container_12">
-           <%= page.variables[:header] %>
-         </div>
+        <div class="container-row">
+          <div class="container_12">
+            <%= page.variables[:header] %>
+          </div>
+        </div>
       </div>
     <% end %>
         
     <div id="container">
-       
-      <div id="container_header" class="container_header container_12"> 
-        <h1 class="site_title grid_4">
-          <a href="/">
-            <% unless site_logo.empty? %>
-              <img src="<%=site_logo%>" alt="<%= site_title%>"/>
-            <% end %>
-            <% unless site_title.empty? %>
-            <%= site_title %>
-            <% end %>
-          </a>
-        </h1>
-        <% unless site_slogan.empty? %>
-        <p class="site_slogan">
-          <%= site_slogan %>
-        </p>
-        <% end %>
-        <% if page.variables.has_key?(:container_header) %>
-          <%= page.variables[:container_header]  %>
-        <% end %>  
-        <% if page.variables.has_key?(:login_register) and not page.variables[:login_register].empty? %>
-          <div id="login_register" class="prefix_3 grid_4">
-             <%= page.variables[:login_register]  %>
-          </div>
-        <% end %>
-        <% if page.variables.has_key?(:connected_user) and not page.variables[:connected_user].empty? %>
-          <div id="connected_user" class="prefix_6 grid_1">
-             <%= page.variables[:connected_user]  %>
-          </div>
-        <% end %>        
+      <% if not user or (user and user.belongs_to?('anonymous')) %>
+      <div id="container_header" class="container_header container_12">
+        <div class="container-row"> 
+          <% if page.variables.has_key?(:languages_translation) and not page.variables[:languages_translation].empty? %>
+            <div id="languages_translation">
+               <%= page.variables[:languages_translation] %>
+            </div>
+          <% end %>
+          <h1 class="site_title grid_12">
+            <a href="/">
+              <% unless site_logo.empty? %>
+                <img src="<%=site_logo%>" alt="<%= site_title%>"/>
+              <% end %>
+              <% unless site_title.empty? %>
+                <%= site_title %>
+              <% end %>
+            </a>
+          </h1>
+          <% unless site_slogan.empty? %>
+            <small class="site_slogan">
+              <%= site_slogan %>
+            </small>
+          <% end %>
+          <div class="prefix_9 grid_3"> 
+          <% if page.variables.has_key?(:login_register) and not page.variables[:login_register].empty? %>
+            <div id="login_register">
+               <%= page.variables[:login_register]  %>
+            </div>
+          <% end %>
+          </div>        
+        </div>
       </div>
-      
+      <% end %>
+
       <% if page.variables.has_key?(:container_headline) and not page.variables[:container_headline].empty? %>
       <div id="container_headline">
-        <%= page.variables[:container_headline] %>
+        <div class="container-row">
+          <%= page.variables[:container_headline] %>
+        </div>
       </div>
       <% end %>
                              
       <div id="container_content" class="container_12">
-          <% if page.variables.has_key?(:content_left) and page.variables[:content_left].length > 0 %>
+        <div class="container-row">
+          <% if page.variables.has_key?(:content_left) and not page.variables[:content_left].empty? %>
             <div class="grid_2">
               <div id="container_content_left">
                 <%= page.variables[:content_left]  %>
@@ -103,21 +123,24 @@
               <% end %>
             </div>
           </div>
-          <% if page.variables.has_key?(:content_right) %>
+          <% if page.variables.has_key?(:content_right) and not page.variables[:content_right].empty? %>
             <div class="grid_3">
               <div id="container_content_right">
                 <%= page.variables[:content_right]  %>
               </div>
             </div>
           <% end %>
+        </div>
       </div>
                                    
       <!-- Page footer -->
       <div id="container_footer" class="container_12">
-        <div id="container_footer_content">
-          <% if page.variables.has_key?(:container_bottom) %>
-            <%= page.variables[:container_bottom]  %>
-          <% end %>
+        <div class="container-row">
+          <div id="container_footer_content">
+            <% if page.variables.has_key?(:container_bottom) %>
+              <%= page.variables[:container_bottom]  %>
+            <% end %>
+          </div>
         </div>
       </div>
       
@@ -125,9 +148,11 @@
 
     <% if page.variables.has_key?(:bottom) %>    
       <div id="bottom">
-         <div class="container_12">
-           <%= page.variables[:bottom] %>
-         </div>
+        <div class="container-row">
+          <div class="container_12">
+            <%= page.variables[:bottom] %>
+          </div>
+        </div>
       </div>
     <% end %>
 

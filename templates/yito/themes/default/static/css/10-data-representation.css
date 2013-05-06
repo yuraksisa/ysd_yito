@@ -1,0 +1,695 @@
+
+/* ========================================================================== */
+/* ================== REPRESENTING AN ITEM ================================== */
+/* ========================================================================== */
+
+/* 
+   -----------------------------------------------------------------------
+   | element-container
+   |
+ */
+
+.element-container {
+  border: 1px solid #EEE;
+  border-radius: 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;  
+}
+
+.element-row-selector {
+ cursor: pointer;
+ cursor: hand;    
+}
+
+.element-navigation-detail {
+ cursor: pointer;
+ cursor: hand;    
+}
+
+.element-detail {
+ padding: 5px;  
+ margin-top: 5px;
+ margin-bottom: 5px;
+}
+
+.element_template_actions {
+ overflow: hidden;
+}
+
+
+.element_template_actions_buttons {
+ margin-top: 5px;
+ float: right;  
+}
+
+.entity-title {
+}
+
+.entity-id {
+
+ padding: 5px;
+ background: yellow;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;   
+  
+}
+
+.entity-field {
+ padding: 5px;  
+ border-bottom: 1px dotted gray;
+ overflow: hidden;
+}
+
+.entity-fieldlabel {
+ font-weight: bold; 
+ display: inline-block;
+ vertical-align: top;
+ width: 25%;
+ padding-top: 5px;
+ padding-bottom: 5px;
+}
+
+.entity-fieldvalue {
+ display: inline-block;
+ width:70%;
+ margin-right: 10px;
+ padding-top: 5px;
+ padding-bottom: 5px;
+}
+
+.entity-block-title {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+
+/* ---- Entity blocks (used on photo management) ------ */
+
+.entity-blocks-container { 
+  margin: 2px;
+  padding: 2px;
+}
+
+
+.entity-block-container { 
+  float: left;    
+}
+
+.entity-block-container-inside {
+  margin: 2px;
+  padding: 2px;
+  border: 1px dashed gray;
+}
+
+.entity-block { 
+  
+  border: 1px black solid;  
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px; 
+  overflow: hidden;
+  
+}
+
+/* ------------------- Item properties -------------------- */
+
+
+/*
+  -------------------------------------
+  attribute_name    attribute_value
+  -------------------------------------
+ */
+
+.item_properties_attribute {
+  overflow: hidden;
+}
+
+.item_properties_attribute_name {
+  width: 60%;
+  float: left;
+}
+
+.item_properties_attribute_value {
+  width: 40%;
+  float: left;
+} 
+
+
+/* ========================================================================== */
+/* ========== REPRESENTING COLLECTIONS OF ITEMS ============================= */
+/* ========================================================================== */
+
+/* ------------------- ENTITIES MANAGEMENT ---------------------------------- */
+
+/* 
+  This classes are used to represent a set of items
+
+   -------------------------------------------------------------------
+   | entity-management                              
+   | -----------------------------------------------------------------
+   | | entity-block
+   | | |--------------------------------------------------------------
+   | | | elements-header
+   | | |   
+   | | | elements_actions
+   | | | elements-title
+   | | | elements-description
+   | | | elements_search
+   | | | -------------------------------------------------------------
+   | | | -------------------------------------------------------------
+   | | | elements-container
+   | | | 
+   | | | elements-list
+   | | | -------------------------------------------------------------
+   | -----------------------------------------------------------------
+ */
+
+.entity-management { /* wrapper */
+  min-height: 100%;
+}
+
+.element-block { /* 2nd wrapper */
+  
+}
+
+.elements-header { /* header */
+  margin-bottom: 5px;
+}
+
+.element_actions {
+  float: right;
+  line-height: 1.618em;
+}
+
+.element_action_submenu {
+  right: 0;
+  left: auto;
+}
+
+.elements_title {
+
+}
+
+.elements-description {
+ margin-bottom: 0.808em; /* Vertical rythm */
+ margin-top: 0.808em;    /* Vertical rythm */  
+ display: none; /* TESTING */
+}
+
+.elements-search {
+  float: right;
+  margin-left: 20px;
+}
+
+.elements-container { /* elements container */
+  
+}
+
+.elements-list {
+  padding-bottom: 0px;
+  margin-bottom: 15px;
+  background: white;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;  
+}
+
+.no-data-message {
+  text-align: center; 
+  margin: 20px 10px 10px 10px;
+  font-weight: bold;
+}
+
+/* --------------------------- List of items ------------------------------ */
+
+/*
+   ----------------------------------
+                            view_list
+    view_list_item
+    view_list_item
+    view_list_item
+   ----------------------------------
+  
+ */
+
+.view_list {  /* The ol or ul item */
+  padding-left: 5px;	
+}
+
+.view_list_item { /* The il item */
+  list-style-type: none;		
+  border-bottom: 1px solid #DDD;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 5px;
+}
+
+/* --------------------------  Teaser box --------------------------------- */
+
+/* 
+   ------------------------------------------------------
+   view_teaser_element
+
+
+   ------------------------------------------------------
+   view_teaser_element
+
+
+   ------------------------------------------------------
+*/
+
+.view_teaser_element {
+  margin-top: 30px;
+  border-top: 1px solid gray;
+  padding-top: 30px;
+}
+
+/* ------------------------ Inline view div ------------------------------- */
+
+/* The elements are show inline (one next to the other) and any of the element
+   attributes attributes are show inline */
+
+/*
+  --------------------------------------  ---------------------------------
+   inline_view_div_element                inline_view_div_element
+   -----------------------------------      -------------------------------          
+     inline_view_div_element_attribute
+   -----------------------------------      -------------------------------
+  -------------------------------------------------------------------------
+*/
+
+.inline_view_div_element {
+  display: inline-block;
+}
+
+.inline_view_div_element_attribute {
+  display: inline-block;
+}
+
+/* ------------------------ Youtube items --------------------------------- */
+
+/* The elements are show as you tube videos (a float image on left size and
+   a title subtitle and body) */
+
+/*
+   -----------------------------------------------------------------
+   | view_div_youtube_container
+   | ---------------------------------------------------------------
+   | | view_div_youtube_element
+   | | ------------------------
+   | | | view_div_youtube_img | view_div_youtube_title
+   | | |                      | view_div_youtube_subtitle
+   | | |                      | view_div_youtube_body
+   | | |----------------------| 
+   | ---------------------------------------------------------------
+   -----------------------------------------------------------------
+*/
+
+.view_div_youtube_container { /* It's the wrapper for the full view */
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  padding-bottom: 1.618em; /* Vertical rythm */
+  margin-top: 1.18em; /* Vertical rythm */
+}
+
+.view_div_youtube_element {
+  border-bottom: 1px dotted #CCC;
+  margin-bottom: 1.618em;  /* Vertical rythm */
+  padding-bottom: 1.618em; /* Vertical rythm */ 
+}
+
+.view_div_youtube_img { /* Class for the image field */
+  width: 195px;
+  float: left;
+  -webkit-border-radius: 5px; /* Safari  */ 
+  -moz-border-radius: 5px; /* Firefox */
+  border-radius: 5px; /* iExplorer 9 */   
+  clear:left; 
+}
+
+.view_div_youtube_title { /* Class for the title field  */
+   font-size: 1.2em; 
+   font-weight: 500; 
+   color: #559;
+   padding-left: 200px; 
+}
+
+.view_div_youtube_title a { /* The anchor of the title */
+   color: #559;
+   text-decoration: none;
+}
+
+.view_div_youtube_subtitle { /* Class for the subtitle field */
+  font-size: 1.1em;
+  padding-left: 200px;
+}
+
+.view_div_youtube_body { /* It's the class for body (text) */
+  padding-left: 200px;
+  font-size: 0.73em;
+  line-height: 1.618em; /* Vertical Rythm */
+  margin-top: 0.279em;  /* Vertical Rythm */
+  margin-bottom: 0.279em; /* Vertical Rythm */
+}
+
+.view_div_youtube_inline { 
+  display: inline-block;
+  padding-left: 5px;
+}
+
+/* ---------------------- Image blocks  ----------------------------------- */
+
+/* Display inline blocks with a centered content on each block */
+
+/* 
+   ---------------------------------------------------------------------------
+   | view_div_imgblocks_container
+   | -----------------------------------  ------------------------------------
+   | view_div_imgblocks_element_wrapper    view_div_img_blockselement_wrapper
+   |      [view_div_imgblocks_img]             [view_div_imgblocks_img]
+   | -----------------------------------  ------------------------------------
+   ---------------------------------------------------------------------------
+*/
+
+.view_div_imgblocks_container { /* It's the wrapper fo the full view */
+
+  background: #FCFAFA;
+  border: 1px solid #DDD;
+  padding: 5px;
+  
+  /* Round borders */
+  -webkit-border-radius: 5px 5px; /* Safari  */  
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */   
+}
+
+.view_div_imgblocks_container a { 
+  text-decoration: none;
+}
+
+.view_div_imgblocks_element_wrapper { /* It's the wrapper for an element */
+ display: inline-block; 
+ padding: 5px;   
+ font-size: 0.8em;
+}
+
+.view_div_imgblocks_img { /* It's the class for the image field */
+ display: block; 
+ margin: 0 auto;  
+}
+
+/* ----------------------- Wordpress thumbnails ---------------------------- */
+
+/* 
+   It shows two elements per row.
+   It's useful when each element is made of an anchor and an image inside 
+ */
+
+/* 
+  ----------------------------  -----------------------------
+   view_div_thumb_container      view_div_thumb_container
+   --------------------------    ---------------------------
+     view_div_thumb_element        view_div_thumb_element
+      [ANCHOR WITH IMG AND          [ANCHOR WITH IMG AND
+      SPAN WITH DESCRIPTION]        SPAN WITH DESCRIPTION]       
+   --------------------------    --------------------------
+  ----------------------------  ----------------------------- 
+*/
+.view_div_thumb_container { /* wrapper */
+  width: 46%;
+  display: inline-block;
+  margin-left: 2%;
+  margin-bottom: 1em;
+}
+
+.view_div_thumb_element { /* content */
+  position:relative;
+  display: block;
+}
+
+.view_div_thumb_element a, .view_div_thumb_element a:visited /* Link */
+{
+  display: block;
+  border-style: none;
+}
+
+.view_div_thumb_element a:hover span /* Link */
+{ 
+  color: rgba(48, 48, 47, 1);
+  opacity: 1;
+}
+
+.view_div_thumb_element img {
+  width: 100%;
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+  box-shadow: 0 0 5px #888;  
+}
+
+.view_div_thumb_element span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(240, 241, 238, .85);
+  opacity: 0;
+  text-align: center;
+  
+  -webkit-transition: all 0.16s cubic-bezier(0, 0, 0.25, 1);
+  -moz-transition: all 0.16s cubic-bezier(0, 0, 0.25, 1);
+  -o-transition: all 0.16s cubic-bezier(0, 0, 0.25, 1);
+  -ms-transition: all 0.16s linear;
+  transition: all 0.16s cubic-bezier(0, 0, 0.25, 1);
+}
+
+.view_div_thumb_element_info {
+  padding-top: 24%;
+}
+
+/* View : Term hierarchy */
+
+.view_term_hierarchy_container { /* Thew view wrapper */
+  background: #EEE; 
+  border: 1px #CCC solid; 
+  padding: 5px; 
+  /* Round borders */
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */ 
+}
+
+.view_term_hierarchy_container a { /* Anchor element */
+  text-decoration: none;
+}
+
+
+
+
+
+/* ======================================================================== */
+/* ===============        OTHER CONTAINERS          ======================= */
+/* ======================================================================== */
+
+/* -------------------------- Letter -------------------------------------- */
+
+.letter { /* The letter container */
+
+}
+
+.letter-recipient { /* the letter destinatary */
+  font-size: larger;
+  text-transform: uppercase;
+}
+
+.letter-paragraph { /* A letter paragraph */
+  margin-left: 30px;
+}
+
+.letter-complimentary-close { /* A letter close */
+  font-style: italic;  
+}
+
+.letter-signature { /* A letter signature */
+  font-size: larger;
+}
+
+
+/* ========================================================================== */
+/* ================== BOXES TO SHOW INFORMATION ============================= */
+/* ========================================================================== */
+
+.box {
+  vertical-align: top;
+}
+
+.box-shadow {
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow:0 0 5px #888;
+  box-shadow: 0 0 5px #888;  
+}
+
+.bottom-box-shadow {
+  -moz-box-shadow: 0 1px 5px -2px #888;
+  -webkit-box-shadow: 0 1px 5px -2px #888;
+  box-shadow: 0 1px 5px -2px #888;
+}
+
+/* ------------------------ Information blocks  ---------------------- */
+
+/* A set of floating boxes to show a description */
+
+/*
+   --------------------------------------------------------------------
+   | information-block-container
+   |
+   | ------------------------------   -------------------------------  
+   | information-block-title          information-block-title
+   | information-block-description    information-block-description
+   | ------------------------------   -------------------------------  
+   |------------------------------------------------------------------*/
+
+.information-block-container { /* Holds a set of information-block */
+  overflow: hidden;   
+}
+
+.information-block {
+  float: left;
+  margin-left: 10px;    
+  padding: 10px;
+  text-align: left;
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */  
+}
+
+.information-block-title {
+  
+}
+
+.information-block-description {
+  
+}
+
+.information-block-category-1 {
+  background: #EEEEEE;  
+}
+
+.information-block-category-2 {
+  background: #DDDDDD;  
+}
+
+.information-block-category-3 {
+  background: #CCCCCC;  
+}
+
+.information-block-category-4 {
+  background: #AAAAAA;  
+}
+
+/* ------------------------- Gui block ---------------------------------- */
+
+/* Used to represent a box with a title */
+
+/* 
+   ----------------------------------------
+   |                              guiblock|
+   | gui-block-title                      |
+   ----------------------------------------
+ */
+.guiblock { /* The container */
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  padding: 5px;
+  background: #EEE;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.guiblock-title { /* The title (inside the container) */
+  font-weight: 600;
+  border-bottom: 1px solid #DDD; 
+  line-height: 1.618em;   /* Vertical rythm */
+  margin-bottom: 0.808em; /* Vertical rythm */
+  margin-top: 0.808em;    /* Vertical rythm */
+}
+
+/* ----------------------- Highlight Block --------------------------------- */
+
+/* Used to represent an important box */
+
+/* 
+    ----------------------------------------
+    |                    highlight_block   |
+    | Highlight block title                |
+    |                                      |
+    ----------------------------------------
+ */ 
+
+.highlight_block {
+  background: #EEE; 
+  border: 1px solid #CCC; 
+  padding: 5px; 
+  -webkit-border-radius: 5px 5px; /* Safari  */ 
+  -moz-border-radius: 5px 5px; /* Firefox */
+  border-radius: 5px 5px; /* iExplorer 9 */ 
+}
+
+.highlight_block_title {
+  padding: 2px 5px 2px 5px;
+}
+
+.highlight_block_level_2 {
+  overflow: hidden;
+  background: #DDDDDD;  
+}
+
+/* --------------------- Content data box ----------------------------- */
+
+/* Used to build more complex boxes with multiple rows */
+
+/*  
+   
+   --------------------------------------------
+   |                         content_data_box |
+   |                                          |
+   | -----------------------------------------|
+   | |                   content_data_block   |                      
+   | | CONTENT_DATA_BLOCK_TITLE               |
+   | |                                        |
+   | | ---------------------------------------|
+   | | |                   content_data_row   |
+   | | | LABEL                                |
+   | | |--------------------------------------|
+   | |----------------------------------------|
+   |------------------------------------------|                
+
+*/
+
+.content_data_box { /* The container */
+    background: #EEEEEE;
+    border: 1px solid #DDDDDD;  
+    padding: 0px 20px 0px 20px;
+    margin-top: 1.618em; /* Vertical rythm */
+}
+
+.content_data_block { /* A block inside the container */
+    border-bottom: 1px solid #DDDDDD; 
+}
+
+.content_data_block_title { /* A block title */
+    color: rgba(207, 32, 32, 0.6);
+}
+
+.content_data_row { /* A row inside a block */
+  line-height: 1.618em;
+}
+
+.content_data_label { /* A label */
+   color: gray; 
+}
+

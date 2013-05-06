@@ -1,3 +1,7 @@
+    #
+    # Application configuration for DEVELOPMENT and PRODUCTION environments
+    #
+
     BASE_PATH = Dir.pwd
 
     # Configure the theme system
@@ -27,3 +31,10 @@
         
     # Templating
     TemplateService::TemplateBuilder.setup(:root => File.dirname(BASE_PATH))         
+
+    # Configure Delayed JOBS
+    #Delayed::Worker.backend = :data_mapper
+    #Delayed::Worker.destroy_failed_jobs = false
+    #Delayed::Worker.sleep_delay = 60
+    #Delayed::Worker.max_attempts = 3
+    #Delayed::Worker.max_run_time = 5.minutes    

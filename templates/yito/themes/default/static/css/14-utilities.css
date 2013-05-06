@@ -1,0 +1,124 @@
+/* ------------ Utilities ------------ */
+
+.indentation { /* An indentation */
+  width : 20px;
+  display: inline-block;  
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+/* ----- Border -------- */
+.no-border {
+  border: none;
+}
+
+.no-background {
+  background: none;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+/* ----- Margins --------- */
+
+.no-margin-right { /* No right margin */
+ margin-right: 0px;	
+}
+
+.no-margin-left { /* No left margin */
+ margin-left: 0px;	
+}
+
+.right-margin {
+  margin-right: 10px;
+}
+
+.left-margin {
+  margin-left: 10px;
+}
+
+.top-margin {
+  margin-top: 0.808em;	
+}
+
+.bottom-margin {
+  margin-bottom: 0.808em;	
+}
+
+/* ------ Separators (borders) ------- */
+
+.left-separator {
+  border-left: 1px solid #DDD;
+}
+
+.right-separator {
+  border-right: 1px solid #DDD;
+}
+
+.top-separator { /* Top separator */ 
+ border-top: 1px solid #DDD; 
+}
+
+.bottom-separator { /* Bottom separator */
+  border-bottom: 1px solid #DDD;
+}
+
+/* ----- Paddings ------- */
+
+.left-space {
+  padding-left: 10px;
+}
+
+.right-space {
+  padding-right: 10px;
+}
+
+.top-space {
+  padding-top: 0.382em;
+}
+
+.bottom-space {
+  padding-bottom: 0.382em;
+}
+
+/* ----- Floats -------- */
+
+.left-float {
+  float: left;
+}
+
+.right-float {
+  float: right;
+}
+
+.clear-float {
+  clear: both;
+}
+
+.left-bar { /* Left float */
+ float: left;	
+}
+
+.right-bar { /* Right float */
+ float: right;	
+}
+
+
+.date_control { /* Date control */
+  background: url('/img/icons/calendar.png');
+  background-repeat: no-repeat; 
+  background-position: 99%;
+  background-color: white;
+}
+
+.link { /* Link */
+  cursor: hand;
+  cursor: pointer;  
+}
+
+.icon { /* An icon */
+  width: 16px;
+}

@@ -1,3 +1,11 @@
+#
+# Web (Unicorn)
+#
 #web: bundle exec thin start -p $PORT -e $RACK_ENV
 web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb
+#web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb & bundle exec rake jobs:work
+
+#
+# Worker (Delayed Jobs rake task)
+#
 #worker: bundle exec rake jobs:work

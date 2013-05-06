@@ -1,0 +1,92 @@
+
+.entity-management-button {
+  min-width: 60px;  
+  border: 1px solid #CCC;
+  background: rgba(30, 148, 172, .1); 
+}
+
+.action-button {
+
+}
+
+.post-button {
+  background-color: rgb(223, 223, 241);
+}
+
+.edit-entity-button {
+  
+}
+
+.create-entity-button {
+  background-color: rgb(205, 221, 233);
+}
+
+.update-entity-button {
+  background-color: rgb(205, 233, 205);
+}
+
+.cancel-entity-button {
+  
+}
+
+.delete-entity-button {
+  
+}
+
+.new-entity-button {
+  background: #E66464;
+  color: white;    
+}
+
+.previous-page-button {
+  
+}
+
+.next-page-button {
+  
+}
+
+.previous-element-button {
+  
+}
+
+.next-element-button {
+  
+}
+
+.navigation-button {
+
+}
+
+.page-navigation { /*Button to change from entity navigation to page navigation*/
+  border: none;
+  background: none;
+  text-decoration: underline;
+  float: left;
+}
+
+.close-bar {
+  overflow: hidden;
+}
+
+.close-bar a {
+  float:right;
+  cursor: hand;
+  cursor: pointer;  
+  margin-right: 5px;
+}
+
+.reload-entities-button {
+  background-image: url('/assets/img/icons/refresh.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 32px;  
+}
+
+.delete-entity-button {
+  background-image: url('/assets/img/icomoon/remove.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 32px;    
+}
+

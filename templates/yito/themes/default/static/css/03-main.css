@@ -31,10 +31,6 @@
 
 /* -------------------------- TAGS STYLE --------------------------- */
 
-* {
- font-family:'Open Sans','American Typewriter', serif;	
-}
-
 body, html {
   height: 100%;
 }
@@ -61,82 +57,12 @@ body
   background: url('/img/background.jpg'); 
   color: black;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
-
-a:link, a:visited {
-  color: rgb(67, 67, 155);
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(117, 117, 190);
-  text-decoration: underline;
-}
-
-h1, h2, h3 {
-  text-rendering: optimizeLegibility;
-}
-
-h1 {
-  font-family: 'Risque';
-  color: #5F5D5D;
-}
-
-h1 a:visited, h1 a:link, h1 a:hover {
-  color: #5F5D5D;
-  text-decoration: none;
-}
-
-h2 {
-  color: black;
-}
-
-h2 a:visited, h2 a:link {
-  color: black;
-} 
-
-h2 a:hover {
-  color: rgb(31, 12, 133);
-}
-
-/* ----- Fonts -------- */
-
-#menu_primary_links a, #menu_members a {
-  font-family: 'Limelight';
-}
-
-/* ----- Links -------- */
-
-p a:link, p a:visited {
-  color: #2D14AF;
-  text-decoration: none;
-}
-
-p a:hover {
- color: darkgrey; 
-}
-
-h1 a {
-  text-decoration: none;
-  font-family: 'Risque';
-  color: #5F5D5D;  
-}
-
-h2 a {
-  color: navy;
-}
-
-/* ----- Images ------ */
-
 a img {
   border: none; 
-}
-
-pre {
-  white-space: normal;
-  font-family: 'Cutive Mono', 'American Typewriter', monospace;
 }
 
 /* -------- Html5 boilerplate -------------- */
@@ -208,11 +134,10 @@ textarea {
 /* ================================================================= */
 
 #top {
-  background: #CD2039;
-}
-
-#top {
-
+  background: #000;
+  line-height: 1.618em; /* Vertical rythm */
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 #header {
@@ -221,19 +146,29 @@ textarea {
 /* ----------- THE CONTAINER (HOLDS ALL THE ELEMENTS) -------------- */
 
 #container { 
-  max-width: 960px; 
   margin: 0 auto;
-  padding: 0px 5px;
+  background-color: rgba(180,180,180,0.2);
+  min-height: 100%;
+}
+
+.container-row {
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 100%;
 }
 
 /* ----------- CONTAINER HEADER ------------------------------------------ */
 
 #container_header {
   border-bottom: 1px solid #DDD;
+  background-color: rgba(90,90,90,0.3);
 }
 
 #container_headline { 
   border-bottom: 1px solid #EEE;
+  background-color: rgba(215,215,215,0.2);
+  height: 2.618em; /* De la escala modular */
+  padding-top: 0.9em;
 }
 
 /* ----------- CONTAINER CONTENT ---------------------------------------- */
@@ -244,17 +179,27 @@ textarea {
 
 #container_content_left {
  overflow: hidden;	
+ min-height: 100%;
 }
 
 #container_content_center {
  overflow: hidden;	
+ min-height: 100%;
 }
 
 #container_content_right {
- overflow: hidden;		
+ overflow: hidden;	
+ min-height: 100%;	
 }
 
 #container_footer_content {
+}
+
+#bottom {
+  clear: both; 
+  background-color: rgba(10,10,10,0.3);
+  padding-top: 0.808em; /* Vertical rythm */
+  padding-bottom: 0.808em; /* Vertical rythm */
 }
 
 /* ------------ RESPONSIVE DESIGN --------------------- */
@@ -265,113 +210,4 @@ textarea {
 
 @media(max-width: 601px) {
 
-}
-
-/* ==================================================== */
-/* --------------- CLASSES ---------------------------- */
-/* ==================================================== */
-
-.date_control {
-  background: url('/img/icons/calendar.png');
-  background-repeat: no-repeat; 
-  background-position: 99%;
-  background-color: white;
-}
-
-.link {
-  cursor: hand;
-  cursor: pointer;  
-}
-
-.icon {
-  width: 16px;
-}
-
-.highlighted_text {
-  font-weight: 600; 
-}
-
-.highlighted_text_2 {
-  color: gray;
-}
-
-.lowlighted_text {
-  font-weight: 300; 
-}
-
-/* -------- Errors --------- */
-
-.error {
-  color: #E23131; 
-  display: block;
-}
-
-.warn {
-  color: darkblue;  
-}
-
-.fatal {
-  color: darkred; 
-}
-
-/* --------------- BLOCKS -------------------- */
-
-/* ------- Highlight Block ------------- */
-
-.highlight_block_title {
-  padding: 2px 5px 2px 5px;
-}
-
-.highlight_block {
-  background: #EEE; 
-  border: 1px solid #CCC; 
-  padding: 5px; 
-  -webkit-border-radius: 5px 5px; /* Safari  */ 
-  -moz-border-radius: 5px 5px; /* Firefox */
-  border-radius: 5px 5px; /* iExplorer 9 */ 
-}
-
-.highlight_block_level_2 {
-  overflow: hidden;
-  background: #DDDDDD;  
-}
-
-/* ------- Information blocks (FLOAT BLOCKS WITH DIFFERENT CATEGORIES) ------------- */
-
-.information-block-container { /* Holds a set of information-block */
-  overflow: hidden;   
-}
-
-.information-block {
-  float: left;
-  margin-left: 10px;    
-  padding: 10px;
-  text-align: left;
-  -webkit-border-radius: 5px 5px; /* Safari  */ 
-  -moz-border-radius: 5px 5px; /* Firefox */
-  border-radius: 5px 5px; /* iExplorer 9 */  
-}
-
-.information-block-category-1 {
-  background: #EEEEEE;  
-}
-
-.information-block-category-2 {
-  background: #DDDDDD;  
-}
-
-.information-block-category-3 {
-  background: #CCCCCC;  
-}
-
-.information-block-category-4 {
-  background: #AAAAAA;  
-}
-
-.information-block-title {
-  
-}
-
-.information-block-description {
-  
 }

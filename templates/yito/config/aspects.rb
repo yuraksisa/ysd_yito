@@ -4,6 +4,7 @@ require 'ysd_md_photo_gallery' unless defined?FieldSet::Photo
 require 'ysd_md_cms' unless defined?ContentManagerSystem::Content
 require 'ysd_md_profile' unless defined?Users::Profile
 require 'ysd_md_attachment' unless defined?Model::Attachment
+require 'ysd_md_fieldset' unless defined?FieldSet::Contact
 require 'fieldsets/ysd_md_commentable'
 require 'fieldsets/ysd_md_fieldset_content_place'
 

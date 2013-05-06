@@ -1,0 +1,187 @@
+/* ------- Body text ---------- */
+
+* {
+ font-family:'Open Sans','American Typewriter', serif;  
+}
+
+html > body {
+  font-size: 100%; /* 16px - default font size */
+}
+
+p {
+  line-height: 1.5em; /* 24px */
+  margin: 0.382em 0;
+}
+
+/* ------- Headings ------------ */
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  color: black;
+  /* 120 Proportional to 24 */
+  font-size: 3.75em; /* 60px / 16px = 3.75 */
+ /* margin-top: 0.5em;  */  /* 30px / 60px (font size) = 0.5 */
+ /* margin-bottom: 0.5em; */ /* 30px / 60px (font size) = 0.5 */  
+  text-align: center;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #5F5D5D;  
+}
+
+h1 a:visited, h1 a:link, h1 a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#top h1 {
+  font-size: 1.2em;  /* 60px / 16px = 3.75 */
+  margin-top: 0em;    /* 30px / 60px (font size) = 0.5 */
+  margin-bottom: 0em; /* 30px / 60px (font size) = 0.5 */  
+  text-align: left;
+}
+
+#top h1 a {
+  color: white;
+}
+
+#top h1 a:visited, #top h1 a:link, #top h1 a:hover {
+  color: white;
+}
+
+
+h2 {
+  color: rgba(150, 150, 150, 0.8);
+  /* 72 es el alto total (proporcional a 24) */
+  font-size: 3.125em;     /* 50px / 16px = 3.125 em */ 
+  margin-top: 0.32em;     /* 16px / 50px = 0.32 em */
+  margin-bottom: 0.32em;  /* 16px / 50px = 0.32 em */
+}
+
+h2 a {
+  color: navy;
+}
+
+h2 a:visited, h2 a:link  {
+  color: rgba(150, 150, 150, 0.8);
+}
+
+h2 a:hover {
+  color: rgba(120, 120, 120, 1);
+}
+
+h3 {
+  color: rgba(0, 0, 0, 0.6);
+  /* 48 es el alto total (proporcional a 24) */
+  font-size: 2em;         /* 32px / 16px = 2 em */
+  margin-top: 0.25em;    /* 8 / 32px = 0.25em */
+  margin-bottom: 0.25em; /* 8 / 32px = 0.25em */
+}
+
+a:link, a:visited {
+  color: rgb(35, 92, 27);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(35, 92, 27);
+  text-decoration: underline;
+}
+
+p a:link, p a:visited {
+  color: #2D14AF;
+  text-decoration: none;
+}
+
+p a:hover {
+ color: darkgrey; 
+}
+
+pre {
+  white-space: normal;
+  font-family: 'Cutive Mono', 'American Typewriter', monospace;
+}
+
+/* --------- Size --------- */
+
+.bigger_text {
+  font-size: larger;
+}
+
+.smaller_text {
+  font-size: smaller;	
+}
+
+/* ------- Transform ------ */
+
+.uppercase_text {
+  text-transform: uppercase;
+}
+
+.lowercase_text {
+  text-transform: lowercase;
+}
+
+/* ------- Contrast ------- */
+
+.more_contrast_text {
+  font-weight: 600;
+}
+
+.less_contrast_text {
+  color: gray;
+}
+
+/* ------- hightlighted and lowlighted text --------- */
+
+.highlighted_text {
+  font-weight: 600; 
+}
+
+.highlighted_text_2 {
+  color: gray;
+}
+
+.lowlighted_text {
+  font-weight: 300;
+}
+
+.lighter_text {
+  color: rgba(130, 130, 130, 0.6);   
+}
+
+/* ----- text alignment ------------ */
+
+.centered_text {
+   text-align: center;
+}
+
+.left_text {
+   text-align: left;
+}
+
+.right_text {
+   text-align: right;
+}
+
+/* ------- Messages colors -------- */
+
+.error {
+  color: #E23131; 
+}
+
+.info {
+  color: blue;
+}
+
+.warn {
+  color: darkblue;  
+}
+
+.fatal {
+  color: darkred; 
+}

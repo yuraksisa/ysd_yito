@@ -22,6 +22,25 @@
   border-radius: 5px;
 }
 
+/* ----- Borders --------- */
+
+.left-border-nosolid {
+  border-left: 1px dashed #CCC;
+}
+
+.right-border-nosolid {
+  border-right: 1px dashed #CCC;
+}
+
+.top-border-nosolid {
+  border-top: 1px dashed #CCC;
+}
+
+.bottom-border-nosolid {
+  border-bottom: 1px dashed #CCC;
+}
+
+
 /* ----- Margins --------- */
 
 .no-margin-right { /* No right margin */
@@ -121,4 +140,32 @@
 
 .icon { /* An icon */
   width: 16px;
+}
+
+.element-status {
+ -webkit-border-radius: 5px; /* Safari  */ 
+ -moz-border-radius: 5px; /* Firefox */
+ border-radius: 5px; /* iExplorer 9 */    
+ padding: 3px;
+}
+
+.pending-status {
+  background-color: rgb(241, 248, 69);
+  color: black; 
+}
+
+.doing-status {
+  background-color: rgb(245, 178, 5);
+  color: black;
+}
+
+.done-status {
+  background-color: rgb(41, 158, 69);
+  color: white;
+}
+
+.error-status {
+
+   background-color: rgb(238, 71, 71);    
+   color: white;
 }

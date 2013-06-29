@@ -48,14 +48,9 @@
         </div>
       <% else %>
         <div id="top" class="top-no-user">      
-          <div class="container-row"> 
-            <% if page.variables.has_key?(:languages_translation) and not page.variables[:languages_translation].empty? %>
-            <div id="languages_translation">
-               <%= page.variables[:languages_translation] %>
-            </div>
-            <% end %>
+          <div class="_container-row"> 
             <div class="container_12">
-              <div class="<% if page.variables.has_key?(:top) and not page.variables[:top].empty? %>prefix_1 grid_5<%else%>grid_12<% end %>">
+              <div class="prefix_1 grid_5">
                 <h1 class="site_title">
                   <a href="/" title="site_title">
                     <% unless site_logo.empty? %>
@@ -77,15 +72,6 @@
                  <%= page.variables[:top] %>
               </div>
               <% end %>
-            </div>
-            <div class="container_12">
-              <div class="prefix_9 grid_3"> 
-                <% if page.variables.has_key?(:login_register) and not page.variables[:login_register].empty? %>
-                  <div id="login_register">
-                    <%= page.variables[:login_register]  %>
-                  </div>
-                <% end %>
-              </div>        
             </div>
           </div>
         </div>  
@@ -120,7 +106,7 @@
       <% end %>
                              
       <div id="container_content" class="container_12">
-        <div class="container-row">
+        <div class="_container-row">
           <% if page.variables.has_key?(:content_left) and not page.variables[:content_left].empty? %>
             <div class="grid_4">
               <div id="container_content_left">
@@ -175,25 +161,25 @@
     <% end %>
 
     <div class="apple_overlay" id="overlay">
-	   <div class="contentWrap"></div>
-    </div>	
+     <div class="contentWrap"></div>
+    </div>  
 
     <script type="text/javascript">
       require(['jquery','jquery.tools'], function($) {
-	      $("a[rel='#overlay'].external").overlay({
-	        mask: {
-		       color: '#aaaaaa',
-		       loadSpeed: 200,
-		       opacity: 0.5
-   	        },
-	        closeOnClick : false,
-		    onBeforeLoad: function() {
-		      this.getOverlay().width(640);
-		      this.getOverlay().height(440);	
-			  var wrap = this.getOverlay().find(".contentWrap");
-			  wrap.load(this.getTrigger().attr("href"));
-	      	}
-	      });
+        $("a[rel='#overlay'].external").overlay({
+          mask: {
+           color: '#aaaaaa',
+           loadSpeed: 200,
+           opacity: 0.5
+            },
+          closeOnClick : false,
+        onBeforeLoad: function() {
+          this.getOverlay().width(640);
+          this.getOverlay().height(440);  
+        var wrap = this.getOverlay().find(".contentWrap");
+        wrap.load(this.getTrigger().attr("href"));
+          }
+        });
       });
     </script>
 

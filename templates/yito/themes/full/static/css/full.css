@@ -1,0 +1,18 @@
+#block_menu_primary_links {
+  float: none;
+  margin-top: 1.5em;
+}
+
+#menu_primary_links {
+  text-transform: none;
+  font-size: 2em;
+}
+
+.content-body {
+	padding-left: 10px;
+}
+
+.entity-management {
+	padding-left: 10px;
+	padding-right: 10px;
+}

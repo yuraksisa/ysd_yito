@@ -58,4 +58,15 @@ div.contentWrap { /* container for external content. uses vertical scrollbar, if
 
 div.wysiwyg {
   width: 100%;
+  border: none;
+}
+
+.html_editor {
+  width: 100%;
+  min-height: 400px;
+}
+
+body.wysiwyg {
+  padding: 2%;
+  width: 96%;
 }

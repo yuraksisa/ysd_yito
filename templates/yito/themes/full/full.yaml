@@ -1,13 +1,12 @@
-name: Default
+name: Full
+parent: default
 description: Default theme. It uses 960.css
-styles: [
-    '/css/style.css',
-    'http://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:400italic,400,800,700,600'
+styles: ['/css/full.css'
     ]
 scripts: []
 images: []
-regions: ['top', 'header', 'languages_translation', 'login_register', 
-          'admin_menu',
+regions: ['top', 'header', 'languages_translation', 'login_register',
+          'admin_menu', 
           'connected_user', 'container_header', 'container_headline', 
           'content_top', 'content_left', 'content_right', 'content_bottom',
           'container_bottom', 'bottom']

@@ -46,10 +46,13 @@ form div label.fieldtitle {
   text-align:left;
   display: block;
   line-height: 1.618em;
+  /*position: absolute;
+  margin-left: 10px;*/
 }
 
 form div.fielddescription {
   line-height: 1.618em;
+  display: none;
 } 
 
 form div input.fieldcontrol, form div textarea.fieldcontrol, form div label.error, form div div.fieldcontrol, form div fieldset.fieldcontrol { /* occupies all the space */
@@ -59,7 +62,7 @@ form div input.fieldcontrol, form div textarea.fieldcontrol, form div label.erro
   -moz-box-sizing: border-box;  
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding-left: 5px;
+  padding-left: 5px; /*150px*/
 }
 
 form div select.fieldcontrol { /* to the left and do not alter the width */
@@ -129,7 +132,7 @@ form input[type="radio"], form input[type="checkbox"] {
 form input[type="button"], form input[type="submit"], form input[type="reset"]  { /* BUTTONS */
   text-align: center;
   
-  margin-left: 5px; 
+  /*margin-left: 5px; */
   padding: 5px; 
    
   background-image: linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
@@ -137,8 +140,8 @@ form input[type="button"], form input[type="submit"], form input[type="reset"]  
   background-image: -moz-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -webkit-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -ms-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
-  background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.25, rgb(221,221,221)), color-stop(0.71, rgb(238,238,238)))
-  text-shadow: #333 1px 1px 4px;;
+  background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.25, rgb(221,221,221)), color-stop(0.71, rgb(238,238,238)));
+  /*text-shadow: #333 1px 1px 4px;*/
   border: solid 1px #b7b7b7;
 
   -webkit-border-radius: 3px 3px; /* Safari  */ 
@@ -147,6 +150,7 @@ form input[type="button"], form input[type="submit"], form input[type="reset"]  
     
   cursor: hand;
   cursor: pointer;  
+  min-width: 80px;
 }
 
 .form-button { /* Represents a button */
@@ -286,4 +290,36 @@ form input[type="button"], form input[type="submit"], form input[type="reset"]  
 
  color: Maroon;
   
+}
+
+.editable_text {
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.radio-block {
+  display: inline-block;
+  border: 1px solid #CCC;
+  padding: 10px;
+  margin: 10px 0px 10px 0x;  
+}
+
+.radio-info {
+  margin-left: 20px;
+}
+
+::-webkit-input-placeholder {
+   color: #DDD;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #DDD;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #DDD;  
+}
+
+:-ms-input-placeholder {  
+   color: #DDD;  
 }

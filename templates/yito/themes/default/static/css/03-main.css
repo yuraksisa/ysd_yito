@@ -52,6 +52,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
+ul {
+  padding-left: 25px;
+  list-style-type: square;
+}
+
 body 
 {	
   background: url('/img/background.jpg'); 
@@ -134,13 +139,24 @@ textarea {
 /* ================================================================= */
 
 #top {
-  background: #000;
   line-height: 1.618em; /* Vertical rythm */
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 
+.top-user {
+  background: #000;
+}
+
+.top-no-user {
+  background-color: rgba(180,180,180,0.2);
+}
+
 #header {
+}
+
+.site_logo {
+  height: 32px;
 }
 
 /* ----------- THE CONTAINER (HOLDS ALL THE ELEMENTS) -------------- */
@@ -154,7 +170,7 @@ textarea {
 .container-row {
   max-width: 960px;
   margin: 0 auto;
-  min-height: 100%;
+  /*min-height: 100%;*/
 }
 
 /* ----------- CONTAINER HEADER ------------------------------------------ */

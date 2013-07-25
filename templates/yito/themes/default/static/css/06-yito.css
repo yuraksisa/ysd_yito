@@ -878,8 +878,9 @@
 }
 
 .block-title { /* Block title */
-  /*font-weight: 800;*/
-  color: darkgray;	
+  color: rgb(120,120,120);
+  text-transform: uppercase;
+  text-align: center;  
 }
 
 #top .block, #header .block, #container_content_left .block, #container_content_right .block {

@@ -7,12 +7,6 @@ module Sinatra
     #  - Helpers to render pages and to load static resources
     #
     #
-    # Settings : 
-    #
-    #  site_anonymous_front_page : Front page for an anonymous user
-    #  site_front_page           : Front page for an authenticated user
-    #
-    #
     module Site
    
       def self.registered(app)
@@ -27,14 +21,10 @@ module Sinatra
           front_page = if authenticated? and not user.belongs_to?('anonymous')
                          if sfp=SystemConfiguration::Variable.get('site.front_page') 
                            sfp.value
-                         else 
-                           settings.site_front_page if defined?(settings.site_front_page) 
                          end
                        else 
                          if sfp=SystemConfiguration::Variable.get('site.anonymous_front_page') 
                            sfp.value
-                         else
-                           settings.site_anonymous_front_page if defined?(settings.site_anonymous_front_page) 
                          end
                        end
           

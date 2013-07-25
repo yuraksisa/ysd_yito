@@ -44,7 +44,7 @@
   background-image: -moz-linear-gradient(top, rgb(216, 61, 48) 25%, rgb(228, 72, 42) 71%);
   background-image: -webkit-linear-gradient(top, rgb(216, 61, 48) 25%, rgb(228, 72, 42) 71%);
   background-image: -ms-linear-gradient(top, rgb(216, 61, 48) 25%, rgb(228, 72, 42) 71%);
-  background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.25, rgb(70, 136, 207)), color-stop(0.71, rgb(228, 72, 42))); 
+  background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.25, rgb(216, 61, 48)), color-stop(0.71, rgb(228, 72, 42))); 
   padding: 9px;
   color: white;
   text-transform: uppercase;

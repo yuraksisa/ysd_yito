@@ -61,12 +61,10 @@
  overflow: hidden;
 }
 
-.entity-fieldlabel {
- font-weight: bold; 
+.entity-fieldlabel { 
  display: inline-block;
- vertical-align: top;
+ vertical-align: middle; /*top*/
  width: 25%;
- /*padding-top: 5px;*/
  padding-bottom: 5px;
 }
 

@@ -2,7 +2,7 @@ name: Default
 description: Default theme. It uses 960.css
 styles: [
     '/css/style.css',
-    'http://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:400italic,400,800,700,600'
+    'https://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:400italic,400,800,700,600'
     ]
 scripts: []
 images: []

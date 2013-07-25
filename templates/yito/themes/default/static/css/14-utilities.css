@@ -154,13 +154,18 @@
   color: black; 
 }
 
+.confirmed-status {
+  background-color: rgb(41, 158, 69);
+  color: white;
+}
+
 .doing-status {
-  background-color: rgb(245, 178, 5);
-  color: black;
+  background-color: rgb(13, 124, 226);
+  color: white;
 }
 
 .done-status {
-  background-color: rgb(41, 158, 69);
+  background-color: rgb(0, 0, 0);
   color: white;
 }
 

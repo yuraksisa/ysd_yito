@@ -46,6 +46,7 @@ form div label.fieldtitle {
   text-align:left;
   display: block;
   line-height: 1.618em;
+  vertical-align: middle;
   /*position: absolute;
   margin-left: 10px;*/
 }

@@ -9,6 +9,10 @@ gem "unicorn"
 #gem "thin" 
 gem "sinatra", :git => "git://github.com/sinatra/sinatra.git"
 
+# Cache
+gem "rack-cache"
+gem 'dalli'
+
 # New Relic
 #gem "newrelic_rpm"
 
@@ -71,6 +75,10 @@ gem "ysd_plugin_background", ">= 0.1"
 
 # YAML
 #gem "dm-yaml-adapter","1.2.0"
+
+# MySQL
+#gem "do_mysql","0.10.8"
+#gem "dm-mysql-adapter","1.2.0"
 
 # PostgreSQL 
 gem "do_postgres","0.10.8"

@@ -140,15 +140,17 @@ textarea {
 
 #top {
   line-height: 1.618em; /* Vertical rythm */
+}
+
+#top.top-user {
+  background: #000;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 
-.top-user {
-  background: #000;
-}
-
-.top-no-user {
+#top.top-no-user {
+  padding-top: 1.618em;
+  padding-bottom: 3.236em;
   background-color: rgba(180,180,180,0.2);
 }
 

@@ -125,6 +125,14 @@ form select.combo {
   -webkit-appearance: menulist-button;
 }
 
+.high_select {
+  height: 37px;
+}
+
+.superhigh_select {
+  height: 50px;
+}
+
 form input[type="radio"], form input[type="checkbox"] {
   margin-left: 1px;
   margin-right: 5px;

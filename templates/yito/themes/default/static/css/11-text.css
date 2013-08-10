@@ -132,6 +132,10 @@ pre {
   text-transform: lowercase;
 }
 
+.italic_text {
+  font-style: italic;
+}
+
 /* ------- Contrast ------- */
 
 .more_contrast_text {

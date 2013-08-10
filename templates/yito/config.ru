@@ -12,12 +12,12 @@ require 'bundler/setup'
 require 'bundler'
 Bundler.require 
 
-# Rack
-use Rack::Session::Cookie, :secret => 'chiriyuyo'
-use Rack::Logger 
+# App requires
+require './config/aspects.rb'
+require './config/business_events.rb' 
+require './my_web.rb'
 
 # Warden configuration 
-
 Warden::Strategies.add(:profile_strategy, ProfileWarden::ProfileWardenStrategy)
 Warden::Strategies.add(:anonymous_strategy, WardenStrategy::AnonymousWardenStrategy)
 Warden::Strategies.add(:facebook_strategy, WardenStrategy::FacebookWardenStrategy)
@@ -41,16 +41,26 @@ Warden::Manager.serialize_from_session do |id|
            Users::Profile.get(username) || Users::Profile.ANONYMOUS_USER
          end
 end
-  
-# ------- Start the application -------------
 
-#MIME::Types.add(MIME::Type.from_array("video/mp4", %(m4v)))
+# Session management
+use Rack::Session::Cookie, :secret => 'chiriyuyo'
+use Rack::Logger 
 
-require './config/aspects.rb'
-require './config/business_events.rb' 
-require './my_web.rb'
-
-
-Sinatra::Yito.use Middleware::RequestLanguage 
+# Cache
+if memcachier_servers = ENV['MEMCACHIER_SERVERS']
+  cache = Dalli::Client.new memcachier_servers.split(','), {
+    :username => ENV['MEMCACHIER_USERNAME'],
+    :password => ENV['MEMCACHIER_PASSWORD']
+  }
+  use Rack::Cache,
+    :verbose => true,
+    :metastore => cache,
+    :entitystore => cache
+else
+  use Rack::Cache,
+    :verbose => true,
+    :metastore => 'file:./cache/meta',
+    :entitystore => 'file:./cache/body'
+end
 
 run Sinatra::MyWeb

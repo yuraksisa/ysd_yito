@@ -20,11 +20,10 @@ require './my_web.rb'
 # Warden configuration 
 Warden::Strategies.add(:profile_strategy, ProfileWarden::ProfileWardenStrategy)
 Warden::Strategies.add(:anonymous_strategy, WardenStrategy::AnonymousWardenStrategy)
-Warden::Strategies.add(:facebook_strategy, WardenStrategy::FacebookWardenStrategy)
 
 use Warden::Manager do |config|
   config.failure_app = Sinatra::Yito
-  config.default_strategies :profile_strategy, :facebook_strategy, :anonymous_strategy
+  config.default_strategies :profile_strategy, :anonymous_strategy
 end
 
 Warden::Manager.serialize_into_session do |user|

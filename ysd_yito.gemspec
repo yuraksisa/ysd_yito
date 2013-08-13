@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name    = "ysd_yito"
-  s.version = "0.1.37"
+  s.version = "0.1.45"
   s.authors = ["Yurak Sisa Dream"]
   s.date    = "2012-12-11"
   s.email   = ["yurak.sisa.dream@gmail.com"]
@@ -11,9 +11,9 @@ Gem::Specification.new do |s|
   s.executables << 'yito'
 
   s.add_runtime_dependency "sinatra"         
-  s.add_runtime_dependency "sinatra-r18n"#, "0.4.9"
+  s.add_runtime_dependency "sinatra-r18n"
   s.add_runtime_dependency "rack" 
-  s.add_runtime_dependency "json"#, "1.5.4"
+  s.add_runtime_dependency "json"
   
   s.add_runtime_dependency "tilt"
   s.add_runtime_dependency "thor"

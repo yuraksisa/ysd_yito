@@ -702,6 +702,7 @@
 
 .content-flyer-wrapper {
   margin-top: 1.618em; /* Vertical rythm */
+  margin-bottom: 1.618em;
 }
 
 .content-flyer-wrapper .content-title {

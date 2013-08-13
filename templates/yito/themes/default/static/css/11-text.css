@@ -45,9 +45,10 @@ h1 a:visited, h1 a:link, h1 a:hover {
 }
 
 .top-user h1 {
-  font-size: 1.2em;  /* 60px / 16px = 3.75 */
-  margin-top: 0em;    /* 30px / 60px (font size) = 0.5 */
-  margin-bottom: 0em; /* 30px / 60px (font size) = 0.5 */  
+  /* 96 es el alto total (proporcional a 24) */
+  font-size: 1.2em;     /* 60px / 16px = 3.75 */
+  margin-top: 0.3em;    /* 18px / 60px (font size) = 0.3em */
+  margin-bottom: 0.3em; /* 18px / 60px (font size) = 0.5em */  
   text-align: left;
 }
 
@@ -64,8 +65,8 @@ h2 {
   color: rgba(150, 150, 150, 0.8);
   /* 72 es el alto total (proporcional a 24) */
   font-size: 3.125em;     /* 50px / 16px = 3.125 em */ 
-  margin-top: 0.32em;     /* 16px / 50px = 0.32 em */
-  margin-bottom: 0.32em;  /* 16px / 50px = 0.32 em */
+  margin-top: 0.22em;     /* 11px / 50px = 0.22 em */
+  margin-bottom: 0.22em;  /* 11px / 50px = 0.22 em */
 }
 
 h2 a {
@@ -82,10 +83,31 @@ h2 a:hover {
 
 h3 {
   color: rgba(0, 0, 0, 0.6);
-  /* 48 es el alto total (proporcional a 24) */
+  /* 48 es el alto total (proporcinal a 24) */
   font-size: 2em;         /* 32px / 16px = 2 em */
-  margin-top: 0.25em;    /* 8 / 32px = 0.25em */
-  margin-bottom: 0.25em; /* 8 / 32px = 0.25em */
+  margin-top: 0.25em;     /* 8 / 32px = 0.25em */
+  margin-bottom: 0.25em;  /* 8 / 32px = 0.25em */
+}
+
+h4 {
+  /* 48 es el alto total (proporcional a 24) */
+  font-size: 1.5em;      /* 24px / 16px = 1.5 em */
+  margin-top: 0.5em;     /* 12px / 24px = 0.5 em*/
+  margin-bottom: 0.5em;  /* 12px / 24px = 0.5 em */
+}
+
+h5 {
+  /* 24 es el alto total (proporcional a 24) */
+  font-size: 1.25em;      /* 20px / 16px = 1.25 em */
+  margin-top: 0.1em;      /* 2px / 20px = 0.1em */
+  margin-bottom: 0.1em;   /* 2px / 20px = 0.1em */
+}
+
+h6 {
+  /* 24 es el alto total (proporcional a 24) */
+  font-size: 1.125em;       /* 18px / 16px = 1.125em */
+  margin-top: 0.16667em;    /*  3px / 18px = 0.16667em */
+  margin-bottom: 0.16667em; /*  3px / 18px = 0.16667em */
 }
 
 a:link, a:visited {

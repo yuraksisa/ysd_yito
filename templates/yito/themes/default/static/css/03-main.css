@@ -58,7 +58,7 @@ ul {
 }
 
 body 
-{	
+{ 
   background: url('/img/background.jpg'); 
   color: black;
   width: 100%;
@@ -138,6 +138,11 @@ textarea {
 /* ------------            MAIN LAYOUT         --------------------- */
 /* ================================================================= */
 
+#body_wrapper {
+  background-color: rgba(180,180,180,0.2);
+  min-height: 100%;
+}
+
 #top {
   line-height: 1.618em; /* Vertical rythm */
 }
@@ -151,22 +156,27 @@ textarea {
 #top.top-no-user {
   padding-top: 1.618em;
   padding-bottom: 3.236em;
-  background-color: rgba(180,180,180,0.2);
+  /*background-color: rgba(180,180,180,0.2);*/
 }
 
 #header {
 }
 
-.site_logo {
-  height: 32px;
+.site_slogan {
+  font-style: italic;
+  font-size: smaller;
+  text-align: center;
+  margin-top: 1.5em;
 }
 
 /* ----------- THE CONTAINER (HOLDS ALL THE ELEMENTS) -------------- */
 
 #container { 
   margin: 0 auto;
-  background-color: rgba(180,180,180,0.2);
+  /*background-color: rgba(180,180,180,0.2);*/
   min-height: 100%;
+  margin-top: 3.236em; /* Vertical rythm */
+  padding-bottom: 3.236em; /*Vertical rythm */
 }
 
 .container-row {
@@ -196,18 +206,18 @@ textarea {
 }
 
 #container_content_left {
- overflow: hidden;	
+ overflow: hidden;  
  min-height: 100%;
 }
 
 #container_content_center {
- overflow: hidden;	
+ overflow: hidden;  
  min-height: 100%;
 }
 
 #container_content_right {
- overflow: hidden;	
- min-height: 100%;	
+ overflow: hidden;  
+ min-height: 100%;  
 }
 
 #container_footer_content {
@@ -220,12 +230,30 @@ textarea {
   padding-bottom: 0.808em; /* Vertical rythm */
 }
 
+.site_logo {
+  height: 32px;
+}
+
+#site_logo {
+  width: auto;
+}
+
+
 /* ------------ RESPONSIVE DESIGN --------------------- */
 
-@media(max-width: 980px) {
-
+@media(max-width: 979px) {
+  #container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 @media(max-width: 601px) {
 
+}
+
+@media(max-width: 480px) {
+  img {
+    width: 100%;
+  }
 }

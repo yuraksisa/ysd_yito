@@ -64,6 +64,16 @@
         margin-left: 1px;
       	/*border: 1px dotted gray;*/
       }
+
+      @media(max-width:601px) {
+        ul.menu > li {
+          display: block;
+        }
+      }
+
+      ul.list_menu > li { /* To show the menu as a list */
+         display: block;
+      }
      
       /* -------------- Submenu (Generic) --------------------*/
       

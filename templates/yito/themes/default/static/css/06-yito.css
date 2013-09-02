@@ -66,7 +66,7 @@
 /* ================================== */
 
 .attachments-list {
- padding-left: 5px; 
+ padding-left: 0px; 
 }
 
 .attachment-element {
@@ -97,6 +97,20 @@
   }
 
 /* ================================== */
+/* -------- ListManagement ---------- */
+/* ================================== */
+
+.list-management-add-action {
+    cursor: hand;
+    cursor: pointer;  
+}
+
+.list-management-item-delete-img {
+    cursor: hand;
+    cursor: pointer;  
+}
+
+/* ================================== */
 /* --------- Gallery ---------------- */
 /* ================================== */
 
@@ -104,6 +118,11 @@
     width: 100%;
     margin-bottom: 1.618em; /* Vertical rythm */
   }  
+
+  #gallery_highlight_photo_size img:first-child {
+    display: block;
+    margin-bottom: 1.618em; /* Vertical rythm */
+  }
 
   #gallery .list-management-item {
     display: inline-block;
@@ -679,20 +698,23 @@
   border-top: 1px solid #CCC;
   line-height: 1.618em;   /* Vertical rythm */
   padding-top: 0.808em;   /* Vertical rythm */
-  margin-bottom: 0.808em; /* Vertical rythm */    
+  margin-bottom: 0.808em; /* Vertical rythm */  
+  margin-top: 1.618em;    /* Vertical rythm */  
 }
 
 .content-action-button {
  background-color: #EEE; 
 }
 
-/* -------- content render (default) ---------- */
+/* ======== Content Renders ============== */
+
+/* -------- Default (render-content.erb) ---------- */
 
 .content-wrapper .content_data_block {
   border-bottom: none;
 }
 
-/* -------- Content header -------- */
+/* -------- Content header (render-content-headerextras.erb) -------- */
 
 .content-header-wrapper {
   margin-top: 2.618em;
@@ -701,7 +723,7 @@
 /* -------- content flyer render ---------- */
 
 .content-flyer-wrapper {
-  margin-top: 1.618em; /* Vertical rythm */
+  /*margin-top: 1.618em;*/ /* Vertical rythm */
   margin-bottom: 1.618em;
 }
 
@@ -723,12 +745,15 @@
 
 /* -------- content right extras render ---------- */
 
+.content-rightextras-wrapper {
+  margin-top: 2.618em; /* Vertical rythm */
+}
+
 .content-rightextras-wrapper .content-body {
-  width: 50%;
+  width: 45%;
   float: left;
   margin-right: 5%;
-  line-height: 2em;
-  letter-spacing: 0.07em;
+  margin-top: -1.4em;
 }
 
 .content-rightextras-wrapper .content_data_block {
@@ -736,15 +761,17 @@
 }
 
 .content-rightextras-wrapper .content-custom {
-  width: 47%;
+  width: 50%;
   float: right;
-/*  display: inline-block;
-  position: relative;
-*/
 }
 
 .content-rightextras-wrapper .content-custom :nth-child(2) {
   clear: left;
+}
+
+.content-rightextras-wrapper .content-custom-nogroup {
+  clear: both;
+  padding-top: 1.25em;
 }
 
 /* -------- content left extras render ---------- */
@@ -754,21 +781,18 @@
 }
 
 .content-leftextras-wrapper .content-custom {
-  width: 47%;
+  width: 50%;
   float: left;
-  /*display: inline-block;
-  position: relative;*/
 }
 
 .content-leftextras-wrapper .content-title {
 }
 
 .content-leftextras-wrapper .content-body {
-  width: 50%;
-  margin-left: 3%;
+  width: 45%;
+  margin-left: 5%;
   float: right;
   margin-top: -1.4em;
-  /*padding-bottom: 2.618em;*/
 }
 
 .content-leftextras-wrapper .content-body + .content-custom {
@@ -794,11 +818,6 @@
   clear: both;
   padding-top: 1.25em;
 }
-
-
-
-/* -------- content blogentry2 render ----- */
-
 
 /* -------- content teaser render -------- */
 
@@ -840,6 +859,20 @@
 
 .content-teaser-body p {
   margin-top: 0px;  
+}
+
+/* ======== Content Render Support classes =========== */
+
+/* ------ Content custom above left float ---------- */
+
+.custom-above-left-float .content-custom-above {
+  float: left;
+  margin-right: 1em;
+}
+
+.custom-above-left-float .content-custom-below {
+  clear: left;
+  padding-top: 1.618em;
 }
 
 /* -------- content status --------------- */

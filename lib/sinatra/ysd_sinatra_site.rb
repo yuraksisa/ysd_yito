@@ -41,6 +41,10 @@ module Sinatra
         #
         app.get "/*" do
  
+          if Plugins::Plugin.plugin_invoke_all(:ignore_static_resources, {:app => self}).include?(request.path)
+            pass
+          end
+
           serve_static_resource(request.path_info, File.join(File.dirname(__FILE__), '..', '..', 'static') )
             
         end        

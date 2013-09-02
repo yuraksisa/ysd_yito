@@ -9,6 +9,29 @@
   overflow: hidden;
 }
 
+/* ----- Vertical align ----- */
+
+.top-vertical-align {
+  vertical-align: top;
+}
+
+/* ------ Shadow ------- */
+
+.box-shadow {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
+}
+
+
+/* ------ BorderBox ----- */
+
+.border-box {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 /* ----- Border -------- */
 .no-border {
   border: none;
@@ -36,19 +59,39 @@
   border-top: 1px dashed #CCC;
 }
 
+.bottom-border-solid {
+  border-bottom: 1px solid;
+}
+
 .bottom-border-nosolid {
   border-bottom: 1px dashed #CCC;
+}
+
+.bottom-border-dotted {
+  border-bottom: 1px dotted #CCC;
+}
+
+.all-border-solid {
+  border: 1px solid;
+}
+
+.all-border-dotted {
+  border: 1px dotted;
+}
+
+.all-border-dashed {
+  border: 1px dashed;
 }
 
 
 /* ----- Margins --------- */
 
 .no-margin-right { /* No right margin */
- margin-right: 0px;	
+ margin-right: 0px; 
 }
 
 .no-margin-left { /* No left margin */
- margin-left: 0px;	
+ margin-left: 0px;  
 }
 
 .right-margin {
@@ -60,11 +103,36 @@
 }
 
 .top-margin {
-  margin-top: 0.808em;	
+  margin-top: 0.808em;  
+}
+
+.top-margin-1line {
+  margin-top: 1.618em;
+}
+
+.top-margin-2lines {
+  margin-top: 3.236em;
 }
 
 .bottom-margin {
-  margin-bottom: 0.808em;	
+  margin-bottom: 0.808em; 
+}
+
+.bottom-margin-1line {
+  margin-bottom: 1.618em; 
+}
+
+.bottom-margin-2lines {
+  margin-bottom: 3.236em;
+}
+
+@media(min-width: 960px) {
+  .grid_right_separator {
+     margin-right: 2em;
+  }
+  .grid_left_separator {
+     margin-left: 2em;
+  }
 }
 
 /* ------ Separators (borders) ------- */
@@ -99,10 +167,33 @@
   padding-top: 0.382em;
 }
 
+.top-space-1line {
+  padding-top: 1.618em;
+}
+
+.top-space-2lines {
+  padding-top: 1.618em;
+}
+
 .bottom-space {
   padding-bottom: 0.382em;
 }
 
+.bottom-space-1line {
+  padding-bottom: 1.618em;
+}
+
+.bottom-space-2lines {
+  padding-bottom: 3.236em;
+}
+
+.all-min-space {
+  padding: 5px;
+}
+
+.all-space {
+  padding: 10px;
+}
 /* ----- Floats -------- */
 
 .left-float {

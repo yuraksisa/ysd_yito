@@ -12,7 +12,7 @@
     <%= page.styles %>
   </head>
   <body>
-
+    <div id="body_wrapper">
       <% if (user and not user.belongs_to?('anonymous'))%>     
         <div id="top" class="top-user">
           <div class="container-row">
@@ -150,19 +150,21 @@
       
     </div>
 
-    <% if page.variables.has_key?(:bottom) %>    
-      <div id="bottom">
+  </div>
+
+  <% if page.variables.has_key?(:bottom) %>    
+    <div id="bottom">
         <div class="container-row">
           <div class="container_12">
             <%= page.variables[:bottom] %>
           </div>
         </div>
       </div>
-    <% end %>
+  <% end %>
 
-    <div class="apple_overlay" id="overlay">
-     <div class="contentWrap"></div>
-    </div>  
+  <div class="apple_overlay" id="overlay">
+    <div class="contentWrap"></div>
+  </div>  
 
     <script type="text/javascript">
       require(['jquery','jquery.tools'], function($) {
@@ -182,6 +184,7 @@
         });
       });
     </script>
+
 
   </body>
 </html>

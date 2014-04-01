@@ -110,6 +110,13 @@
     cursor: pointer;  
 }
 
+.list-management-item-description {
+
+}
+
+.list-management-item-delete {
+}
+
 /* ================================== */
 /* --------- Gallery ---------------- */
 /* ================================== */
@@ -126,6 +133,7 @@
 
   #gallery .list-management-item {
     display: inline-block;
+    margin-bottom: 1em;
   }
 
   .gallery-thumbnail {
@@ -917,8 +925,12 @@
   text-align: center;  
 }
 
-#top .block, #header .block, #container_content_left .block, #container_content_right .block {
+#top .block, #container_content_left .block, #container_content_right .block {
   font-size: 0.75em;
+}
+
+#header .block {
+  font-size: 1em;
 }
 
 /* ------ View Management ------------- */

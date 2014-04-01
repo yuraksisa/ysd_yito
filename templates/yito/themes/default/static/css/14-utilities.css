@@ -1,5 +1,10 @@
 /* ------------ Utilities ------------ */
 
+.over_cursor {
+  cursor: pointer;
+  cursor: hand;  
+}
+
 .indentation { /* An indentation */
   width : 20px;
   display: inline-block;  
@@ -7,6 +12,14 @@
 
 .overflow {
   overflow: hidden;
+}
+
+.100_100_height {
+  height: 100%;
+}
+
+.as_link {
+  text-decoration: underline;
 }
 
 /* ----- Vertical align ----- */
@@ -194,6 +207,11 @@
 .all-space {
   padding: 10px;
 }
+
+.all-full-space {
+  padding : 1em;
+}
+
 /* ----- Floats -------- */
 
 .left-float {

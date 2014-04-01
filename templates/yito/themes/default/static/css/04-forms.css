@@ -143,13 +143,14 @@ form input[type="button"], form input[type="submit"], form input[type="reset"]  
   
   /*margin-left: 5px; */
   padding: 5px; 
-   
+  /*
   background-image: linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -o-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -moz-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -webkit-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -ms-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.25, rgb(221,221,221)), color-stop(0.71, rgb(238,238,238)));
+  */
   /*text-shadow: #333 1px 1px 4px;*/
   border: solid 1px #b7b7b7;
 

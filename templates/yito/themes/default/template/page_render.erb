@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= page.title %></title>
+    <title><%= page.title %> - <%=site_title%></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="content-language" content="<%=page.language%>"> 
     <meta name="description" content="<%=page.description%>"/>
@@ -11,6 +11,8 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <%= page.scripts %> 
     <%= page.styles %>
+    <%= page.scripts_source %> 
+    <%= page.styles_source %>
   </head>
   <body>
 
@@ -56,7 +58,7 @@
             </div>
             <% end %>
             <div class="container_12">
-              <div class="<% if page.variables.has_key?(:top) and not page.variables[:top].empty? %>prefix_1 grid_5<%else%>grid_12<% end %>">
+              <div class="<% if page.variables.has_key?(:top) and not page.variables[:top].empty? %>grid_6<%else%>grid_12<% end %>">
                 <h1 class="site_title">
                   <a href="/" title="site_title">
                     <% unless site_logo.empty? %>
@@ -92,7 +94,7 @@
         </div>  
       <% end %>
 
-    <% if page.variables.has_key?(:header) %>    
+    <% if page.variables.has_key?(:header) and not page.variables[:header].empty? %>    
       <div id="header">
         <div class="container-row">
           <div class="container_12">

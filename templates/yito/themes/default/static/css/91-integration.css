@@ -52,7 +52,7 @@ div.contentWrap { /* container for external content. uses vertical scrollbar, if
   .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border: 1px solid #EEE; }
   .ui-tabs-vertical .ui-tabs-nav li a { display:block; border-bottom: none; float: none;}
   .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {}
-  .ui-tabs-vertical .ui-tabs-panel { float: right; width: 65%; padding: 5px 10px 10px 10px; /*border: 1px solid #CCC;*/}
+  .ui-tabs-vertical .ui-tabs-panel { float: right; width: 60%; padding: 5px 10px 10px 10px; /*border: 1px solid #CCC;*/}
 
 }
 

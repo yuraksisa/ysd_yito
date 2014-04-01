@@ -155,12 +155,18 @@ textarea {
 
 #top.top-no-user {
   padding-top: 1.618em;
-  padding-bottom: 3.236em;
+  padding-bottom: 1.618em; /*3.236em*/
   /*background-color: rgba(180,180,180,0.2);*/
 }
 
 #header {
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: rgba(215,215,215,0.2);
+
 }
+
 
 .site_slogan {
   font-style: italic;
@@ -175,7 +181,7 @@ textarea {
   margin: 0 auto;
   /*background-color: rgba(180,180,180,0.2);*/
   min-height: 100%;
-  margin-top: 3.236em; /* Vertical rythm */
+  margin-top: 1.618em; /* Vertical rythm */
   padding-bottom: 3.236em; /*Vertical rythm */
 }
 

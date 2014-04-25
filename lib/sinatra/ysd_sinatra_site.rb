@@ -4,13 +4,14 @@ module Sinatra
     # It's a Sinatra middleware who manages the web site.
     #
     #  - Shows the home page /
+    #  - Shows the dashboard page /dashboard (home page for registered users)
     #  - Helpers to render pages and to load static resources
     #
     #
     module Site
    
       def self.registered(app)
-                    
+
         app.enable :logging
      
         #
@@ -18,16 +19,8 @@ module Sinatra
         #
         app.get '/?' do
         
-          front_page = if authenticated? and not user.belongs_to?('anonymous')
-                         if sfp=SystemConfiguration::Variable.get('site.front_page') 
-                           sfp.value
-                         end
-                       else 
-                         if sfp=SystemConfiguration::Variable.get('site.anonymous_front_page') 
-                           sfp.value
-                         end
-                       end
-          
+          front_page = SystemConfiguration::Variable.get_value('site.anonymous_front_page', nil) 
+                       
           if front_page
             status, header, body = call! env.merge("PATH_INFO" => front_page) 
           else
@@ -35,7 +28,22 @@ module Sinatra
           end
           
         end        
+
+        #
+        # Site dashboard
+        #
+        app.get '/dashboard/?', :allowed_usergroups => ['user', 'staff'] do
                 
+           dashboard_page = SystemConfiguration::Variable.get_value('site.front_page', nil)
+           
+           if dashboard_page 
+             status, header, body = call! env.merge("PATH_INFO" => dashboard_page) 
+           else
+             load_page :dashboard_frontpage
+           end
+
+        end
+
         #
         # Serves the main static content (css, img ,js) from the theme
         #

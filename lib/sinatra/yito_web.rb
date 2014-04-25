@@ -15,7 +15,6 @@ module Sinatra
     helpers  Sinatra::RequestLanguageHelper  
     register Sinatra::R18n 
     register Sinatra::YSD::Errors 
-    register Sinatra::YSD::Site
 
     enable :logging
 
@@ -35,6 +34,7 @@ module Sinatra
     
     # Plugin extension (the sinatra extension which loads the modules) 
     register Sinatra::YSD::PluginExtension 
+    register Sinatra::YSD::Site
 
     # Register the logger
     Model::LogDeviceInverseProxy.instance.register_logdevice(Model::LogDevice.new)

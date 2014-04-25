@@ -155,7 +155,7 @@ textarea {
 
 #top.top-no-user {
   padding-top: 1.618em;
-  padding-bottom: 1.618em; /*3.236em*/
+  padding-bottom: 3.236em; 
   /*background-color: rgba(180,180,180,0.2);*/
 }
 

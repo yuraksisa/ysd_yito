@@ -7,6 +7,9 @@ module Sinatra
   #
   class MyWeb < Sinatra::Yito
    
+     set :session_secret, 'chiriyuyo'
+     enable :sessions
+   
      set :protection, :except => [:frame_options]
 
      Middleware::RequestLanguage.set :protection, :except => [:frame_options]

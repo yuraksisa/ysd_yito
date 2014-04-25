@@ -41,11 +41,8 @@
  padding: 10px 10px 10px 10px;
  border: 1px solid #DDD;
  margin-bottom: 1.389em; /* Vertical rythm */
- background: rgba(186, 221, 233, 0.2);
+ background: rgba(255, 255, 255, 1);
  z-index: 9999;
- -webkit-border-radius: 5px 5px; /* Safari  */ 
- -moz-border-radius: 5px 5px; /* Firefox */
- border-radius: 5px 5px; /* iExplorer 9 */	
 }
 
 .elements-summary {

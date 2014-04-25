@@ -22,7 +22,7 @@ Warden::Strategies.add(:profile_strategy, ProfileWarden::ProfileWardenStrategy)
 Warden::Strategies.add(:anonymous_strategy, WardenStrategy::AnonymousWardenStrategy)
 
 use Warden::Manager do |config|
-  config.failure_app = Sinatra::Yito
+  config.failure_app = Sinatra::MyWeb
   config.default_strategies :profile_strategy, :anonymous_strategy
 end
 
@@ -41,8 +41,9 @@ Warden::Manager.serialize_from_session do |id|
          end
 end
 
-# Session management
-use Rack::Session::Cookie, :secret => 'chiriyuyo'
+# Rack
+# Sessions are defined in sinatra app because the use of sinatra-flash
+#use Rack::Session::Cookie, :secret => 'chiriyuyo'
 use Rack::Logger 
 
 # Cache

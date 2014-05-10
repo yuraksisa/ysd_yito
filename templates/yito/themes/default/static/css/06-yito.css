@@ -1142,10 +1142,49 @@
 
 /* -- TRANSLATION -- */
 
-#block_translation_menu {
-  display: inline-block;  
-  float: right;
+#block_translation_list {
+  display: block;   
   font-size: 0.8em;
+}
+
+@media(max-width: 480px) {
+  #block_translation_list {
+    float: none;
+    text-align: center;
+  }
+}
+
+@media(max-width: 800px) and (min-width: 481px) {
+  #block_translation_list {
+    float: none;
+    text-align: right;
+  }
+}
+
+@media(min-width: 801px) {
+  #block_translation_list {
+    float: none;
+    text-align: right;
+  }
+}
+
+#block_translation_menu {
+  display: block;   
+  font-size: 0.8em;
+}
+
+@media(max-width: 800px) {
+  #block_translation_menu {
+    float: none;
+    text-align: center;
+  }
+}
+
+@media(min-width: 801px) {
+  #block_translation_menu {
+    float: right;
+    text-align: right;
+  }
 }
 
 #menu_translation_menu {
@@ -1174,8 +1213,21 @@
 /* ---- MENU PRIMARY LINKS ------ */
 
 #block_menu_primary_links {
-  float: right;
-  display: inline-block;   
+  display: block;   
+}
+
+@media(max-width: 800px) {
+  #block_menu_primary_links {
+    float: none;
+    text-align: center;
+  }
+}
+
+@media(min-width: 801px) {
+  #block_menu_primary_links {
+    float: right;
+    text-align: center;
+  }
 }
 
 #menu_primary_links {

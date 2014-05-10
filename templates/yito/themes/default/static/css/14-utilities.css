@@ -14,6 +14,10 @@
   overflow: hidden;
 }
 
+.100_100_width {
+  width: 100%;
+}
+
 .100_100_height {
   height: 100%;
 }

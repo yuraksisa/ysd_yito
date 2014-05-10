@@ -248,6 +248,10 @@
   margin-bottom: 5px;
 }
 
+.view_div_element {
+  overflow: hidden;
+}
+
 /* --------------------------  Teaser box --------------------------------- */
 
 /* 

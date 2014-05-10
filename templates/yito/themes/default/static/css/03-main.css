@@ -107,6 +107,9 @@ hr {
 
 img {
     vertical-align: middle;
+    outline: 0; 
+    max-width: 100%;
+    height: auto;        
 }
 
 /*
@@ -155,24 +158,29 @@ textarea {
 
 #top.top-no-user {
   padding-top: 1.618em;
-  padding-bottom: 3.236em; 
-  /*background-color: rgba(180,180,180,0.2);*/
+  padding-bottom: 1.618em; /*3.236em*/
+  background-color: rgba(215,215,215,0.2);
 }
 
 #header {
 
   padding-top: 1em;
   padding-bottom: 1em;
-  background-color: rgba(215,215,215,0.2);
-
+  background-color: rgba(128, 128, 128, 0.2);
 }
-
 
 .site_slogan {
   font-style: italic;
   font-size: smaller;
   text-align: center;
   margin-top: 1.5em;
+}
+
+@media(max-width: 800px) {
+  .site_title > a, .site_title > a > img {
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 /* ----------- THE CONTAINER (HOLDS ALL THE ELEMENTS) -------------- */
@@ -260,6 +268,8 @@ textarea {
 
 @media(max-width: 480px) {
   img {
-    width: 100%;
+    outline: 0; 
+    max-width: 100%;
+    height: auto;    
   }
 }

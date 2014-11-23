@@ -68,12 +68,24 @@
   border-left: 1px dashed #CCC;
 }
 
+.left-border-solid {
+  border-left: 1px solid #CCC;
+}
+
 .right-border-nosolid {
   border-right: 1px dashed #CCC;
 }
 
+.right-border-solid {
+  border-right: 1px solid #CCC;
+}
+
 .top-border-nosolid {
   border-top: 1px dashed #CCC;
+}
+
+.top-border-solid {
+  border-top: 1px solid #CCC;
 }
 
 .bottom-border-solid {
@@ -263,27 +275,21 @@
 }
 
 .pending-status {
-  background-color: rgb(241, 248, 69);
-  color: black; 
+  color: rgb(231, 186, 12);
 }
 
 .confirmed-status {
-  background-color: rgb(41, 158, 69);
-  color: white;
+  color: rgb(41, 158, 69);
 }
 
 .doing-status {
-  background-color: rgb(13, 124, 226);
-  color: white;
+  color: rgb(13, 124, 226);
 }
 
 .done-status {
-  background-color: rgb(0, 0, 0);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .error-status {
-
-   background-color: rgb(238, 71, 71);    
-   color: white;
+   color: rgb(238, 71, 71);    
 }

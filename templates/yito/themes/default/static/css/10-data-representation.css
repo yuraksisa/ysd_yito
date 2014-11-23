@@ -75,6 +75,7 @@
  margin-right: 10px;
  padding-top: 5px;
  padding-bottom: 5px;
+ vertical-align: middle;
 }
 
 .entity-block-title {
@@ -777,8 +778,9 @@
 .content_data_box { /* The container */
     background: #EEEEEE;
     border: 1px solid #DDDDDD;  
-    padding: 0px 20px 0px 20px;
+    padding: 1em;
     margin-top: 1.618em; /* Vertical rythm */
+    margin-bottom: 1.618em; /* Vertical rythm */
 }
 
 .content_data_block { /* A block inside the container */

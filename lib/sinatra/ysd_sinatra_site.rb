@@ -19,6 +19,8 @@ module Sinatra
         #
         app.get '/?' do
         
+          p "Site public home page"
+
           front_page = SystemConfiguration::Variable.get_value('site.anonymous_front_page', nil) 
                        
           if front_page
@@ -33,6 +35,8 @@ module Sinatra
         # Site dashboard
         #
         app.get '/dashboard/?', :allowed_usergroups => ['user', 'staff'] do
+                
+           p "Site dashboard"
                 
            dashboard_page = SystemConfiguration::Variable.get_value('site.front_page', nil)
            

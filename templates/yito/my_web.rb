@@ -12,8 +12,8 @@ module Sinatra
    
      set :protection, :except => [:frame_options]
 
-     Middleware::RequestLanguage.set :protection, :except => [:frame_options]
-     use Middleware::RequestLanguage 
+     #Middleware::RequestLanguage.set :protection, :except => [:frame_options]
+     #use Middleware::RequestLanguage 
 
      # You can define your own routes HERE
 

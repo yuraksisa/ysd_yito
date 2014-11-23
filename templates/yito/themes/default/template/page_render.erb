@@ -16,7 +16,7 @@
   </head>
   <body>
 
-      <% if (user and not user.belongs_to?('anonymous'))%>     
+      <% if (user and not user.belongs_to?('anonymous') and page.admin_page)%>     
         <div id="top" class="top-user">
           <div class="container-row">
             <div class="container_12">

@@ -13,6 +13,7 @@ module Sinatra
   class Yito < Sinatra::Base
 
     helpers  Sinatra::RequestLanguageHelper  
+    register Sinatra::LanguageExtract
     register Sinatra::R18n 
     register Sinatra::YSD::Errors 
 
@@ -32,6 +33,8 @@ module Sinatra
       class_eval File.read('./config/environments/production.rb'), __FILE__, __LINE__
     end
     
+    Encoding.default_external=Encoding::UTF_8
+
     # Plugin extension (the sinatra extension which loads the modules) 
     register Sinatra::YSD::PluginExtension 
     register Sinatra::YSD::Site
@@ -58,7 +61,10 @@ module Sinatra
     # Before any request (except /login and /logout)
     before /^(?!(\/.*login|\/.*logout|\/.*unauthenticated))/ do
       if not authenticated?
+        p "Not authenticated"
         authenticate # Force the authentication (always the anonymous user)
+      else
+        p "Authenticated #{user.username}"
       end
     end
 

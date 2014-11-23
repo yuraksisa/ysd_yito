@@ -140,9 +140,7 @@ form input[type="radio"], form input[type="checkbox"] {
 
 form input[type="button"], form input[type="submit"], form input[type="reset"]  { /* BUTTONS */
   text-align: center;
-  
-  /*margin-left: 5px; */
-  padding: 5px; 
+  padding: 10px; 
   /*
   background-image: linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -o-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
@@ -167,7 +165,7 @@ form input[type="button"], form input[type="submit"], form input[type="reset"]  
 
   text-align: center;
 
-  padding: 0px 5px 0px 5px;
+  padding: 10px;
 
   background-image: linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -o-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);

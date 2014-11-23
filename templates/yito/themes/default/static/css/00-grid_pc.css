@@ -1,0 +1,218 @@
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/
+
+  Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+
+@media(min-width: 980px) {
+
+  body {
+    min-width: 960px;
+  }
+
+  .container_grid_pc {
+    margin: 0 auto;
+  }
+
+}
+
+/* Container
+----------------------------------------------------------------------------------------------------*/
+
+.container_grid_pc {
+  margin-left: auto;
+  margin-right: auto;
+  clear:both;
+}
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_10_pc,
+.grid_20_pc,
+.grid_30_pc,
+.grid_40_pc,
+.grid_50_pc,
+.grid_60_pc,
+.grid_70_pc,
+.grid_80_pc,
+.grid_90_pc,
+.grid_100_pc {
+  /*float: left; */
+  margin-left: 0px; /*10*/
+  margin-right: 0px; /*10*/
+}
+
+@media(min-width: 601px) {
+  .grid_10_pc,
+  .grid_20_pc,
+  .grid_30_pc,
+  .grid_40_pc,
+  .grid_50_pc,
+  .grid_60_pc,
+  .grid_70_pc,
+  .grid_80_pc,
+  .grid_90_pc,
+  .grid_100_pc0 {
+    float: left; 
+  }
+}
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+  margin-left: 0;
+}
+
+.omega {
+  margin-right: 0;
+}
+
+/* `Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+@media(max-width: 600px ) {
+
+  .container_grid_pc,
+  .container_grid_pc .grid_10_pc,
+  .container_grid_pc .grid_20_pc,
+  .container_grid_pc .grid_30_pc,
+  .container_grid_pc .grid_40_pc,
+  .container_grid_pc .grid_50_pc,
+  .container_grid_pc .grid_60_pc,
+  .container_grid_pc .grid_70_pc,
+  .container_grid_pc .grid_80_pc,
+  .container_grid_pc .grid_90_pc,
+  .container_grid_pc .grid_100_pc {
+     width: 100%;
+  }
+
+}
+
+@media(min-width: 601px) {
+
+  .container_grid_pc {
+    width: 100%; /*960px;*/
+  }  
+
+  .container_grid_pc .grid_10_pc {
+    width: 10%; /*80px;*/ /*60*/ 
+  }
+
+  .container_grid_pc .grid_20_pc {
+    width: 20%; /*160px;*/ /*140*/
+  }
+
+  .container_grid_pc .grid_30_pc{
+    width: 30%; /*240px;*/ /* 220 */
+  }
+
+  .container_grid_pc .grid_40_pc {
+    width: 40%; /*320px;*/ /*300*/
+  }
+
+  .container_grid_pc .grid_50_pc {
+    width: 50%; /*400px;*/ /*380*/
+  }
+
+  .container_grid_pc .grid_60_pc {
+    width: 60%; /*480px;*/ /* 460 */
+  }
+
+  .container_grid_pc .grid_70_pc {
+    width: 70%; /*560px;*/ /*540*/
+  }
+
+  .container_grid_pc .grid_80_pc {
+    width: 80%; /*640px;*/ /*620*/  
+  }
+
+  .container_grid_pc .grid_90_pc{
+    width: 90%; /*720px;*/ /* 700 */
+  }
+
+  .container_grid_pc .grid_100_pc {
+    width: 100%; /*800px;*/ /*780*/
+  }
+
+  /* `Prefix Extra Space >> Global
+  ----------------------------------------------------------------------------------------------------*/
+
+  /* `Prefix Extra Space >> 12 Columns
+  ----------------------------------------------------------------------------------------------------*/
+
+
+  /* `Suffix Extra Space >> Global
+  ----------------------------------------------------------------------------------------------------*/
+
+  /* `Suffix Extra Space >> 12 Columns
+  ----------------------------------------------------------------------------------------------------*/
+
+  /* `Push Space >> Global
+  ----------------------------------------------------------------------------------------------------*/
+
+  /* `Push Space >> 12 Columns
+  ----------------------------------------------------------------------------------------------------*/
+
+  /* `Pull Space >> Global
+  ----------------------------------------------------------------------------------------------------*/
+
+  /* `Pull Space >> 12 Columns
+  ----------------------------------------------------------------------------------------------------*/
+
+}
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after,
+.container_grid_pc:before,
+.container_grid_pc:after{
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after,
+.container_grid_pc:after {
+  clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix,
+.container_grid_pc {
+  zoom: 1;
+}

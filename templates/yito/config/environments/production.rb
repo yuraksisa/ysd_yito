@@ -48,7 +48,8 @@ require 'dm-ysd-encrypted' unless defined?Crypto
   #  > require 'digest/sha2'
   #
   #  CRYPT RSA KEY
-  #  > rsa_key=OpenSSL::PKey::RSA.generate(2048).to_pem
+  #  > rsa_key=OpenSSL::PKey::RSA.generate(2048)
+  #  .to_pem para importar en heroku
   #  
   #  CRYPT_AES_KEY 
   #  > Base64.encode64(rsa_key.public_encrypt(Digest::SHA2.new(256).digest('my-password'))) 

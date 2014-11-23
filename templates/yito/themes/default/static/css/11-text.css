@@ -1,6 +1,6 @@
 /* ------- Body text ---------- */
 
-* {
+*, button {
  font-family:'Open Sans','American Typewriter', serif;  
 }
 
@@ -170,6 +170,10 @@ pre {
 
 .less_contrast_text {
   color: gray;
+}
+
+.ultra_less_contrast_text {
+  color: #DDD;
 }
 
 /* ------- hightlighted and lowlighted text --------- */

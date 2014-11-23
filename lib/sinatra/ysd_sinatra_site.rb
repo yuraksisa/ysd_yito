@@ -12,6 +12,10 @@ module Sinatra
    
       def self.registered(app)
 
+        # Add the local folders to the views and translations     
+        app.settings.views = Array(app.settings.views).push(File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'views')))
+        app.settings.translations = Array(app.settings.translations).push(File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'i18n')))       
+
         app.enable :logging
      
         #
@@ -19,11 +23,9 @@ module Sinatra
         #
         app.get '/?' do
         
-          p "Site public home page"
-
           front_page = SystemConfiguration::Variable.get_value('site.anonymous_front_page', nil) 
-                       
-          if front_page
+
+          if front_page and (not front_page.empty?) and (not front_page == '/')
             status, header, body = call! env.merge("PATH_INFO" => front_page) 
           else
             load_page :frontpage

@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
 
   s.name    = "ysd_yito"
-  s.version = "0.1.49"
+  s.version = "0.1.52"
   s.authors = ["Yurak Sisa Dream"]
   s.date    = "2012-12-11"
   s.email   = ["yurak.sisa.dream@gmail.com"]
-  s.files   = Dir['lib/**/*.rb', 'templates/**/*', 'bin/**/*'] 
+  s.files   = Dir['lib/**/*.rb', 'views/**/*.erb', 'templates/**/*', 'bin/**/*'] 
   s.description = "Base project to create web applications"
   s.summary = "Base project to create web applications"
   s.executables << 'yito'

@@ -37,7 +37,7 @@ Warden::Manager.serialize_from_session do |id|
               id.to_s
             end
   user = if username and username.strip.length > 0            
-           Users::Profile.get(username) || Users::Profile.ANONYMOUS_USER
+           username == 'anonymous' ? Users::Profile.ANONYMOUS_USER : Users::Profile.get(username)
          end
 end
 
@@ -45,6 +45,22 @@ end
 # Sessions are defined in sinatra app because the use of sinatra-flash
 #use Rack::Session::Cookie, :secret => 'chiriyuyo'
 use Rack::Logger 
+
+#Unicorn worker killer
+if ENV['RACK_ENV'] == :production
+  require 'unicorn/worker_killer'
+  max_request_min =  500
+  max_request_max =  600
+
+  # Max requests per worker
+  use Unicorn::WorkerKiller::MaxRequests, max_request_min, max_request_max
+
+  oom_min = (240) * (1024**2)
+  oom_max = (260) * (1024**2)
+
+  # Max memory size (RSS) per worker
+  use Unicorn::WorkerKiller::Oom, oom_min, oom_max
+end
 
 # Cache
 if memcachier_servers = ENV['MEMCACHIER_SERVERS']

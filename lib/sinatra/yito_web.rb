@@ -50,21 +50,21 @@ module Sinatra
       logger.formatter = proc do |severity, datetime, progname, msg|
         "#{datetime.strftime('%Y-%m-%d %H:%M:%S')} [#{severity}] #{progname} #{msg}\n"
       end
-      env['rack.logger'] = logger          
-      #
-      Plugins::Plugin.plugin_invoke_all('aspects', {:app => self}) #TODO solve
-      # Configure the theme
-      theme=SystemConfiguration::Variable.get_value('site.theme','default')
-      Themes::ThemeManager.instance.select_theme(theme.to_sym)
+      env['rack.logger'] = logger         
+      unless request.path_info =~ /^\/api/
+        Plugins::Plugin.plugin_invoke_all('aspects', {:app => self}) #TODO solve
+        theme=SystemConfiguration::Variable.get_value('site.theme','default')
+        Themes::ThemeManager.instance.select_theme(theme.to_sym)
+      end
     end
 
     # Before any request (except /login and /logout)
     before /^(?!(\/.*login|\/.*logout|\/.*unauthenticated))/ do
       if not authenticated?
-        p "Not authenticated"
+        #p "Not authenticated"
         authenticate # Force the authentication (always the anonymous user)
       else
-        p "Authenticated #{user.username}"
+        #p "Authenticated #{user.username}"
       end
     end
 

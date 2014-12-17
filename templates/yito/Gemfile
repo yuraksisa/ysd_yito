@@ -6,6 +6,11 @@ gem "rake"
 # Web 
 gem "foreman"
 gem "unicorn"
+
+group :production do
+  gem "unicorn-worker-killer"
+end
+
 #gem "thin" 
 gem "sinatra", :git => "git://github.com/sinatra/sinatra.git"
 

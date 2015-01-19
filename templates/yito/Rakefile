@@ -21,6 +21,10 @@ task :environment do
     
     require 'ysd_yito_core' # Not included on gemfile
     the_environment = ENV['RACK_ENV'] || :development
+    if ENV['LOAD_VARIABLES']
+      require 'dotenv'
+      Dotenv.load
+    end      
     require File.expand_path(File.join('config','aspects.rb'))
     require File.expand_path(File.join('config','environments',"#{the_environment}.rb"))
     

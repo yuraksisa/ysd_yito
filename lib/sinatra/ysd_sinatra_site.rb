@@ -39,9 +39,13 @@ module Sinatra
         app.get '/dashboard/?', :allowed_usergroups => ['user', 'staff'] do
                 
            p "Site dashboard"
-                
-           dashboard_page = SystemConfiguration::Variable.get_value('site.front_page', nil)
-           
+
+           if user.belongs_to?('staff')
+             dashboard_page = SystemConfiguration::Variable.get_value('site.front_page', nil)
+           else
+             dashboard_page = SystemConfiguration::Variable.get_value('site.user_front_page', nil)
+           end
+                      
            if dashboard_page 
              status, header, body = call! env.merge("PATH_INFO" => dashboard_page) 
            else

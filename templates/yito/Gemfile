@@ -8,6 +8,8 @@ gem "foreman"
 gem "unicorn"
 
 group :production do
+  gem "dotenv"
+  gem "dotenv-deployment"
   gem "unicorn-worker-killer"
 end
 

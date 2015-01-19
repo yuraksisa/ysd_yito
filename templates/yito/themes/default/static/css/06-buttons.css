@@ -1,8 +1,9 @@
 
 .entity-management-button {
   min-width: 60px;  
-  border: 1px solid #CCC;
-  background: rgba(30, 148, 172, .1); 
+  border: none;
+  background: rgba(30, 148, 172, .3); 
+  padding: 10px 15px;
 }
 
 .mini-button {
@@ -138,12 +139,18 @@
   
 }
 
+.search-entity-button {
+  background-color: rgb(247, 118, 10);
+  color: white;  
+}
+
 .delete-entity-button {
-  
+  background: #E66464;
+  color: white;
 }
 
 .new-entity-button {
-  background: #E66464;
+  background: #1350EF;
   color: white;    
 }
 
@@ -191,11 +198,3 @@
   background-position: center;
   padding-left: 32px;  
 }
-
-.delete-entity-button {
-  background-image: url('/assets/img/icomoon/remove.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-left: 32px;    
-}
-

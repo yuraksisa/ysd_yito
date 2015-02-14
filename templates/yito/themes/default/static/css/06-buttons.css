@@ -65,13 +65,7 @@
 }
 
 .green-button {
-  background-image: -webkit-linear-gradient(top, rgb(11, 150, 89) 25%, rgb(39, 187, 104) 71%);
-  background-image: linear-gradient(top, rgb(11, 150, 89) 25%, rgb(39, 187, 104) 71%);
-  background-image: -o-linear-gradient(top, rgb(11, 150, 89) 25%, rgb(39, 187, 104) 71%);
-  background-image: -moz-linear-gradient(top, rgb(11, 150, 89) 25%, rgb(39, 187, 104) 71%);
-  background-image: -webkit-linear-gradient(top, rgb(11, 150, 89) 25%, rgb(39, 187, 104) 71%);
-  background-image: -ms-linear-gradient(top, rgb(11, 150, 89) 25%, rgb(39, 187, 104) 71%);
-  background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.25, rgb(11, 150, 89)), color-stop(0.71, rgb(39, 187, 104))); 
+  background: rgb(41, 148, 18);
   border: none;
   border-radius: 0px;
   color: white;
@@ -88,6 +82,27 @@
 }
 
 .green-button a:hover {
+ color: yellow; 
+}
+
+.green-white-button {
+  background: rgb(41, 148, 18);
+  border: none;
+  border-radius: 0px;
+  color: white;
+}
+
+.green-white-button a { /* Represents a link inside a button */
+  text-decoration: none;
+  font-weight: normal;  
+  display: block;
+}
+
+.green-white-button a:link, .green-white-button a:visited {
+  color: white;
+}
+
+.green-white-button a:hover {
  color: yellow; 
 }
 
@@ -140,7 +155,7 @@
 }
 
 .search-entity-button {
-  background-color: rgb(247, 118, 10);
+  background: rgb(247, 118, 10);
   color: white;  
 }
 
@@ -190,11 +205,4 @@
   cursor: hand;
   cursor: pointer;  
   margin-right: 5px;
-}
-
-.reload-entities-button {
-  background-image: url('/assets/img/icons/refresh.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-left: 32px;  
 }

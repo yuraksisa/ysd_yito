@@ -119,6 +119,8 @@ form select { /* SELECT */
   margin-left: 1px;	
   border-color: #CCC;
   line-height: 1.618em;
+  height: 2.2em;
+  margin-bottom: 0.1em;  
 }
 
 form select.combo {
@@ -219,7 +221,7 @@ form input[type="button"], form input[type="submit"], form input[type="reset"]  
 
 .element-form-detail { /* contains the form */
   background: white;
-  border: 1px solid #DDD;
+  /*border: 1px solid #DDD;*/
   border-radius: 5px;
  -webkit-border-radius: 5px;
  -moz-border-radius: 5px; 
@@ -293,7 +295,7 @@ form input[type="button"], form input[type="submit"], form input[type="reset"]  
 
 .editable_text {
   font-family: monospace;
-  font-size: 0.9em;
+  font-size: 1.3em;
 }
 
 .radio-block {

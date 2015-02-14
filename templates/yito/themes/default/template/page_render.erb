@@ -14,7 +14,7 @@
     <%= page.scripts_source %> 
     <%= page.styles_source %>
   </head>
-  <body>
+  <body <%if page.resource %>class="<%=page.resource%>"<%end%> >
 
       <% if (user and not user.belongs_to?('anonymous') and page.admin_page)%>     
         <div id="top" class="top-user">

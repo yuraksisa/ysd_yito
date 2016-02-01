@@ -4,6 +4,7 @@ require 'sinatra/r18n'
 require 'ysd_yito_core'
 require 'ysd_yito_js'
 require 'sinatra/ysd_sinatra_site'
+require 'sinatra/multi_route'
 
 module Sinatra
 
@@ -16,6 +17,7 @@ module Sinatra
     register Sinatra::LanguageExtract
     register Sinatra::R18n 
     register Sinatra::YSD::Errors 
+    register Sinatra::MultiRoute
 
     enable :logging
 

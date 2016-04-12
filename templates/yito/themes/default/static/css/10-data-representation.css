@@ -61,7 +61,7 @@
 
 .entity-field {
  padding: 5px;  
- border-bottom: 1px dotted gray;
+/* border-bottom: 1px dotted gray;*/
  overflow: hidden;
 }
 
@@ -80,6 +80,7 @@
  padding-top: 5px;
  padding-bottom: 5px;
  vertical-align: middle;
+}
 }
 
 .entity-block-title {
@@ -218,7 +219,7 @@
   padding-bottom: 0px;
   margin-bottom: 15px;
   background: white;
-  /*border: 1px solid #DDD;*/
+  /*border: 1px solid #DDD; */
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;  
@@ -243,11 +244,11 @@
  */
 
 .view_list {  /* The ol or ul item */
-  padding-left: 5px;	
+  padding-left: 5px;  
 }
 
 .view_list_item { /* The il item */
-  list-style-type: none;		
+  list-style-type: none;    
   border-bottom: 1px solid #DDD;
   margin-left: 2px;
   margin-right: 2px;
@@ -741,12 +742,11 @@
  */ 
 
 .highlight_block {
-  background: #EEE; 
-  border: 1px solid #CCC; 
-  padding: 5px; 
-  -webkit-border-radius: 5px 5px; /* Safari  */ 
-  -moz-border-radius: 5px 5px; /* Firefox */
-  border-radius: 5px 5px; /* iExplorer 9 */ 
+  background: #FDED86; 
+  border: 1px solid #DDD;
+  padding: 5px;
+  margin-bottom: 0.808em;
+  margin-top: 0.808em;
 }
 
 .highlight_block_title {
@@ -783,9 +783,8 @@
 .content_data_box { /* The container */
     background: #EEEEEE;
     border: 1px solid #DDDDDD;  
-    padding: 1em;
+    padding: 0px 20px 0px 20px;
     margin-top: 1.618em; /* Vertical rythm */
-    margin-bottom: 1.618em; /* Vertical rythm */
 }
 
 .content_data_block { /* A block inside the container */

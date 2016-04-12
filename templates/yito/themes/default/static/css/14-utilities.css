@@ -68,24 +68,12 @@
   border-left: 1px dashed #CCC;
 }
 
-.left-border-solid {
-  border-left: 1px solid #CCC;
-}
-
 .right-border-nosolid {
   border-right: 1px dashed #CCC;
 }
 
-.right-border-solid {
-  border-right: 1px solid #CCC;
-}
-
 .top-border-nosolid {
   border-top: 1px dashed #CCC;
-}
-
-.top-border-solid {
-  border-top: 1px solid #CCC;
 }
 
 .bottom-border-solid {
@@ -110,6 +98,18 @@
 
 .all-border-dashed {
   border: 1px dashed;
+}
+
+.all-border-solid-light {
+  border: 1px solid #CCC;
+}
+
+.all-border-dotted-light {
+  border: 1px dotted #CCC;
+}
+
+.all-border-dashed-light {
+  border: 1px dashed #CCC;
 }
 
 
@@ -243,11 +243,11 @@
 }
 
 .left-bar { /* Left float */
- float: left;	
+ float: left; 
 }
 
 .right-bar { /* Right float */
- float: right;	
+ float: right;  
 }
 
 

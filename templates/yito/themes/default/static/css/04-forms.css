@@ -47,8 +47,6 @@ form div label.fieldtitle {
   display: block;
   line-height: 1.618em;
   vertical-align: middle;
-  /*position: absolute;
-  margin-left: 10px;*/
 }
 
 form div.fielddescription {
@@ -68,10 +66,11 @@ form div input.fieldcontrol, form div textarea.fieldcontrol, form div label.erro
 
 form div select.fieldcontrol { /* to the left and do not alter the width */
   line-height: 1.618em;
+  min-height: 200px;
 }
 
 form div select.fieldcontrol-combo { /* more than one select in the same row */
-  margin-right: 5px;	
+  margin-right: 5px;  
 }
 
 /* ----------------- CONTROLS ------------------ */
@@ -81,7 +80,7 @@ form div select.fieldcontrol-combo { /* more than one select in the same row */
 }
 
 form fieldset {
-  border: 1px solid #DDD;	
+  border: 1px solid #DDD; 
   padding: 0.808em 0.808em 0.808em 0; 
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -89,7 +88,7 @@ form fieldset {
 }
 
 form legend {
-  font-weight: bold; 	
+  font-weight: bold;  
 }
 
 form input[type="checkbox"] {
@@ -107,7 +106,7 @@ form input:focus {
 }
 
 form textarea { /* TEXTAREA */
-  border: 1px solid #DDD; /* Simple black border */	
+  border: 1px solid #DDD; /* Simple black border */ 
   font-size: 1em;
 }
 
@@ -116,11 +115,11 @@ form textarea:focus {
 }
 
 form select { /* SELECT */
-  margin-left: 1px;	
+  margin-left: 1px; 
   border-color: #CCC;
   line-height: 1.618em;
   height: 2.2em;
-  margin-bottom: 0.1em;  
+  margin-bottom: 0.1em;
 }
 
 form select.combo {
@@ -142,12 +141,13 @@ form input[type="radio"], form input[type="checkbox"] {
 
 form input[type="button"], form input[type="submit"], form input[type="reset"]  { /* BUTTONS */
   text-align: center;
+  
   padding: 10px 15px; 
   border: none;
 
   -webkit-border-radius: 3px 3px; /* Safari  */ 
   -moz-border-radius: 3px 3px; /* Firefox */
-  border-radius: 3px 3px; /* iExplorer 9 */	  
+  border-radius: 3px 3px; /* iExplorer 9 */   
     
   cursor: hand;
   cursor: pointer;  
@@ -158,23 +158,25 @@ form input[type="button"], form input[type="submit"], form input[type="reset"]  
 
   text-align: center;
 
-  padding: 10px;
-
+  padding: 0px 5px 0px 5px;
+/*
   background-image: linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -o-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -moz-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -webkit-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -ms-linear-gradient(top, rgb(221,221,221) 25%, rgb(238,238,238) 71%);
   background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.25, rgb(221,221,221)), color-stop(0.71, rgb(238,238,238)))
-  text-shadow: #333 1px 1px 4px;;
+*/
+  background: rgb(221,221,221); 
+/*  text-shadow: #333 1px 1px 4px; */
   border: solid 1px #b7b7b7;
 
   -webkit-border-radius: 3px 3px; /* Safari  */ 
   -moz-border-radius: 3px 3px; /* Firefox */
-  border-radius: 3px 3px; /* iExplorer 9 */	  
+  border-radius: 3px 3px; /* iExplorer 9 */   
    
   cursor: hand;
-  cursor: pointer;	
+  cursor: pointer;  
 
   display: inline-block;
   
@@ -195,7 +197,7 @@ form input[type="button"], form input[type="submit"], form input[type="reset"]  
 }
 
 .form-button a:hover {
- color: gray;	
+ color: gray; 
 }
 
 .disabled-form-button {

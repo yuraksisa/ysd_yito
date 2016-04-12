@@ -2,7 +2,7 @@
 .entity-management-button {
   min-width: 60px;  
   border: none;
-  background: rgba(30, 148, 172, .3); 
+  background: rgba(193, 199, 200, 0.3); 
   padding: 10px 15px;
 }
 
@@ -11,6 +11,7 @@
 }
 
 .blue-button {
+  /*
   background-image: -webkit-linear-gradient(top, rgb(70, 136, 207) 25%, rgb(121, 169, 214) 71%);
   background-image: linear-gradient(top, rgb(70, 136, 207) 25%, rgb(121, 169, 214) 71%);
   background-image: -o-linear-gradient(top, rgb(70, 136, 207) 25%, rgb(121, 169, 214) 71%);
@@ -18,8 +19,12 @@
   background-image: -webkit-linear-gradient(top, rgb(70, 136, 207) 25%, rgb(121, 169, 214) 71%);
   background-image: -ms-linear-gradient(top, rgb(70, 136, 207) 25%, rgb(121, 169, 214) 71%);
   background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.25, rgb(70, 136, 207)), color-stop(0.71, rgb(121, 169, 214)));  
+  */
+  background: rgb(70, 136, 207);
+/*
   border: none;
   border-radius: 0px;
+*/
   color: white;
 }
 
@@ -38,6 +43,7 @@
 }
 
 .red-button {
+  /*
   background-image: -webkit-linear-gradient(top, rgb(216, 61, 48) 25%, rgb(228, 72, 42) 71%);
   background-image: linear-gradient(top, rgb(216, 61, 48) 25%, rgb(228, 72, 42) 71%);
   background-image: -o-linear-gradient(top, rgb(216, 61, 48) 25%, rgb(228, 72, 42) 71%);
@@ -45,8 +51,12 @@
   background-image: -webkit-linear-gradient(top, rgb(216, 61, 48) 25%, rgb(228, 72, 42) 71%);
   background-image: -ms-linear-gradient(top, rgb(216, 61, 48) 25%, rgb(228, 72, 42) 71%);
   background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.25, rgb(216, 61, 48)), color-stop(0.71, rgb(228, 72, 42))); 
+  */
+  background: rgb(216, 61, 48);
+/*
   border: none;
   border-radius: 0px;
+ */
   color: white;
 }
 
@@ -66,8 +76,10 @@
 
 .green-button {
   background: rgb(41, 148, 18);
+/*
   border: none;
   border-radius: 0px;
+ */
   color: white;
 }
 
@@ -103,7 +115,7 @@
 }
 
 .green-white-button a:hover {
- color: yellow; 
+ color: white; 
 }
 
 .black-button {
@@ -190,10 +202,10 @@
 }
 
 .page-navigation { /*Button to change from entity navigation to page navigation*/
-  border: none;
+  /*border: none;
   background: none;
   text-decoration: underline;
-  float: left;
+  float: left;*/
 }
 
 .close-bar {
@@ -206,3 +218,4 @@
   cursor: pointer;  
   margin-right: 5px;
 }
+

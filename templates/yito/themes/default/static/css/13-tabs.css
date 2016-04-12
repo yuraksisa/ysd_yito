@@ -1,4 +1,4 @@
-#content_tabs{
+#content_tabs, .content_tabs{
   overflow: hidden;
   width: 100%;
   margin: 0;
@@ -6,12 +6,12 @@
   list-style: none;
 }
 
-#content_tabs li{
+#content_tabs li, .content_tabs li{
   float: left;
   margin: 0 .5em 0 0;
 }
 
-#content_tabs a{
+#content_tabs a, .content_tabs a{
   position: relative;
   background: rgba(240, 240, 240, 0.5);
   border: 1px solid #AAA;
@@ -25,13 +25,18 @@
 #content_abs a:hover,
 #content_tabs a:hover::after,
 #content_tabs a:focus,
-#content_tabs a:focus::after{
+#content_tabs a:focus::after,
+.content_abs a:hover,
+.content_tabs a:hover::after,
+.content_tabs a:focus,
+.content_tabs a:focus::after {
 /*
   background: #fff;
   */
 }
 
-#content_tabs a:focus{
+#content_tabs a:focus,
+.content_tabs a:focus{
   outline: 0;
 }
 /*
@@ -47,7 +52,9 @@
 */
 
 #content_tabs #current a,
-#content_tabs #current a::after{
+#content_tabs #current a::after,
+.content_tabs #current a,
+.content_tabs #current a::after{
   background: rgba(240,240,240,0.5);
   color: black;
   font-weight: bold;

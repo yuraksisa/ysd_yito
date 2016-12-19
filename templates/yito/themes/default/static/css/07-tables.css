@@ -34,7 +34,8 @@
 
 .table-cell {
   padding: 10px 4px 10px 4px;
-  border-bottom: 1px solid #EEE;  
+  border-bottom: 1px solid #EEE;
+  word-wrap: break-word;    
 }
 
 #elements_tbody .table-row:last-child td {

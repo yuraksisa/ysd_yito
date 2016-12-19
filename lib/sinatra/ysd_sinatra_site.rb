@@ -36,12 +36,18 @@ module Sinatra
         #
         # Site dashboard
         #
-        app.get '/dashboard/?', :allowed_usergroups => ['user', 'staff'] do
+        app.get '/dashboard/?', :allowed_usergroups => ['user', 'editor', 'staff', 'webmaster', 'booking_manager', 'booking_operator'] do
                 
-           p "Site dashboard"
-
-           if user.belongs_to?('staff')
-             dashboard_page = SystemConfiguration::Variable.get_value('site.front_page', nil)
+           allowed_groups = ['editor', 'webmaster', 'booking_manager', 'booking_operator', 'staff', 'user']
+           if user.belongs_to?(allowed_groups)
+             dashboard_page = nil
+             allowed_groups.each do |item|
+               next if !user.belongs_to?(item)
+               dashboard_page = SystemConfiguration::Variable.get_value("site.#{item}_front_page")
+               dashboard_page = nil if !dashboard_page.nil? && dashboard_page.empty?
+               break unless dashboard_page.nil?
+             end
+             dashboard_page = SystemConfiguration::Variable.get_value('site.front_page', nil) if dashboard_page.nil?
            else
              dashboard_page = SystemConfiguration::Variable.get_value('site.user_front_page', nil)
            end

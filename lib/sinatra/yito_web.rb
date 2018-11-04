@@ -63,10 +63,10 @@ module Sinatra
     # Before any request (except /login and /logout)
     before /^(?!(\/.*login|\/.*logout|\/.*unauthenticated))/ do
       if not authenticated?
-        #p "Not authenticated"
+        p "User not authenticated"
         authenticate # Force the authentication (always the anonymous user)
       else
-        #p "Authenticated #{user.username}"
+        p "Authenticated #{user.username}"
       end
     end
 

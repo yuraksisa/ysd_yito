@@ -43,6 +43,7 @@ module Sinatra
              dashboard_page = nil
              allowed_groups.each do |item|
                next if !user.belongs_to?(item)
+               p "item : #{item}"
                dashboard_page = SystemConfiguration::Variable.get_value("site.#{item}_front_page")
                dashboard_page = nil if !dashboard_page.nil? && dashboard_page.empty?
                break unless dashboard_page.nil?
@@ -53,6 +54,7 @@ module Sinatra
            end
                       
            if dashboard_page 
+             p "DASHBOARD: #{dashboard_page}"
              status, header, body = call! env.merge("PATH_INFO" => dashboard_page) 
            else
              load_page :dashboard_frontpage

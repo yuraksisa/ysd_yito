@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name    = "ysd_yito"
-  s.version = "0.1.61"
+  s.version = "0.1.62"
   s.authors = ["Yurak Sisa Dream"]
   s.date    = "2012-12-11"
   s.email   = ["yurak.sisa.dream@gmail.com"]
@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "thor"
 
   s.add_runtime_dependency "ysd_yito_core", ">= 0.1"
-  s.add_runtime_dependency "ysd_yito_js", ">= 0.1"  
   s.add_runtime_dependency "ysd_md_yito"
 
   s.add_runtime_dependency "ysd_core_plugins",">= 0.2.0"

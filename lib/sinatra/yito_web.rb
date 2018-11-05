@@ -2,7 +2,6 @@ require 'rubygems'
 require 'sinatra/base'
 require 'sinatra/r18n'
 require 'ysd_yito_core'
-require 'ysd_yito_js'
 require 'sinatra/ysd_sinatra_site'
 require 'sinatra/multi_route'
 

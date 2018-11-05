@@ -43,7 +43,6 @@ module Sinatra
              dashboard_page = nil
              allowed_groups.each do |item|
                next if !user.belongs_to?(item)
-               p "item : #{item}"
                dashboard_page = SystemConfiguration::Variable.get_value("site.#{item}_front_page")
                dashboard_page = nil if !dashboard_page.nil? && dashboard_page.empty?
                break unless dashboard_page.nil?

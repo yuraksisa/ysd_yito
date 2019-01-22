@@ -45,6 +45,7 @@ module Sinatra
     
     # Before any request
     before do
+      #p "START-REQUEST:#{request.path_info}"
       # configure logger
       logger = ::Logger.new(Model::LogDeviceInverseProxy.instance)
       logger.level = Logger::INFO
@@ -54,8 +55,10 @@ module Sinatra
       env['rack.logger'] = logger         
       unless request.path_info =~ /^\/api/
         Plugins::Plugin.plugin_invoke_all('aspects', {:app => self}) #TODO solve
-        theme=SystemConfiguration::Variable.get_value('site.theme','default')
-        Themes::ThemeManager.instance.select_theme(theme.to_sym)
+        # [NOTE 2019.01.22] There is just a back-end theme
+        Themes::ThemeManager.instance.select_theme(:default)
+        #theme=SystemConfiguration::Variable.get_value('site.theme','default')
+        #Themes::ThemeManager.instance.select_theme(theme.to_sym)
       end
     end
 
